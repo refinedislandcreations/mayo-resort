@@ -1,0 +1,46 @@
+<section class="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-20 py-10 sm:py-16 lg:py-24">
+  <div class="flex flex-col md:grid md:grid-cols-2">
+    <!-- Left Column: Title and Slider -->
+    <div class="md:flex md:flex-col md:justify-center">
+      <div class="sm:max-w-md sm:pr-5">
+        <h3 class="subtitle pb-2p">{{ page.gallery-section.subtitle }}</h3>
+        <p class="title pb-5p">{{ page.gallery-section.title }}</p>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {% for image in page.slider-images %}
+            <div class="swiper-slide">
+              <div
+                class="bg-image portrait"
+                style="background-image: url('{{ image.image }}');">
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Swiper Navigation Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Swiper Pagination Dots -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- Right Column: Text Sections -->
+    <div>
+  <div class="pt-5p md:pt-0 grid md:grid-cols-1 sm:grid-cols-3 md:border-l-2 md:ml-5p md:border-[#919b4a]">
+    {% for section in page.gallery-text-sections %}
+      <div class="sm:px-[5%] md:pl-5p 
+                  {% if forloop.first %}pb-5p md:pb-0 md:pt-5p{% endif %}
+                  {% if forloop.last %}pb-5p{% endif %}
+                  {% if forloop.first == false %}pb-5p md:pt-10p{% endif %}
+                  {% if forloop.last == false %}md:pb-10p md:border-b-2 md:border-[#919b4a]{% endif %}">
+        <h4 class="paragraph-title pb-2p">{{ section.title }}</h4>
+        <p>{{ section.paragraph }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+<section class="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-20 py-10 sm:py-16 lg:py-24">
+  <!-- Title Section -->
+  <div class="grid grid-cols-1 gap-4">
+    <div class="col-span-full">
+      <p class="subtitle pb-2p">{{ page.partners.subtitle }}</p>
+      <p class="title pb-5p">{{ page.partners.title }}</p>
+    </div>
+    <div class="col-span-full">
+      <div class="leading-relaxed lg:columns-2 lg:gap-8">
+        {{ page.partners.dynamic-text }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Partner Cards -->
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 mt-6">
+    {% for item in page.partners.businesses %}
+      <div class="p-5 border border-soliman">
+        <!-- Logo -->
+        <div class="flex justify-center items-center mb-4">
+          <img src="{{ item.logo }}" alt="{{ item.name }} logo" class="h-16 object-contain">
+        </div>
+        <!-- Name -->
+        <h3 class="text-lg font-semibold text-center mb-2">{{ item.name }}</h3>
+        <!-- Discount -->
+        <p class="text-center text-[#919b4a] font-bold mb-2">{{ item.discount }}</p>
+        <!-- Explanation -->
+        <p class="text-sm text-center">{{ item.explanation }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
