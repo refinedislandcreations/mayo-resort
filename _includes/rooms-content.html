@@ -1,0 +1,65 @@
+<section class="py-16 bg-alabaster">
+  <h2
+    class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-extrabold text-center mb-12 tracking-widest text-raisin-black uppercase"
+  >
+    Our Beautiful Rooms
+  </h2>
+
+  <div class="max-w-full mx-auto px-4 xs:px-6 sm:px-8 lg:px-12">
+    <div class="flex flex-wrap justify-center -mx-4">
+      {% for room in site.data.rooms.rooms %}
+      <div class="w-full md:w-1/2 px-4 mb-12 flex">
+        <div
+          class="overflow-hidden max-w-full md:max-w-[567px] mx-auto flex flex-col h-full w-full"
+        >
+          <img
+            src="{{ room.image }}"
+            alt="{{ room.title }}"
+            class="w-full h-auto object-cover aspect-[567/330]"
+          />
+          <div class="py-6 flex flex-col flex-grow">
+            <h3
+              class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-raisin-black uppercase tracking-wide"
+            >
+              {{ room.title }}
+            </h3>
+            <p class="text-raisin-black mb-4 text-sm xs:text-base max-w-[90%]">
+              {{ room.description }}
+            </p>
+
+            <div class="flex flex-col space-y-4 text-raisin-black mb-6">
+              <div class="flex items-center space-x-2">
+                <img
+                  src="/assets/images/icons/bed.png"
+                  alt="Bed icon"
+                  class="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6"
+                />
+                <span class="text-sm xs:text-base font-medium"
+                  >{{ room.bed }}</span
+                >
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  src="/assets/images/icons/capacity.png"
+                  alt="Capacity icon"
+                  class="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6"
+                />
+                <span class="text-sm xs:text-base font-medium"
+                  >{{ room.capacity }}</span
+                >
+              </div>
+            </div>
+
+            <a
+              href="{{ room.button_url }}"
+              class="inline-block bg-keppel text-white px-4 xs:px-6 py-2 xs:py-3 font-bold tracking-widest uppercase hover:bg-keppel-hover transition duration-300 ease-in-out mt-auto self-start text-sm xs:text-base"
+            >
+              {{ room.button_text }}
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
