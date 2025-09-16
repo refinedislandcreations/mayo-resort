@@ -5,7 +5,7 @@
     <div class="flex justify-between items-center w-full">
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <a href="{{ '/index.html' | relative_url }}">
+        <a href="{{ '/' | relative_url }}">
           <img
             src="{{ '/assets/images/logo.png' | relative_url }}"
             alt="Logo"
@@ -18,12 +18,13 @@
       <nav
         class="hidden xl:flex space-x-8 items-center uppercase font-bold h-full"
       >
-        <!-- Room Dropdown -->
+        {% for item in site.data.navigation.main_nav %} {% if item.submenu %}
+        <!-- Dropdown Menu -->
         <div class="relative group h-full flex items-center">
           <button
             class="inline-flex items-center hover:text-baby-powder-hover focus:outline-none text-baby-powder uppercase font-bold text-xl tracking-widest"
           >
-            Rooms
+            {{ item.title }}
             <svg
               class="w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out group-hover:rotate-180"
               viewBox="0 0 24 24"
@@ -42,140 +43,30 @@
             class="absolute left-0 top-full bg-custom-blue bg-opacity-80 border-none rounded-none shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 origin-top z-20 text-xl tracking-widest whitespace-nowrap"
             style="margin-top: 8px"
           >
+            {% for subitem in item.submenu %}
             <a
-              href="{{ '/room-types' | relative_url }}"
+              href="{{ subitem.url | relative_url }}"
               class="block px-4 py-2 text-baby-powder hover:bg-custom-blue-hover"
-              >Room Types</a
+              >{{ subitem.title }}</a
             >
-            <a
-              href="{{ '/special-offer' | relative_url }}"
-              class="block px-4 py-2 text-baby-powder hover:bg-custom-blue-hover"
-              >Special Offer</a
-            >
-            <a
-              href="{{ '/group-stays' | relative_url }}"
-              class="block px-4 py-2 text-baby-powder hover:bg-custom-blue-hover"
-              >Group Stays</a
-            >
+            {% endfor %}
           </div>
         </div>
-
-        <!-- Restaurant Dropdown -->
-        <div class="relative group h-full flex items-center">
-          <button
-            class="inline-flex items-center text-baby-powder hover:text-baby-powder-hover focus:outline-none uppercase font-bold text-xl tracking-widest"
-          >
-            Restaurant
-            <svg
-              class="w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out group-hover:rotate-180"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M19 9l-7 7-7-7"></path>
-          </button>
-          <div
-            class="absolute left-0 top-full bg-custom-blue bg-opacity-80 border-none rounded-none shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 origin-top z-20 text-xl tracking-widest whitespace-nowrap"
-            style="margin-top: 8px"
-          >
-            <a
-              href="{{ '/special-events' | relative_url }}"
-              class="block px-4 py-2 text-baby-powder hover:bg-custom-blue-hover"
-              >Special Events</a
-            >
-          </div>
-        </div>
-
-        <!-- Weddings -->
-        <a
-          href="{{ '/weddings' | relative_url }}"
-          class="text-baby-powder hover:text-baby-powder-hover px-3 py-2 text-xl tracking-widest"
-          >Weddings</a
-        >
-
-        <!-- Activities Dropdown -->
-        <div class="relative group h-full flex items-center">
-          <button
-            class="inline-flex items-center text-baby-powder hover:text-baby-powder-hover focus:outline-none uppercase font-bold text-xl tracking-widest"
-          >
-            Activities
-            <svg
-              class="w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out group-hover:rotate-180"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M19 9l-7 7-7-7"></path>
-          </button>
-          <div
-            class="absolute left-0 top-full bg-custom-blue bg-opacity-80 border-none rounded-none shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 origin-top z-20 text-xl tracking-widest whitespace-nowrap"
-            style="margin-top: 8px"
-          >
-            <a
-              href="{{ '/near-mayo' | relative_url }}"
-              class="block px-4 py-2 text-baby-powder hover:bg-custom-blue-hover"
-              >Near Mayo</a
-            >
-            <a
-              href="{{ '/north-bali' | relative_url }}"
-              class="block px-4 py-2 text-baby-powder hover:bg-custom-blue-hover"
-              >North Bali</a
-            >
-          </div>
-        </div>
-
-        <!-- Contact Dropdown -->
-        <div class="relative group h-full flex items-center">
-          <button
-            class="inline-flex items-center text-baby-powder hover:text-baby-powder-hover focus:outline-none uppercase font-bold text-xl tracking-widest"
-          >
-            Contact
-            <svg
-              class="w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out group-hover:rotate-180"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M19 9l-7 7-7-7"></path>
-          </button>
-          <div
-            class="absolute left-0 top-full bg-custom-blue bg-opacity-80 border-none rounded-none shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 origin-top z-20 text-xl tracking-widest whitespace-nowrap"
-            style="margin-top: 8px"
-          >
-            <a
-              href="{{ '/contact-form' | relative_url }}"
-              class="block px-4 py-2 text-baby-powder hover:bg-custom-blue-hover"
-              >Contact Form</a
-            >
-            <a
-              href="{{ '/getting-here' | relative_url }}"
-              class="block px-4 py-2 text-baby-powder hover:bg-custom-blue-hover"
-              >Getting Here</a
-            >
-          </div>
-        </div>
-
+        {% elsif item.is_button %}
         <!-- Book Now Button -->
         <a
-          href="{{ '/booking' | relative_url }}"
+          href="{{ item.url | relative_url }}"
           class="ml-4 inline-block bg-keppel text-white px-[20px] py-[15px] hover:bg-keppel-hover transition duration-300 ease-in-out transform hover:scale-105 font-bold text-xl tracking-widest"
-          >Book Now</a
+          >{{ item.title }}</a
         >
+        {% else %}
+        <!-- Single Link -->
+        <a
+          href="{{ item.url | relative_url }}"
+          class="text-baby-powder hover:text-baby-powder-hover px-3 py-2 text-xl tracking-widest"
+          >{{ item.title }}</a
+        >
+        {% endif %} {% endfor %}
       </nav>
 
       <!-- Mobile Hamburger -->
@@ -205,14 +96,13 @@
     <!-- Mobile Menu -->
     <nav
       id="mobile-menu"
-      class="fixed inset-0 bg-custom-blue z-40 flex flex-col p-6 xl:hidden transform translate-x-full transition-transform duration-500 ease-in-out"
+      class="fixed inset-0 bg-custom-blue z-40 flex flex-col p-6 xl:hidden transform translate-x-full transition-transform duration-500 ease-in-out overflow-y-auto"
     >
-      <!-- Menu Items -->
       <div
-        class="flex flex-col space-y-6 mt-20 uppercase font-bold text-baby-powder text-xl w-full max-w-xl mx-auto"
+        class="flex flex-col space-y-6 mt-20 uppercase font-bold text-baby-powder text-xl w-full max-w-xl mx-auto min-h-[calc(100vh-3rem)]"
       >
         <div class="flex-shrink-0">
-          <a href="{{ '/index.html' | relative_url }}">
+          <a href="{{ '/' | relative_url }}">
             <img
               src="{{ '/assets/images/logo.png' | relative_url }}"
               alt="Logo"
@@ -220,11 +110,13 @@
             />
           </a>
         </div>
+        {% for item in site.data.navigation.main_nav %} {% if item.submenu %}
+        <!-- Dropdown Menu -->
         <details class="dropdown">
           <summary
             class="cursor-pointer py-2 hover:text-baby-powder-hover flex items-center justify-between tracking-widest"
           >
-            <span>Rooms</span>
+            <span>{{ item.title }}</span>
             <svg
               class="w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out"
               viewBox="0 0 24 24"
@@ -240,326 +132,54 @@
             </svg>
           </summary>
           <div
-            class="dropdown-content overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0"
+            class="dropdown-content overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out opacity-0 max-h-0"
           >
             <ul class="pl-4 space-y-2 mt-2">
+              {% for subitem in item.submenu %}
               <li>
                 <a
-                  href="{{ '/room-types' | relative_url }}"
+                  href="{{ subitem.url | relative_url }}"
                   class="block hover:text-baby-powder-hover pb-2 tracking-widest"
-                  >Room Types</a
+                  >{{ subitem.title }}</a
                 >
               </li>
-              <li>
-                <a
-                  href="{{ '/special-offer' | relative_url }}"
-                  class="block hover:text-baby-powder-hover pb-2 tracking-widest"
-                  >Special Offer</a
-                >
-              </li>
-              <li>
-                <a
-                  href="{{ '/group-stays' | relative_url }}"
-                  class="block hover:text-baby-powder-hover pb-2 tracking-widest"
-                  >Group Stays</a
-                >
-              </li>
+              {% endfor %}
             </ul>
           </div>
         </details>
-
-        <details class="dropdown">
-          <summary
-            class="cursor-pointer py-2 hover:text-baby-powder-hover flex items-center justify-between tracking-widest"
-          >
-            <span>Restaurant</span>
-            <svg
-              class="w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </summary>
-          <div
-            class="dropdown-content overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0"
-          >
-            <ul class="pl-4 space-y-2 mt-2">
-              <li>
-                <a
-                  href="{{ '/special-events' | relative_url }}"
-                  class="block hover:text-baby-powder-hover pb-2 tracking-widest"
-                  >Special Events</a
-                >
-              </li>
-            </ul>
-          </div>
-        </details>
-
-        <a
-          href="{{ '/weddings' | relative_url }}"
-          class="block py-2 hover:text-baby-powder-hover tracking-widest"
-          >Weddings</a
-        >
-
-        <details class="dropdown">
-          <summary
-            class="cursor-pointer py-2 hover:text-baby-powder-hover flex items-center justify-between tracking-widest"
-          >
-            <span>Activities</span>
-            <svg
-              class="w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </summary>
-          <div
-            class="dropdown-content overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0"
-          >
-            <ul class="pl-4 space-y-2 mt-2">
-              <li>
-                <a
-                  href="{{ '/near-mayo' | relative_url }}"
-                  class="block hover:text-baby-powder-hover pb-2 tracking-widest"
-                  >Near Mayo</a
-                >
-              </li>
-              <li>
-                <a
-                  href="{{ '/north-bali' | relative_url }}"
-                  class="block hover:text-baby-powder-hover pb-2 tracking-widest"
-                  >North Bali</a
-                >
-              </li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="dropdown">
-          <summary
-            class="cursor-pointer py-2 hover:text-baby-powder-hover flex items-center justify-between tracking-widest"
-          >
-            <span>Contact</span>
-            <svg
-              class="w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </summary>
-          <div
-            class="dropdown-content overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0"
-          >
-            <ul class="pl-4 space-y-2 mt-2">
-              <li>
-                <a
-                  href="{{ '/contact-form' | relative_url }}"
-                  class="block hover:text-baby-powder-hover pb-2 tracking-widest"
-                  >Contact Form</a
-                >
-              </li>
-              <li>
-                <a
-                  href="{{ '/getting-here' | relative_url }}"
-                  class="block hover:text-baby-powder-hover pb-2 tracking-widest"
-                  >Getting Here</a
-                >
-              </li>
-            </ul>
-          </div>
-        </details>
-
+        {% elsif item.is_button %}
         <div class="text-left">
           <a
-            href="{{ '/booking' | relative_url }}"
+            href="{{ item.url | relative_url }}"
             class="inline-block bg-keppel px-[20px] py-[15px] hover:bg-keppel-hover transition duration-300 ease-in-out transform hover:scale-105 font-bold"
-            >Book Now</a
+            >{{ item.title }}</a
           >
         </div>
+        {% else %}
+        <a
+          href="{{ item.url | relative_url }}"
+          class="block py-2 hover:text-baby-powder-hover tracking-widest"
+          >{{ item.title }}</a
+        >
+        {% endif %} {% endfor %}
 
         <!-- Social Icons -->
-        <div class="flex space-x-3 justify-start pt-6">
+        <div class="flex space-x-3 justify-start pt-6 pb-6">
+          {% for social in site.data.navigation.social_links %}
           <a
-            href="{{ 'https://instagram.com/yourprofile' | relative_url }}"
+            href="{{ social.url }}"
             target="_blank"
             class="text-baby-powder hover:text-baby-powder-hover"
           >
             <img
-              src="{{ '/assets/images/icons/instagram-icon.png' | relative_url }}"
-              alt="Instagram"
+              src="{{ social.icon | relative_url }}"
+              alt="{{ social.title }}"
               class="h-5 w-auto"
             />
           </a>
-          <a
-            href="{{ 'https://facebook.com/yourprofile' | relative_url }}"
-            target="_blank"
-            class="text-baby-powder hover:text-baby-powder-hover"
-          >
-            <img
-              src="{{ '/assets/images/icons/facebook-icon.png' | relative_url }}"
-              alt="Facebook"
-              class="h-5 w-auto"
-            />
-          </a>
+          {% endfor %}
         </div>
       </div>
-
-      
     </nav>
   </div>
-
-  <script>
-    // Mobile menu toggle
-    const btn = document.getElementById("mobile-menu-button");
-    const menu = document.getElementById("mobile-menu");
-
-    let isMenuOpen = false;
-
-    btn.addEventListener("click", () => {
-      isMenuOpen = !isMenuOpen;
-      if (isMenuOpen) {
-        menu.classList.remove("translate-x-full");
-        menu.classList.add("translate-x-0");
-        btn.querySelectorAll("span > span").forEach((line, index) => {
-          if (index === 0) line.classList.add("rotate-45", "translate-y-2.5");
-          if (index === 1) line.classList.add("opacity-0");
-          if (index === 2) line.classList.add("-rotate-45", "-translate-y-2.5");
-        });
-      } else {
-        menu.classList.add("translate-x-full");
-        menu.classList.remove("translate-x-0");
-        btn.querySelectorAll("span > span").forEach((line, index) => {
-          if (index === 0)
-            line.classList.remove("rotate-45", "translate-y-2.5");
-          if (index === 1) line.classList.remove("opacity-0");
-          if (index === 2)
-            line.classList.remove("-rotate-45", "-translate-y-2.5");
-        });
-        // Close all open dropdowns when menu closes
-        document.querySelectorAll("details.dropdown").forEach((el) => {
-          el.open = false;
-          const content = el.querySelector(".dropdown-content");
-          const icon = el.querySelector("svg");
-          content.style.maxHeight = "0px";
-          content.style.opacity = "0";
-          icon.classList.remove("rotate-180");
-        });
-      }
-    });
-
-    // Desktop dropdowns
-    document.querySelectorAll(".xl\\:flex .group").forEach((dropdown) => {
-      let timeout;
-      const menu = dropdown.querySelector("div.absolute");
-      if (!menu) return;
-
-      dropdown.addEventListener("mouseenter", () => {
-        clearTimeout(timeout);
-        menu.classList.add("opacity-100", "visible", "scale-100");
-        menu.classList.remove("opacity-0", "invisible", "scale-95");
-      });
-
-      dropdown.addEventListener("mouseleave", () => {
-        timeout = setTimeout(() => {
-          menu.classList.remove("opacity-100", "visible", "scale-100");
-          menu.classList.add("opacity-0", "invisible", "scale-95");
-        }, 150);
-      });
-
-      menu.addEventListener("mouseenter", () => clearTimeout(timeout));
-      menu.addEventListener("mouseleave", () => {
-        timeout = setTimeout(() => {
-          menu.classList.remove("opacity-100", "visible", "scale-100");
-          menu.classList.add("opacity-0", "invisible", "scale-95");
-        }, 150);
-      });
-
-      dropdown.querySelector("button").addEventListener("click", (e) => {
-        e.preventDefault();
-        if (menu.classList.contains("opacity-100")) {
-          menu.classList.remove("opacity-100", "visible", "scale-100");
-          menu.classList.add("opacity-0", "invisible", "scale-95");
-        } else {
-          menu.classList.add("opacity-100", "visible", "scale-100");
-          menu.classList.remove("opacity-0", "invisible", "scale-95");
-        }
-      });
-    });
-
-    // Mobile dropdowns
-    document.querySelectorAll("details.dropdown").forEach((el) => {
-      const summary = el.querySelector("summary");
-      const content = el.querySelector(".dropdown-content");
-      const icon = summary.querySelector("svg");
-
-      // Toggle dropdown
-      el.addEventListener("toggle", () => {
-        if (el.open) {
-          content.style.maxHeight = content.scrollHeight + "px";
-          content.style.opacity = "1";
-          icon.classList.add("rotate-180");
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-          requestAnimationFrame(() => {
-            content.style.maxHeight = "0px";
-            content.style.opacity = "0";
-          });
-          icon.classList.remove("rotate-180");
-        }
-      });
-
-      // Reset max-height after animation
-      content.addEventListener("transitionend", () => {
-        if (el.open) {
-          content.style.maxHeight = "none";
-        }
-      });
-
-      // Close menu and reset hamburger when a link is clicked
-      content.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          isMenuOpen = false;
-          menu.classList.add("translate-x-full");
-          menu.classList.remove("translate-x-0");
-          btn.querySelectorAll("span > span").forEach((line, index) => {
-            if (index === 0)
-              line.classList.remove("rotate-45", "translate-y-2.5");
-            if (index === 1) line.classList.remove("opacity-0");
-            if (index === 2)
-              line.classList.remove("-rotate-45", "-translate-y-2.5");
-          });
-          // Close all dropdowns
-          document.querySelectorAll("details.dropdown").forEach((dropdown) => {
-            dropdown.open = false;
-            const dropdownContent = dropdown.querySelector(".dropdown-content");
-            const dropdownIcon = dropdown.querySelector("svg");
-            dropdownContent.style.maxHeight = "0px";
-            dropdownContent.style.opacity = "0";
-            dropdownIcon.classList.remove("rotate-180");
-          });
-        });
-      });
-    });
-  </script>
 </header>

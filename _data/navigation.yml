@@ -1,0 +1,42 @@
+main_nav:
+  - title: Rooms
+    url: "#"
+    submenu:
+      - title: Room Types
+        url: "/room-types"
+      - title: Special Offer
+        url: "/special-offer"
+      - title: Group Stays
+        url: "/group-stays"
+  - title: Restaurant
+    url: "#"
+    submenu:
+      - title: Special Events
+        url: "/special-events"
+  - title: Weddings
+    url: "/weddings"
+  - title: Activities
+    url: "#"
+    submenu:
+      - title: Near Mayo
+        url: "/near-mayo"
+      - title: North Bali
+        url: "/north-bali"
+  - title: Contact
+    url: "#"
+    submenu:
+      - title: Contact Form
+        url: "/contact-form"
+      - title: Getting Here
+        url: "/getting-here"
+  - title: Book Now
+    url: "/booking"
+    is_button: true
+
+social_links:
+  - title: Instagram
+    url: "https://instagram.com/yourprofile"
+    icon: "/assets/images/icons/instagram-icon.png"
+  - title: Facebook
+    url: "https://facebook.com/yourprofile"
+    icon: "/assets/images/icons/facebook-icon.png"
