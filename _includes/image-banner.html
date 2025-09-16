@@ -1,24 +1,19 @@
 <!-- file: _includes/image-banner.html -->
 <section
   class="relative w-full h-screen bg-cover bg-center"
-  style="background-image: url('{{ '/assets/images/mayo-resort.png' | relative_url }}');"
+  style="background-image: url('{{ include.bg_image | relative_url }}');"
 >
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black/40"></div>
 
   <!-- Content -->
   <div
-    class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6"
+    class="relative z-10 flex flex-col items-start justify-end h-full text-white text-left px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 pb-12"
   >
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Mayo Resort</h1>
-    <p class="text-lg md:text-2xl mb-6 max-w-2xl">
-      Experience comfort, nature, and unforgettable moments.
-    </p>
-    <a
-      href="{{ '/booking' | relative_url }}"
-      class="bg-keppel px-6 py-3 font-bold rounded-lg hover:bg-keppel-hover transition"
+    <h1
+      class="font-extrabold text-raisin-black uppercase tracking-widest text-2xl xs:text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl 3xl:text-[7rem] 4xl:text-[8rem] 5xl:text-[9rem]"
     >
-      Book Now
-    </a>
+      {{ include.title | replace: '\n', '<br />' | raw }}
+    </h1>
   </div>
 </section>
