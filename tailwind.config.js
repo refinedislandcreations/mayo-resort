@@ -8,15 +8,15 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      serif: ["Playfair Display", "serif"],
+      "serif": ["Playfair Display", "serif"],
       "sans-serif": ["Raleway", "sans-serif"],
     },
     fontSize: {
-      xs: ["0.75rem", "1.2"],
-      sm: ["0.875rem;", "1.2"],
-      base: ["1rem", "1.2"],
-      lg: ["1.125rem;", "1.2"],
-      xl: ["1.25rem", "1.2"],
+      "xs": ["0.75rem", "1.2"],
+      "sm": ["0.875rem;", "1.2"],
+      "base": ["1rem", "1.2"],
+      "lg": ["1.125rem;", "1.2"],
+      "xl": ["1.25rem", "1.2"],
       "2xl": ["1.5rem", "1.2"],
       "3xl": ["1.875rem", "1"],
       "4xl": ["2.25rem", "1"],
@@ -28,13 +28,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        featured: "var(--featured-color)",
-        base: "var(--base-color)",
+        "featured": "var(--featured-color)",
+        "base": "var(--base-color)",
       },
       lineHeight: {
-        tight: ".85",
-        snug: ".95",
-        12: "3rem",
+        "tight": ".85",
+        "snug": ".95",
+        "12": "3rem",
       },
       spacing: {
         "1p": "1%",
@@ -56,19 +56,30 @@ module.exports = {
         "1/1": "100%",
       },
       aspectRatio: {
-        landscape: "3 / 2",
+        "landscape": "3 / 2",
         "portrait-tall": "5/8",
-        portrait: "4/5",
+        "portrait": "4/5",
       },
       minHeight: {
-        100: "100vh",
-        90: "90vh",
-        80: "80vh",
-        70: "70vh",
-        60: "60vh",
-        50: "50vh",
-        40: "40vh",
-        30: "30vh",
+        "100": "100vh",
+        "90": "90vh",
+        "80": "80vh",
+        "70": "70vh",
+        "60": "60vh",
+        "50": "50vh",
+        "40": "40vh",
+        "30": "30vh",
+      },
+      screens: {
+        "xs": "300px", // Smallest phones
+        "sm": "480px", // Small phones
+        "md": "768px", // Tablets (portrait)
+        "lg": "1024px", // Tablets (landscape) and small desktops
+        "xl": "1280px", // Desktops
+        "2xl": "1440px", // Large desktops
+        "3xl": "1600px", // Very large screens
+        "4xl": "1920px", // Full HD screens
+        "5xl": "2560px", // 2K screens
       },
       colors: {
         "custom-blue": "#173753",
