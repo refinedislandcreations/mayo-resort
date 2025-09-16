@@ -508,6 +508,18 @@ video {
 .mt-20 {
   margin-top: 5rem;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.ml-auto {
+  margin-left: auto;
+}
 .block {
   display: block;
 }
@@ -553,6 +565,9 @@ video {
 .max-h-0 {
   max-height: 0px;
 }
+.max-h-\[401px\] {
+  max-height: 401px;
+}
 .min-h-\[calc\(100vh-3rem\)\] {
   min-height: calc(100vh - 3rem);
 }
@@ -570,6 +585,13 @@ video {
 }
 .max-w-xl {
   max-width: 36rem;
+}
+.max-w-\[505px\] {
+  max-width: 505px;
+}
+.max-w-max {
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 .flex-shrink-0 {
   flex-shrink: 0;
@@ -601,6 +623,9 @@ video {
 .items-start {
   align-items: flex-start;
 }
+.items-end {
+  align-items: flex-end;
+}
 .items-center {
   align-items: center;
 }
@@ -609,6 +634,9 @@ video {
 }
 .justify-end {
   justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
 }
 .justify-between {
   justify-content: space-between;
@@ -637,6 +665,11 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -671,6 +704,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(90 175 157 / var(--tw-bg-opacity));
 }
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
 }
@@ -679,6 +716,10 @@ video {
 }
 .bg-center {
   background-position: center;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-6 {
   padding: 1.5rem;
@@ -702,6 +743,26 @@ video {
 .py-\[15px\] {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .pb-12 {
   padding-bottom: 3rem;
@@ -729,6 +790,14 @@ video {
   font-size: 1.25rem;
   line-height: 1.2;
 }
+.text-base {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.text-sm {
+  font-size: 0.875rem;;
+  line-height: 1.2;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -740,6 +809,15 @@ video {
 }
 .tracking-widest {
   letter-spacing: 0.1em;
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+.tracking-normal {
+  letter-spacing: 0em;
 }
 .text-baby-powder {
   --tw-text-opacity: 1;
@@ -753,6 +831,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
 .opacity-0 {
   opacity: 0;
 }
@@ -764,6 +846,11 @@ video {
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .transition {
@@ -874,6 +961,14 @@ html, body {
 
 
 
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
+
+
+
 .hover\:text-baby-powder-hover:hover {
   --tw-text-opacity: 1;
   color: rgb(168 218 220 / var(--tw-text-opacity));
@@ -926,9 +1021,24 @@ html, body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+  .xs\:pl-6 {
+    padding-left: 1.5rem;
+  }
   .xs\:text-3xl {
     font-size: 1.875rem;
     line-height: 1;
+  }
+  .xs\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .xs\:text-base {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  .xs\:text-lg {
+    font-size: 1.125rem;;
+    line-height: 1.2;
   }
 }
 
@@ -944,9 +1054,24 @@ html, body {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+  .sm\:pl-8 {
+    padding-left: 2rem;
+  }
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 1;
+  }
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 1;
+  }
+  .sm\:text-lg {
+    font-size: 1.125rem;;
+    line-height: 1.2;
+  }
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.2;
   }
 }
 
@@ -954,13 +1079,37 @@ html, body {
 
 
 @media (min-width: 768px) {
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+  .md\:flex-row {
+    flex-direction: row;
+  }
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+  .md\:pl-12 {
+    padding-left: 3rem;
+  }
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 1.2;
   }
 }
 
@@ -976,9 +1125,24 @@ html, body {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+  .lg\:pl-16 {
+    padding-left: 4rem;
+  }
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.2;
   }
 }
 
@@ -996,8 +1160,27 @@ html, body {
     padding-left: 6rem;
     padding-right: 6rem;
   }
+  .xl\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .xl\:pl-20 {
+    padding-left: 5rem;
+  }
   .xl\:text-8xl {
     font-size: 6rem;
+    line-height: 1;
+  }
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 1;
+  }
+  .xl\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 }
@@ -1006,8 +1189,27 @@ html, body {
 
 
 @media (min-width: 1440px) {
+  .\32xl\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  .\32xl\:pl-24 {
+    padding-left: 6rem;
+  }
   .\32xl\:text-9xl {
     font-size: 8rem;
+    line-height: 1;
+  }
+  .\32xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 1;
+  }
+  .\32xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+  .\32xl\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 }
@@ -1016,8 +1218,27 @@ html, body {
 
 
 @media (min-width: 1600px) {
+  .\33xl\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .\33xl\:pl-32 {
+    padding-left: 8rem;
+  }
   .\33xl\:text-\[7rem\] {
     font-size: 7rem;
+  }
+  .\33xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+  .\33xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .\33xl\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
   }
 }
 
@@ -1025,8 +1246,27 @@ html, body {
 
 
 @media (min-width: 1920px) {
+  .\34xl\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  .\34xl\:pl-40 {
+    padding-left: 10rem;
+  }
   .\34xl\:text-\[8rem\] {
     font-size: 8rem;
+  }
+  .\34xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .\34xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .\34xl\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
   }
 }
 
@@ -1034,8 +1274,26 @@ html, body {
 
 
 @media (min-width: 2560px) {
+  .\35xl\:px-48 {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+  .\35xl\:pl-48 {
+    padding-left: 12rem;
+  }
   .\35xl\:text-\[9rem\] {
     font-size: 9rem;
+  }
+  .\35xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .\35xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+  .\35xl\:text-\[10rem\] {
+    font-size: 10rem;
   }
 }
 

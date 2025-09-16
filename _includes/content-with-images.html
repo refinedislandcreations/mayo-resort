@@ -1,0 +1,35 @@
+<section
+  class="flex flex-col md:flex-row items-center justify-between bg-baby-powder py-12 pl-4 xs:pl-6 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20 2xl:pl-24 3xl:pl-32 4xl:pl-40 5xl:pl-48"
+>
+  <div class="md:w-1/2 mb-8 md:mb-0 flex flex-col justify-center">
+    <h2
+      class="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold mb-4 uppercase text-raisin-black tracking-wide"
+    >
+      {{ include.title }}
+    </h2>
+    <p
+      class="text-sm xs:text-base sm:text-lg md:text-xl mb-6 text-gray-700 tracking-wider"
+    >
+      {{ include.description }}
+    </p>
+    <a
+      href="{{ include.button_link }}"
+      class="inline-block bg-keppel text-white px-5 py-3 hover:bg-keppel-hover transition duration-300 ease-in-out font-bold tracking-widest uppercase max-w-max text-base xs:text-lg sm:text-xl md:text-2xl"
+    >
+      {{ include.button_text }}
+    </a>
+  </div>
+
+  <div class="md:w-1/2 flex flex-col space-y-4 items-end">
+    <img
+      src="{{ include.image1 }}"
+      alt="Image 1"
+      class="w-full max-w-[505px] max-h-[401px] object-cover shadow"
+    />
+    <img
+      src="{{ include.image2 }}"
+      alt="Image 2"
+      class="w-full max-w-[505px] max-h-[401px] object-cover shadow"
+    />
+  </div>
+</section>
