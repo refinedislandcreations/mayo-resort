@@ -658,6 +658,9 @@ video {
 .max-w-xl {
   max-width: 36rem;
 }
+.max-w-\[800px\] {
+  max-width: 800px;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -884,6 +887,22 @@ video {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -901,6 +920,15 @@ video {
 }
 .pt-12 {
   padding-top: 3rem;
+}
+.pr-4 {
+  padding-right: 1rem;
+}
+.pr-5 {
+  padding-right: 1.25rem;
+}
+.pb-8 {
+  padding-bottom: 2rem;
 }
 .text-left {
   text-align: left;
@@ -1243,6 +1271,9 @@ html, body {
   .xs\:pl-6 {
     padding-left: 1.5rem;
   }
+  .xs\:pr-6 {
+    padding-right: 1.5rem;
+  }
   .xs\:text-2xl {
     font-size: 1.5rem;
     line-height: 1.2;
@@ -1297,8 +1328,15 @@ html, body {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   .sm\:pl-8 {
     padding-left: 2rem;
+  }
+  .sm\:pr-8 {
+    padding-right: 2rem;
   }
   .sm\:text-3xl {
     font-size: 1.875rem;
@@ -1359,8 +1397,15 @@ html, body {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
   .md\:pl-12 {
     padding-left: 3rem;
+  }
+  .md\:pr-12 {
+    padding-right: 3rem;
   }
   .md\:text-2xl {
     font-size: 1.5rem;
@@ -1415,6 +1460,9 @@ html, body {
   .lg\:pl-16 {
     padding-left: 4rem;
   }
+  .lg\:pr-16 {
+    padding-right: 4rem;
+  }
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1446,6 +1494,9 @@ html, body {
   .xl\:pl-20 {
     padding-left: 5rem;
   }
+  .xl\:pr-20 {
+    padding-right: 5rem;
+  }
   .xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -1462,6 +1513,9 @@ html, body {
 @media (min-width: 1440px) {
   .\32xl\:pl-24 {
     padding-left: 6rem;
+  }
+  .\32xl\:pr-24 {
+    padding-right: 6rem;
   }
   .\32xl\:text-7xl {
     font-size: 4.5rem;
@@ -1480,6 +1534,9 @@ html, body {
   .\33xl\:pl-32 {
     padding-left: 8rem;
   }
+  .\33xl\:pr-32 {
+    padding-right: 8rem;
+  }
   .\33xl\:text-\[7rem\] {
     font-size: 7rem;
   }
@@ -1492,6 +1549,9 @@ html, body {
   .\34xl\:pl-40 {
     padding-left: 10rem;
   }
+  .\34xl\:pr-40 {
+    padding-right: 10rem;
+  }
   .\34xl\:text-\[8rem\] {
     font-size: 8rem;
   }
@@ -1503,6 +1563,9 @@ html, body {
 @media (min-width: 2560px) {
   .\35xl\:pl-48 {
     padding-left: 12rem;
+  }
+  .\35xl\:pr-48 {
+    padding-right: 12rem;
   }
   .\35xl\:text-\[9rem\] {
     font-size: 9rem;
