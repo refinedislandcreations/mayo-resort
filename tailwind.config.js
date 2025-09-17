@@ -91,6 +91,7 @@ module.exports = {
         "keppel": "#5aaf9d",
         "keppel-hover": "#4a8a83",
         "raisin-black": "#212227",
+        "raisin-black-hover": "#383940",
       },
     },
   },
