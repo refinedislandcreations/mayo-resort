@@ -501,6 +501,30 @@ video {
 .z-50 {
   z-index: 50;
 }
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+.col-start-1 {
+  grid-column-start: 1;
+}
+.col-start-2 {
+  grid-column-start: 2;
+}
+.col-start-3 {
+  grid-column-start: 3;
+}
+.row-span-1 {
+  grid-row: span 1 / span 1;
+}
+.row-start-1 {
+  grid-row-start: 1;
+}
+.row-start-2 {
+  grid-row-start: 2;
+}
 .m-auto {
   margin: auto;
 }
@@ -549,6 +573,9 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.mt-12 {
+  margin-top: 3rem;
+}
 .block {
   display: block;
 }
@@ -560,6 +587,9 @@ video {
 }
 .inline-flex {
   display: inline-flex;
+}
+.grid {
+  display: grid;
 }
 .hidden {
   display: none;
@@ -605,6 +635,21 @@ video {
 }
 .max-h-\[401px\] {
   max-height: 401px;
+}
+.max-h-64 {
+  max-height: 16rem;
+}
+.max-h-\[300px\] {
+  max-height: 300px;
+}
+.max-h-60 {
+  max-height: 15rem;
+}
+.max-h-80 {
+  max-height: 20rem;
+}
+.max-h-96 {
+  max-height: 24rem;
 }
 .min-h-\[320px\] {
   min-height: 320px;
@@ -704,6 +749,15 @@ video {
      -moz-user-select: none;
           user-select: none;
 }
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
 }
@@ -730,6 +784,9 @@ video {
 }
 .justify-between {
   justify-content: space-between;
+}
+.gap-4 {
+  gap: 1rem;
 }
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -903,6 +960,10 @@ video {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.py-64 {
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -1018,6 +1079,10 @@ video {
 .text-keppel {
   --tw-text-opacity: 1;
   color: rgb(90 175 157 / var(--tw-text-opacity));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 .underline {
   text-decoration-line: underline;
@@ -1308,6 +1373,33 @@ html, body {
 
 
 @media (min-width: 480px) {
+  .sm\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .sm\:col-start-2 {
+    grid-column-start: 2;
+  }
+  .sm\:col-start-4 {
+    grid-column-start: 4;
+  }
+  .sm\:col-start-1 {
+    grid-column-start: 1;
+  }
+  .sm\:col-start-3 {
+    grid-column-start: 3;
+  }
+  .sm\:row-start-1 {
+    grid-row-start: 1;
+  }
+  .sm\:row-start-2 {
+    grid-row-start: 2;
+  }
+  .sm\:block {
+    display: block;
+  }
   .sm\:h-6 {
     height: 1.5rem;
   }
@@ -1319,6 +1411,9 @@ html, body {
   }
   .sm\:w-6 {
     width: 1.5rem;
+  }
+  .sm\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .sm\:px-6 {
     padding-left: 1.5rem;
@@ -1366,6 +1461,10 @@ html, body {
     font-size: 1rem;
     line-height: 1.2;
   }
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
   .sm\:leading-relaxed {
     line-height: 1.625;
   }
@@ -1375,8 +1474,50 @@ html, body {
 
 
 @media (min-width: 768px) {
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .md\:col-start-1 {
+    grid-column-start: 1;
+  }
+  .md\:col-start-2 {
+    grid-column-start: 2;
+  }
+  .md\:col-start-4 {
+    grid-column-start: 4;
+  }
+  .md\:col-start-5 {
+    grid-column-start: 5;
+  }
+  .md\:col-start-6 {
+    grid-column-start: 6;
+  }
+  .md\:col-start-7 {
+    grid-column-start: 7;
+  }
+  .md\:col-start-3 {
+    grid-column-start: 3;
+  }
+  .md\:row-start-1 {
+    grid-row-start: 1;
+  }
+  .md\:row-start-2 {
+    grid-row-start: 2;
+  }
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+  .md\:mt-12 {
+    margin-top: 3rem;
+  }
+  .md\:block {
+    display: block;
+  }
+  .md\:max-h-96 {
+    max-height: 24rem;
   }
   .md\:min-h-\[420px\] {
     min-height: 420px;
@@ -1390,6 +1531,12 @@ html, body {
   .md\:max-w-\[567px\] {
     max-width: 567px;
   }
+  .md\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1400,6 +1547,10 @@ html, body {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .md\:pl-12 {
     padding-left: 3rem;
@@ -1474,6 +1625,10 @@ html, body {
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 1;
+  }
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 1.2;
   }
 }
 
