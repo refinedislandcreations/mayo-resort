@@ -1,10 +1,10 @@
 <section
-  class="flex flex-col md:flex-row items-center justify-between bg-baby-powder py-12 pr-4 xs:pr-6 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20 2xl:pr-24 3xl:pr-32 4xl:pr-40 5xl:pr-48"
+  class="flex flex-col md:flex-row items-center justify-between bg-baby-powder py-12 md:py-24 lg:py-48 pr-4 xs:pr-6 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20 2xl:pr-24 3xl:pr-32 4xl:pr-40 5xl:pr-48"
 >
   <!-- Gambar di kiri -->
   <div class="md:w-1/2 mb-8 md:mb-0 flex">
     <img
-      src="{{ include.image1 }}"
+      src="{{ page..offer.image }}"
       alt="Image"
       class="w-full max-w-[505px] max-h-[401px] object-cover shadow"
     />
@@ -15,18 +15,18 @@
     <h2
       class="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold mb-4 uppercase text-raisin-black tracking-wide"
     >
-      {{ include.title }}
+      {{ page..offer.title }}
     </h2>
     <p
       class="text-sm xs:text-base sm:text-lg md:text-xl mb-6 text-gray-700 tracking-wider py-2 sm:py-4 md:py-8"
     >
-      {{ include.description }}
+      {{ page..offer.description }}
     </p>
     <a
-      href="{{ include.button_link }}"
+      href="{{ page..offer.button_link }}"
       class="inline-block bg-keppel text-white px-5 py-3 hover:bg-keppel-hover transition duration-300 ease-in-out font-bold tracking-widest uppercase max-w-max text-base xs:text-lg sm:text-xl md:text-2xl"
     >
-      {{ include.button_text }}
+      {{ page..offer.button_text }}
     </a>
   </div>
 </section>

@@ -8,20 +8,109 @@ seo:
     - Meal Prep Bali
   social_image:
   hide-from-google: true
+
+image_banner:
+  image_banner: "/assets/images/mayo-resort.png"
+  banner_label: "Welcome to Mayo Resort"
+  title: |
+    Welcome to
+    Mayo Resort
+
+mayo-about:
+  title: "A Peaceful Escape by the Sea"
+  description: "Located at the tip of a scenic headland, Mayo Resort provides a serene retreat, surrounded by the Bali Sea on three sides. With panoramic ocean views, a calm microclimate, and unforgettable sunsets, it's the perfect place to unwind and enjoy a peaceful escape, away from the hustle and bustle."
+  button_text: "Find Out More"
+  button_link: "/contact"
+  image1: "/assets/images/dummy.png"
+  image2: "/assets/images/dummy.png"
+
+rooms:
+  - title: "Garden Studio"
+    image: "/assets/images/dummy.png"
+    description: "A spacious 60 sqm retreat with a private patio, offering tranquil views of the gardens, pool, and ocean."
+    bed: "1 King-size Double Bed"
+    capacity: "2 adults (plus space for 1 extra mattress)"
+    button_text: "Find out more"
+    button_url: "/rooms/garden-studio"
+
+  - title: "Ocean view studios"
+    image: "/assets/images/dummy.png"
+    description: "Bright and cozy 46 sqm studios with a balcony or terrace offering serene views of the sea, gardens, and pool."
+    bed: "1 King-size Double Bed + 1 sofa-bed"
+    capacity: "2 adults + 1 child"
+    button_text: "Find out more"
+    button_url: "/rooms/ocean-view-studios"
+
+  - title: "2-Bedroom Family Suite"
+    image: "/assets/images/dummy.png"
+    description: "A generous 180 sqm suite with two bedrooms, a living room, and a terrace perfect for families, all with ocean views."
+    bed: "1 King-size Double Bed & 2 Single Beds + 1 sofa-bed"
+    capacity: "5 adults (can add 2 extra mattresses if needed, so max 7)"
+    button_text: "Find out more"
+    button_url: "/rooms/2-bedroom-family-suite"
+
+  - title: "Villa Putih"
+    image: "/assets/images/dummy.png"
+    description: "A stunning two-bedroom beachfront villa with a private pool, lush garden, and panoramic views of the ocean, rice fields, and surrounding hills."
+    bed: "2 King-size Double Beds"
+    capacity: "4 adults (plus sofa space if needed)"
+    button_text: "Find out more"
+    button_url: "/rooms/villa-putih"
+
+testimonials:
+  - main_quote: "AMAZING PRODUCT, HIGHLY RECOMMENDED!"
+    rating: 3
+    description: "I've been using this product for months and it exceeded my expectations. The quality is top-notch and customer service is excellent. Will buy again! Five stars! Highly recommended. A must-have for anyone looking for quality and reliability."
+    name: "John Doe"
+    date: "March 2024"
+
+  - main_quote: "EXCELLENT SERVICE AND SUPPORT."
+    rating: 5
+    description: "The team was very responsive and helped me every step of the way. Truly appreciated!"
+    name: "Jane Smith"
+    date: "April 2024"
+
+  - main_quote: "VALUE FOR MONEY."
+    rating: 4
+    description: "Great features at an affordable price. Would definitely buy again."
+    name: "Emily Johnson"
+    date: "May 2024"
+
+  - main_quote: "USER-FRIENDLY AND EFFICIENT."
+    rating: 4
+    description: "The interface is intuitive and easy to navigate. It has significantly improved my workflow."
+    name: "Michael Brown"
+    date: "June 2024"
+
+  - main_quote: "HIGHLY RECOMMENDED FOR PROFESSIONALS."
+    rating: 0
+    description: "This product has been a game-changer for my business. The features are tailored to meet professional needs."
+    name: "Sarah Davis"
+    date: "July 2024"
+
+offer:
+  title: "Special Offers"
+  description: "Whether you’re marking a special moment or simply looking to unwind, our packages are thoughtfully crafted to offer the perfect experience."
+  button_text: "Find Out More"
+  button_link: "/kontak"
+  image: "/assets/images/dummy.png"
+
+dining:
+  - title: "Dining at Bora Bora"
+    description: "Bora Bora delivers a memorable dining experience, featuring exquisite seafood, stunning ocean views, and a perfect atmosphere for any occasion."
+    button_link: "/more-info"
+    button_text: "Find Out More"
+    image_height: "max-h-64 md:max-h-96"
+    images:
+      - /assets/images/dummy.png
+      - /assets/images/dummy.png
+      - /assets/images/dummy.png
+      - /assets/images/dummy.png
+      - /assets/images/dummy.png
+      - /assets/images/dummy.png
 ---
 
-{% include image-banner.html bg_image="/assets/images/mayo-resort.png"
-title="Welcome to\nMayo Resort" %} {% include content-with-images.html title="A
-Peaceful Escape by the Sea" description="Located at the tip of a scenic
-headland, Mayo Resort provides a serene retreat, surrounded by the Bali Sea on
-three sides. With panoramic ocean views, a calm microclimate, and unforgettable
-sunsets, it's the perfect place to unwind and enjoy a peaceful escape, away from
-the hustle and bustle." button_text="Find Out More" button_link="/kontak"
-image1="/assets/images/dummy.png" image2="/assets/images/dummy.png" %} {%
+{% include image-banner.html %} {% include content-with-images.html %} {%
 include rooms-content.html %} {% include testimonial.html %} {% include
-content-with-image-on-the-left.html title="Special Offers" description="LWhether
-you’re marking a special moment or simply looking to unwind, our packages are
-thoughtfully crafted to offer the perfect experience." button_text="Find Out
-More" button_link="/kontak" image1="/assets/images/dummy.png"
-image2="/assets/images/dummy.png" %} {% include image-gallery-text-section.html
-id="bora-bora" %}
+content-with-image-on-the-left.html %} {% include
+image-gallery-text-section.html %}

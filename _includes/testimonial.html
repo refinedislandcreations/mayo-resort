@@ -19,7 +19,7 @@
     <div
       class="flex-1 w-full max-w-full xs:max-w-4xl px-0 xs:px-4 text-center relative overflow-hidden min-h-[280px] xs:min-h-[320px] sm:min-h-[360px] md:min-h-[420px]"
     >
-      {% for t in site.data.testimonial %}
+      {% for t in page.testimonials %}
       <article
         class="testimonial-item absolute top-1/2 left-0 right-0 transform -translate-y-1/2 mx-auto transition-opacity duration-500 ease-in-out {% unless forloop.first %}opacity-0 pointer-events-none{% endunless %}"
         data-index="{{ forloop.index0 }}"

@@ -1,79 +1,79 @@
-{% assign section = site.data.image-gallery | where: "id", include.id | first %}
+{% assign page = page.dining[0] %}
 
 <section class="px-4 xs:px-6 md:px-8 py-24 max-w-full mx-auto bg-alabaster">
   <!-- Judul -->
   <h2
     class="uppercase font-bold text-3xl xs:text-4xl sm:text-5xl mb-4 text-raisin-black text-center md:mt-12"
   >
-    {{ section.title }}
+    {{ page.title }}
   </h2>
 
   <!-- Deskripsi -->
   <p
     class="max-w-3xl text-base xs:text-lg mb-8 text-raisin-black text-center mx-auto"
   >
-    {{ section.description }}
+    {{ page.description }}
   </p>
 
   <!-- Tombol -->
   <div class="text-center mb-12">
     <a
-      href="{{ section.button_link }}"
+      href="{{ page.button_link }}"
       class="inline-block bg-keppel text-white px-5 py-3 hover:bg-keppel-hover transition duration-300 ease-in-out font-bold tracking-widest uppercase max-w-max text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl"
     >
-      {{ section.button_text }}
+      {{ page.button_text }}
     </a>
   </div>
 
   <!-- Grid Bento Gambar -->
-  {% if section.images.size >= 6 %}
+  {% if page.images.size >= 6 %}
   <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
     <!-- Gambar 1 -->
     <img
-      src="{{ section.images[0] }}"
+      src="{{ page.images[0] }}"
       alt="Image 1"
       loading="lazy"
-      class="col-span-2 md:col-span-1 md:col-start-1 md:row-start-1 object-cover w-full h-full rounded {{ section.image_height }}"
+      class="col-span-2 md:col-span-1 md:col-start-1 md:row-start-1 object-cover w-full h-full rounded {{ page.image_height }}"
     />
 
     <!-- Gambar 2 -->
     <img
-      src="{{ section.images[1] }}"
+      src="{{ page.images[1] }}"
       alt="Image 2"
       loading="lazy"
-      class="col-span-1 md:col-span-2 md:col-start-2 md:row-start-1 object-cover w-full h-full rounded {{ section.image_height }}"
+      class="col-span-1 md:col-span-2 md:col-start-2 md:row-start-1 object-cover w-full h-full rounded {{ page.image_height }}"
     />
 
     <!-- Gambar 3 -->
     <img
-      src="{{ section.images[2] }}"
+      src="{{ page.images[2] }}"
       alt="Image 3"
       loading="lazy"
-      class="col-span-1 md:block md:col-span-1 md:col-start-4 md:row-start-1 object-cover w-full h-full rounded {{ section.image_height }}"
+      class="col-span-1 md:block md:col-span-1 md:col-start-4 md:row-start-1 object-cover w-full h-full rounded {{ page.image_height }}"
     />
 
     <!-- Gambar 4 -->
     <img
-      src="{{ section.images[3] }}"
+      src="{{ page.images[3] }}"
       alt="Image 4"
       loading="lazy"
-      class="col-span-1 md:col-span-1 md:col-start-1 md:row-start-2 object-cover w-full h-full rounded {{ section.image_height }}"
+      class="col-span-1 md:col-span-1 md:col-start-1 md:row-start-2 object-cover w-full h-full rounded {{ page.image_height }}"
     />
 
     <!-- Gambar 5 -->
     <img
-      src="{{ section.images[4] }}"
+      src="{{ page.images[4] }}"
       alt="Image 5"
       loading="lazy"
-      class="col-span-1 md:col-span-1 md:col-start-2 md:row-start-2 object-cover w-full h-full rounded {{ section.image_height }}"
+      class="col-span-1 md:col-span-1 md:col-start-2 md:row-start-2 object-cover w-full h-full rounded {{ page.image_height }}"
     />
 
     <!-- Gambar 6 -->
     <img
-      src="{{ section.images[5] }}"
+      src="{{ page.images[5] }}"
       alt="Image 6"
       loading="lazy"
-      class="col-span-2 md:col-span-2 md:col-start-3 md:row-start-2 object-cover w-full h-full rounded {{ section.image_height }}"
+      class="col-span-2 md:col-span-2 md:col-start-3 md:row-start-2 object-cover w-full h-full rounded {{ page.image_height }}"
     />
   </div>
   {% else %}
