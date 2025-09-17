@@ -153,10 +153,22 @@ activities:
       image: "/assets/images/dummy.png"
       button_link: "/hiking-info"
       button_text: "Find Out More"
+
+cta_mayo:
+  title: "How to Get here"
+  description: "The journey to Mayo Resort is part of the experience, with three scenic routes and memorable stops along the way."
+  button_text: "Find Out More"
+  button_link: "/contact"
+  image: "/assets/images/dummy.png"
 ---
 
-{% include image-banner.html %} {% include content-with-images.html %} {%
-include rooms-content.html %} {% include testimonial.html %} {% include
-content-with-image-on-the-left.html %} {% include content-image-right.html %} {%
-include images-gallery-content.html %} {% include section-slider.html %} {%
-include image-gallery-text-section.html %}
+{% include image-banner.html %} 
+{% include content-with-image-on-the-left.html section=page.cta_mayo %}  
+{% include content-with-image-on-the-left.html section=page.offer %} 
+{% include content-with-images.html %} 
+{% include testimonial.html %}  
+{% include rooms-content.html %} 
+{% include images-gallery-content.html %} 
+{% include section-slider.html %}  
+{% include content-image-right.html %} 
+{% include image-gallery-text-section.html %}
