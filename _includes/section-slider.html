@@ -1,0 +1,55 @@
+<div class="w-full py-16 bg-bone overflow-x-hidden">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2
+      class="text-7xl font-bold uppercase tracking-widest text-gray-800 mb-12"
+    >
+      {{ page.activities.title }}
+    </h2>
+  </div>
+
+  <div class="relative w-full">
+    <div class="overflow-hidden">
+      <div
+        class="flex items-center -mx-4 transition-transform duration-500 ease-in-out"
+        id="slider"
+      >
+        {% for card in page.activities.cards %}
+        <div
+          class="flex-shrink-0 w-10/12 md:w-1/2 lg:w-5/12 px-4 transition-all duration-500 ease-in-out"
+        >
+          <div class="flex flex-col">
+            <img
+              src="{{ card.image }}"
+              alt="{{ card.title }}"
+              class="w-full h-96 object-cover mb-6"
+            />
+
+            <h3
+              class="text-3xl font-bold uppercase tracking-wider text-raisin-black mb-3"
+            >
+              {{ card.title }}
+            </h3>
+            <p class="text-raisin-black mb-6 h-32">{{ card.description }}</p>
+            <a
+              href="{{ card.button_link }}"
+              class="inline-block bg-keppel text-white px-4 xs:px-6 py-2 xs:py-3 font-bold tracking-widest uppercase hover:bg-keppel-hover transition duration-300 ease-in-out mt-auto self-start text-sm xs:text-base"
+            >
+              {{ card.button_text }}
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-center items-center mt-8 space-x-4">
+    <button id="prevBtn" class="text-2xl text-gray-500 hover:text-gray-800">
+      &lt;
+    </button>
+    <div class="flex space-x-2" id="dots"></div>
+    <button id="nextBtn" class="text-2xl text-gray-500 hover:text-gray-800">
+      &gt;
+    </button>
+  </div>
+</div>

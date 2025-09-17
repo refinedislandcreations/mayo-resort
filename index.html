@@ -16,7 +16,7 @@ image_banner:
     Welcome to
     Mayo Resort
 
-mayo-about:
+mayo_about:
   title: "A Peaceful Escape by the Sea"
   description: "Located at the tip of a scenic headland, Mayo Resort provides a serene retreat, surrounded by the Bali Sea on three sides. With panoramic ocean views, a calm microclimate, and unforgettable sunsets, it's the perfect place to unwind and enjoy a peaceful escape, away from the hustle and bustle."
   button_text: "Find Out More"
@@ -108,9 +108,55 @@ dining:
       - /assets/images/dummy.png
       - /assets/images/dummy.png
       - /assets/images/dummy.png
+
+celebrate_section:
+  title: "Celebrate in Style"
+  description: "From milestone birthdays to intimate gatherings, Mayo Resort offers the perfect backdrop for your special moments. Surrounded by serene waters and stunning scenery, every celebration here becomes truly memorable."
+  button_link: "/more-info"
+  button_text: "Start Planning With Us"
+  image_height: "max-h-64 md:max-h-96"
+  image: "/assets/images/dummy.png"
+
+weddings:
+  images:
+    - src: "/assets/images/dummy.png"
+      alt: "Gambar 1"
+    - src: "/assets/images/dummy.png"
+      alt: "Gambar 2"
+    - src: "/assets/images/dummy.png"
+      alt: "Gambar 3"
+    - src: "/assets/images/dummy.png"
+      alt: "Gambar 4"
+  title: "Weddings by the Sea"
+  description: >
+    Exchange your vows surrounded by the Bali Sea, with unobstructed ocean views and breathtaking sunsets.
+
+    Mayo Resort provides an elegant, serene setting for an unforgettable wedding day that you and your guests will cherish forever.
+  button_text: "Celebrations by the Sea"
+  button_link: "/celebrations"
+
+activities:
+  title: "Activities in North Bali"
+  cards:
+    - title: "Diving"
+      description: "From nearby Purijati to world-famous Tulamben and Menjangan Island, incredible dive spots are just minutes to hours away, with exclusive guest discounts on courses and excursions."
+      image: "/assets/images/dummy.png"
+      button_link: "/diving-info"
+      button_text: "Find Out More"
+    - title: "Snorkeling"
+      description: "Explore colorful reefs and marine life in shallow waters perfect for all skill levels. Our team can arrange trips to the best local snorkeling spots. "
+      image: "/assets/images/dummy.png"
+      button_link: "/snorkeling-info"
+      button_text: "Find Out More"
+    - title: "Hiking"
+      description: "Discover breathtaking trails through tropical forests and scenic coastal paths. Our guides can lead you to hidden gems and panoramic viewpoints."
+      image: "/assets/images/dummy.png"
+      button_link: "/hiking-info"
+      button_text: "Find Out More"
 ---
 
 {% include image-banner.html %} {% include content-with-images.html %} {%
 include rooms-content.html %} {% include testimonial.html %} {% include
-content-with-image-on-the-left.html %} {% include
-image-gallery-text-section.html %}
+content-with-image-on-the-left.html %} {% include content-image-right.html %} {%
+include images-gallery-content.html %} {% include section-slider.html %} {%
+include image-gallery-text-section.html %}

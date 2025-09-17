@@ -13,11 +13,11 @@
     {% include site-header.html %} {{content}} {% unless page.no_footer %} {%
     include site-footer.html %} {% endunless %}
 
-    <script src="scripts.js"></script>
-    <script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/nav.js' | relative_url }}" defer></script>
     <script
       src="{{ '/assets/js/testimonial.js' | relative_url }}"
       defer
     ></script>
+    <script src="{{ '/assets/js/slider.js' | relative_url }}" defer></script>
   </body>
 </html>
