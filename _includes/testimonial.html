@@ -2,13 +2,12 @@
   class="max-w-full mx-auto px-2 xs:px-4 py-24 bg-bone min-h-[350px] xs:min-h-[400px] sm:min-h-[480px] md:min-h-[560px]"
 >
   <div
-    class="flex flex-col xs:flex-row items-center justify-between space-y-6 xs:space-y-0 xs:space-x-6 max-w-7xl mx-auto"
+    class="flex flex-col xs:flex-row items-center justify-between space-y-6 xs:space-y-0 max-w-7xl mx-auto"
   >
-    <!-- Left Arrow -->
     <button
       id="prevBtn"
       aria-label="Previous testimonial"
-      class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl select-none flex-shrink-0 px-3 py-2"
+      class="hidden md:flex text-2xl xs:text-3xl sm:text-4xl md:text-5xl select-none flex-shrink-0 px-3 py-2"
     >
       <img
         src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
@@ -17,11 +16,11 @@
     </button>
 
     <div
-      class="flex-1 w-full max-w-full xs:max-w-4xl px-0 xs:px-4 text-center relative overflow-hidden min-h-[280px] xs:min-h-[320px] sm:min-h-[360px] md:min-h-[420px]"
+      class="flex-1 w-full max-w-full xs:max-w-4xl px-0 xs:px-4 text-center justify-center relative overflow-visible min-h-[280px] xs:min-h-[320px] sm:min-h-[360px] md:min-h-[420px]"
     >
       {% for t in page.testimonials %}
       <article
-        class="testimonial-item absolute top-1/2 left-0 right-0 transform -translate-y-1/2 mx-auto transition-opacity duration-500 ease-in-out {% unless forloop.first %}opacity-0 pointer-events-none{% endunless %}"
+        class="testimonial-item absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full transition-opacity duration-500 ease-in-out {% unless forloop.first %}opacity-0 pointer-events-none{% endunless %}"
         data-index="{{ forloop.index0 }}"
       >
         <p
@@ -29,7 +28,6 @@
         >
           "{{ t.main_quote }}"
         </p>
-
         <div
           class="flex justify-center mb-4 space-x-1 text-keppel text-sm xs:text-base sm:text-lg md:text-xl"
           aria-label="Rating: {{ t.rating }} stars"
@@ -40,13 +38,11 @@
           <span>☆</span>
           {% endif %} {% endfor %}
         </div>
-
         <p
           class="text-xs xs:text-sm sm:text-base md:text-lg sm:leading-relaxed mb-6 max-w-full xs:max-w-3xl mx-auto text-raisin-black"
         >
           {{ t.description }}
         </p>
-
         <p
           class="font-bold text-xs xs:text-sm sm:text-base mb-1 text-raisin-black"
         >
@@ -55,7 +51,6 @@
         <p class="text-xs xs:text-sm sm:text-base text-raisin-black mb-6">
           {{ t.date }}
         </p>
-
         <button
           class="text-xs xs:text-sm sm:text-base underline text-raisin-black hover:text-raisin-black-hover focus:outline-none"
           type="button"
@@ -66,11 +61,10 @@
       {% endfor %}
     </div>
 
-    <!-- Right Arrow -->
     <button
       id="nextBtn"
       aria-label="Next testimonial"
-      class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl select-none flex-shrink-0 px-3 py-2 rotate-180"
+      class="hidden md:flex text-2xl xs:text-3xl sm:text-4xl md:text-5xl select-none flex-shrink-0 px-3 py-2 rotate-180"
     >
       <img
         src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
