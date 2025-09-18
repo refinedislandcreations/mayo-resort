@@ -1,7 +1,7 @@
 <div class="w-full py-16 bg-bone overflow-x-hidden">
-  <div class="max-w-6xl mx-auto text-center">
+  <div class="max-w-6xl mx-auto text-center px-4">
     <h2
-      class="text-7xl font-bold uppercase tracking-widest text-gray-800 mb-12"
+      class="text-5xl md:text-7xl font-bold uppercase tracking-widest text-gray-800 mb-12"
     >
       {{ page.activities.title }}
     </h2>
@@ -23,16 +23,17 @@
               alt="{{ card.title }}"
               class="w-full h-96 object-cover mb-6"
             />
-
             <h3
-              class="text-3xl font-bold uppercase tracking-wider text-raisin-black mb-3"
+              class="text-3xl md:text-5xl font-bold uppercase tracking-wider text-raisin-black mb-3"
             >
               {{ card.title }}
             </h3>
-            <p class="text-raisin-black mb-6 h-32">{{ card.description }}</p>
+            <p class="text-raisin-black mb-6 h-32 text-lg">
+              {{ card.description }}
+            </p>
             <a
               href="{{ card.button_link }}"
-              class="inline-block bg-keppel text-white px-4 xs:px-6 py-2 xs:py-3 font-bold tracking-widest uppercase hover:bg-keppel-hover transition duration-300 ease-in-out mt-auto self-start text-sm xs:text-base"
+              class="inline-block bg-keppel text-white px-4 xs:px-6 py-2 xs:py-3 font-bold tracking-widest uppercase hover:bg-keppel-hover transition duration-300 ease-in-out mt-auto self-start text-sm xs:text-base md:text-lg"
             >
               {{ card.button_text }}
             </a>
@@ -43,13 +44,24 @@
     </div>
   </div>
 
-  <div class="flex justify-center items-center mt-8 space-x-4">
-    <button id="prevBtn" class="text-2xl text-gray-500 hover:text-gray-800">
-      &lt;
+  <div class="flex justify-center items-center mt-8 space-x-6">
+    <button id="prevBtn" class="text-2xl text-keppel hover:text-keppel-hover">
+      <img
+        src="/assets/images/icons/arrow.png"
+        alt="Previous"
+        class="pointer-events-none w-4"
+      />
     </button>
-    <div class="flex space-x-2" id="dots"></div>
-    <button id="nextBtn" class="text-2xl text-gray-500 hover:text-gray-800">
-      &gt;
+    <div class="flex space-x-3" id="dots"></div>
+    <button
+      id="nextBtn"
+      class="text-2xl text-keppel hover:text-keppel-hover rotate-180"
+    >
+      <img
+        src="/assets/images/icons/arrow.png"
+        alt="Next"
+        class="pointer-events-none w-4"
+      />
     </button>
   </div>
 </div>
