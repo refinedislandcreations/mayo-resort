@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "rounded-full",
         "border-2",
         "border-raisin-black",
-        "bg-transparent",
+        "bg-bone",
         "transition-colors",
         "duration-300",
         "cursor-pointer"
@@ -77,11 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     slides.forEach((slide, index) => {
       if (index === currentIndex) {
-        slide.classList.remove("opacity-50", "scale-90");
+        slide.classList.remove("opacity-100", "scale-90");
         slide.classList.add("opacity-100", "scale-100");
       } else {
         slide.classList.remove("opacity-100", "scale-100");
-        slide.classList.add("opacity-50", "scale-90");
+        slide.classList.add("opacity-100", "scale-90");
       }
     });
 
