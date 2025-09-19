@@ -1,8 +1,17 @@
-<section class="bg-baby-powder py-16 max-w-full">
-  <div class="mx-auto max-w-[96rem] px-6 pt-16 pb-24 bg-baby-powder">
+<section
+  class="bg-baby-powder max-w-full py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
+>
+  <div class="mx-auto max-w-[96rem] bg-baby-powder">
+    <div class="md:hidden mb-6 text-center">
+      <h2
+        class="text-raisin-black uppercase text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold"
+      >
+        {{ page.weddings.title }}
+      </h2>
+    </div>
     <!-- Grid Container -->
     <div
-      class="grid grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2"
+      class="grid grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 {{ page.weddings.image_size }}"
     >
       <!-- Gambar 1 -->
       <div
@@ -50,22 +59,22 @@
     </div>
 
     <!-- Text Content Below Grid -->
-    <div class="mt-12 max-w-4xl mx-auto text-center px-4">
+    <div class="mt-6 md:mt-20 max-w-4xl mx-auto text-center">
       <h2
-        class="text-raisin-black font-extrabold uppercase text-2xl xs:text-4xl md:text-5xl lg:text-7xl mb-6"
+        class="hidden md:block text-raisin-black uppercase text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold"
       >
         {{ page.weddings.title }}
       </h2>
 
       <p
-        class="text-gray-700 max-w-3xl mx-auto text-base md:text-lg mb-6 leading-relaxed whitespace-pre-line"
+        class="text-raisin-black max-w-3xl mx-auto text-base font-normal mt-6 md:mt-12 leading-relaxed whitespace-pre-line"
       >
         {{ page.weddings.description }}
       </p>
 
       <a
         href="{{ page.weddings.button_link }}"
-        class="inline-block bg-keppel text-white px-8 py-3 hover:bg-keppel-hover transition duration-300 ease-in-out font-bold tracking-widest uppercase text-lg rounded"
+        class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
       >
         {{ page.weddings.button_text }}
       </a>
