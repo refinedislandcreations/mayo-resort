@@ -1,29 +1,33 @@
-<section class="py-16 bg-alabaster">
+<section
+  class="py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-alabaster"
+>
   <h2
-    class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-extrabold text-center mb-12 tracking-widest text-raisin-black uppercase"
+    class="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-center mb-12 tracking-widest text-raisin-black uppercase"
   >
     Our Beautiful Rooms
   </h2>
 
-  <div class="max-w-[96rem] mx-auto px-4 xs:px-6 sm:px-8 lg:px-12">
-    <div class="flex flex-wrap justify-center -mx-4">
+  <div class="max-w-[96rem] mx-auto">
+    <div class="flex flex-wrap justify-center">
       {% for room in page.rooms %}
-      <div class="w-full md:w-1/2 px-4 mb-12 flex">
+      <div class="w-full md:w-1/2 flex">
         <div
           class="overflow-hidden max-w-full md:max-w-[567px] mx-auto flex flex-col h-full w-full"
         >
           <img
             src="{{ room.image }}"
             alt="{{ room.title }}"
-            class="w-full h-auto object-cover aspect-[567/330]"
+            class="w-full h-auto object-cover shadow {{ room.image_size }}"
           />
           <div class="py-6 flex flex-col flex-grow">
             <h3
-              class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-raisin-black uppercase tracking-wide"
+              class="text-lg md:text-2xl lg:text-3xl font-semibold mb-3 text-raisin-black uppercase tracking-wide"
             >
               {{ room.title }}
             </h3>
-            <p class="text-raisin-black mb-4 text-sm xs:text-base max-w-[90%]">
+            <p
+              class="text-raisin-black mb-4 text-base font-normal mt-4 md:mt-8 max-w-[90%]"
+            >
               {{ room.description }}
             </p>
 
@@ -52,7 +56,7 @@
 
             <a
               href="{{ room.button_url }}"
-              class="inline-block bg-keppel text-white px-4 xs:px-6 py-2 xs:py-3 font-bold tracking-widest uppercase hover:bg-keppel-hover transition duration-300 ease-in-out mt-auto self-start text-sm xs:text-base"
+              class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
             >
               {{ room.button_text }}
             </a>
