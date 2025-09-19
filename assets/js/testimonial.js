@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function showTestimonial(index) {
     testimonials.forEach((el, i) => {
       if (i === index) {
-        el.classList.remove("opacity-0", "pointer-events-none");
+        el.classList.remove("hidden");
       } else {
-        el.classList.add("opacity-0", "pointer-events-none");
+        el.classList.add("hidden");
       }
     });
   }
@@ -34,29 +34,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function resetAutoSlide() {
     if (autoSlideInterval) clearInterval(autoSlideInterval);
-    // Jika auto slide aktif, restart interval
     if (window.innerWidth < 768) {
       autoSlideInterval = setInterval(nextTestimonial, 3000);
     }
   }
 
-  // Inisialisasi tampilkan testimonial pertama
   showTestimonial(currentIndex);
 
-  // Auto slide hanya di bawah md (768px)
   function setupAutoSlide() {
     if (window.innerWidth < 768) {
-      // Start auto slide
       autoSlideInterval = setInterval(nextTestimonial, 3000);
     } else {
-      // Clear auto slide kalau di atas md
       if (autoSlideInterval) clearInterval(autoSlideInterval);
     }
   }
 
   setupAutoSlide();
 
-  // Cek saat resize layar
   window.addEventListener("resize", () => {
     setupAutoSlide();
   });

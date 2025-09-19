@@ -1,8 +1,8 @@
 <section
-  class="max-w-full mx-auto px-2 xs:px-4 py-24 bg-bone min-h-[350px] xs:min-h-[400px] sm:min-h-[480px] md:min-h-[560px]"
+  class="max-w-full mx-auto py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-bone min-h-[350px] xs:min-h-[400px] sm:min-h-[480px] md:min-h-[560px]"
 >
   <div
-    class="flex flex-col xs:flex-row items-center justify-between space-y-6 xs:space-y-0 max-w-6xl mx-auto"
+    class="flex flex-col xs:flex-row items-center justify-between max-w-[96rem] mx-auto space-y-6 md:space-y-0"
   >
     <button
       id="prevBtn"
@@ -16,15 +16,15 @@
     </button>
 
     <div
-      class="flex-1 w-full max-w-full xs:max-w-4xl px-0 xs:px-4 text-center justify-center relative overflow-visible min-h-[280px] xs:min-h-[320px] sm:min-h-[360px] md:min-h-[420px]"
+      class="flex-1 w-full max-w-full xs:max-w-4xl text-center relative overflow-hidden min-h-[280px] xs:min-h-[320px] sm:min-h-[360px] md:min-h-[420px] flex items-center justify-center"
     >
       {% for t in page.testimonials %}
       <article
-        class="testimonial-item absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full transition-opacity duration-500 ease-in-out {% unless forloop.first %}opacity-0 pointer-events-none{% endunless %}"
+        class="testimonial-item w-full max-w-full transition-opacity duration-500 ease-in-out {% unless forloop.first %}hidden{% endunless %}"
         data-index="{{ forloop.index0 }}"
       >
         <p
-          class="uppercase font-extrabold text-base xs:text-lg sm:text-2xl md:text-3xl lg:text-4xl mb-4 leading-tight text-raisin-black"
+          class="uppercase text-xl sm:text-2xl md:text-4xl font-bold mb-6 md:mb-12 leading-tight text-raisin-black"
         >
           "{{ t.main_quote }}"
         </p>
@@ -39,20 +39,14 @@
           {% endif %} {% endfor %}
         </div>
         <p
-          class="text-xs xs:text-sm sm:text-base md:text-lg sm:leading-relaxed mb-6 max-w-full xs:max-w-3xl mx-auto text-raisin-black"
+          class="text-base font-normal sm:leading-relaxed mb-6 max-w-full xs:max-w-3xl mx-auto text-raisin-black"
         >
           {{ t.description }}
         </p>
-        <p
-          class="font-bold text-xs xs:text-sm sm:text-base mb-1 text-raisin-black"
-        >
-          {{ t.name }}
-        </p>
-        <p class="text-xs xs:text-sm sm:text-base text-raisin-black mb-6">
-          {{ t.date }}
-        </p>
+        <p class="font-bold text-base mb-1 text-raisin-black">{{ t.name }}</p>
+        <p class="text-base font-normal text-raisin-black mb-6">{{ t.date }}</p>
         <button
-          class="text-xs xs:text-sm sm:text-base underline text-raisin-black hover:text-raisin-black-hover focus:outline-none"
+          class="text-base font-bold underline text-raisin-black hover:text-raisin-black-hover focus:outline-none"
           type="button"
         >
           <a href="">View all reviews</a>
