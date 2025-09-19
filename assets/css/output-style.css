@@ -1037,6 +1037,10 @@ video {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -1666,6 +1670,10 @@ body {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .md\:pl-12 {
     padding-left: 3rem;
