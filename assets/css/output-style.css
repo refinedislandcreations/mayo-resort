@@ -1319,6 +1319,15 @@ body {
 }
 
 @media (min-width: 480px) {
+  .sm\:block {
+    display: block;
+  }
+  .sm\:grid {
+    display: grid;
+  }
+  .sm\:hidden {
+    display: none;
+  }
   .sm\:h-6 {
     height: 1.5rem;
   }

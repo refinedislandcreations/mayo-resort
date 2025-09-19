@@ -1,17 +1,19 @@
 {% assign dining_section = page.dining[0] %}
 
-<section class="px-4 xs:px-6 md:px-8 py-24 max-w-full mx-auto bg-alabaster">
-  <div class="max-w-[96rem] mx-auto w-full">
+<section
+  class="py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 max-w-full mx-auto bg-alabaster"
+>
+  <div class="max-w-[96rem] mx-auto">
     <!-- Judul -->
     <h2
-      class="uppercase font-bold text-3xl xs:text-4xl sm:text-5xl mb-4 text-raisin-black text-center md:mt-12"
+      class="uppercase text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-raisin-black text-center"
     >
       {{ dining_section.title }}
     </h2>
 
     <!-- Deskripsi -->
     <p
-      class="max-w-3xl text-base xs:text-lg mb-8 text-raisin-black text-center mx-auto"
+      class="max-w-3xl text-base font-normal mt-6 md:mt-12 text-raisin-black text-center mx-auto"
     >
       {{ dining_section.description }}
     </p>
@@ -20,15 +22,15 @@
     <div class="text-center mb-12">
       <a
         href="{{ dining_section.button_link }}"
-        class="inline-block bg-keppel text-white px-5 py-3 hover:bg-keppel-hover transition duration-300 ease-in-out font-bold tracking-widest uppercase max-w-max text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl"
+        class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
       >
         {{ dining_section.button_text }}
       </a>
     </div>
 
-    <!-- Grid Bento Gambar -->
+    <!-- Grid Bento for Desktop -->
     {% if dining_section.images.size >= 6 %}
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-4">
       <img
         src="{{ dining_section.images[0] }}"
         alt="Image 1"
@@ -76,5 +78,17 @@
       Image data incomplete. Please provide 6 images for this layout.
     </p>
     {% endif %}
+
+    <!-- Images for Mobile -->
+    <div class="sm:hidden flex flex-col space-y-4">
+      {% for image in dining_section.images limit:3 %}
+      <img
+        src="{{ image }}"
+        alt="Dining Image"
+        loading="lazy"
+        class="w-full h-auto object-cover {{ dining_section.image_height }}"
+      />
+      {% endfor %}
+    </div>
   </div>
 </section>
