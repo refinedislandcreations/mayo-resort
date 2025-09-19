@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function resetAutoSlide() {
     if (autoSlideInterval) clearInterval(autoSlideInterval);
     if (window.innerWidth < 768) {
-      autoSlideInterval = setInterval(nextTestimonial, 3000);
+      autoSlideInterval = setInterval(nextTestimonial, 5000);
     }
   }
 
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setupAutoSlide() {
     if (window.innerWidth < 768) {
-      autoSlideInterval = setInterval(nextTestimonial, 3000);
+      autoSlideInterval = setInterval(nextTestimonial, 5000);
     } else {
       if (autoSlideInterval) clearInterval(autoSlideInterval);
     }
