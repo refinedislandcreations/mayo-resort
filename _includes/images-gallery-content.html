@@ -1,70 +1,74 @@
-<section class="mx-auto px-6 pt-16 pb-24 bg-baby-powder">
-  <!-- Grid Container -->
-  <div class="grid grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2">
-    <!-- Gambar 1 -->
+<section class="bg-baby-powder py-16 max-w-full">
+  <div class="mx-auto max-w-[96rem] px-6 pt-16 pb-24 bg-baby-powder">
+    <!-- Grid Container -->
     <div
-      class="col-span-2 row-span-1 md:col-span-1 md:row-span-2 md:row-start-1 md:col-start-1"
+      class="grid grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2"
     >
-      <img
-        src="{{ page.weddings.images[0].src }}"
-        alt="{{ page.weddings.images[0].alt }}"
-        class="w-full h-full object-cover"
-      />
+      <!-- Gambar 1 -->
+      <div
+        class="col-span-2 row-span-1 md:col-span-1 md:row-span-2 md:row-start-1 md:col-start-1"
+      >
+        <img
+          src="{{ page.weddings.images[0].src }}"
+          alt="{{ page.weddings.images[0].alt }}"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Gambar 2 -->
+      <div
+        class="col-span-1 row-span-1 md:col-span-1 md:row-span-1 md:row-start-1 md:col-start-2"
+      >
+        <img
+          src="{{ page.weddings.images[1].src }}"
+          alt="{{ page.weddings.images[1].alt }}"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Gambar 3 -->
+      <div
+        class="col-span-1 row-span-1 md:col-span-1 md:row-span-1 md:row-start-2 md:col-start-2"
+      >
+        <img
+          src="{{ page.weddings.images[2].src }}"
+          alt="{{ page.weddings.images[2].alt }}"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Gambar 4 -->
+      <div
+        class="col-span-2 row-span-1 md:col-span-1 md:row-span-2 md:row-start-1 md:col-start-3"
+      >
+        <img
+          src="{{ page.weddings.images[3].src }}"
+          alt="{{ page.weddings.images[3].alt }}"
+          class="w-full h-full object-cover"
+        />
+      </div>
     </div>
 
-    <!-- Gambar 2 -->
-    <div
-      class="col-span-1 row-span-1 md:col-span-1 md:row-span-1 md:row-start-1 md:col-start-2"
-    >
-      <img
-        src="{{ page.weddings.images[1].src }}"
-        alt="{{ page.weddings.images[1].alt }}"
-        class="w-full h-full object-cover"
-      />
+    <!-- Text Content Below Grid -->
+    <div class="mt-12 max-w-4xl mx-auto text-center px-4">
+      <h2
+        class="text-raisin-black font-extrabold uppercase text-2xl xs:text-4xl md:text-5xl lg:text-7xl mb-6"
+      >
+        {{ page.weddings.title }}
+      </h2>
+
+      <p
+        class="text-gray-700 max-w-3xl mx-auto text-base md:text-lg mb-6 leading-relaxed whitespace-pre-line"
+      >
+        {{ page.weddings.description }}
+      </p>
+
+      <a
+        href="{{ page.weddings.button_link }}"
+        class="inline-block bg-keppel text-white px-8 py-3 hover:bg-keppel-hover transition duration-300 ease-in-out font-bold tracking-widest uppercase text-lg rounded"
+      >
+        {{ page.weddings.button_text }}
+      </a>
     </div>
-
-    <!-- Gambar 3 -->
-    <div
-      class="col-span-1 row-span-1 md:col-span-1 md:row-span-1 md:row-start-2 md:col-start-2"
-    >
-      <img
-        src="{{ page.weddings.images[2].src }}"
-        alt="{{ page.weddings.images[2].alt }}"
-        class="w-full h-full object-cover"
-      />
-    </div>
-
-    <!-- Gambar 4 -->
-    <div
-      class="col-span-2 row-span-1 md:col-span-1 md:row-span-2 md:row-start-1 md:col-start-3"
-    >
-      <img
-        src="{{ page.weddings.images[3].src }}"
-        alt="{{ page.weddings.images[3].alt }}"
-        class="w-full h-full object-cover"
-      />
-    </div>
-  </div>
-
-  <!-- Text Content Below Grid -->
-  <div class="mt-12 max-w-4xl mx-auto text-center px-4">
-    <h2
-      class="text-raisin-black font-extrabold uppercase text-2xl xs:text-4xl md:text-5xl lg:text-7xl mb-6"
-    >
-      {{ page.weddings.title }}
-    </h2>
-
-    <p
-      class="text-gray-700 max-w-3xl mx-auto text-base md:text-lg mb-6 leading-relaxed whitespace-pre-line"
-    >
-      {{ page.weddings.description }}
-    </p>
-
-    <a
-      href="{{ page.weddings.button_link }}"
-      class="inline-block bg-keppel text-white px-8 py-3 hover:bg-keppel-hover transition duration-300 ease-in-out font-bold tracking-widest uppercase text-lg"
-    >
-      {{ page.weddings.button_text }}
-    </a>
   </div>
 </section>
