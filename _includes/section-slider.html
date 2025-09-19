@@ -1,7 +1,9 @@
-<div class="w-full py-16 bg-bone overflow-x-hidden">
-  <div class="max-w-[96rem] mx-auto text-center px-4">
+<div
+  class="w-full bg-bone overflow-x-hidden py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
+>
+  <div class="max-w-[96rem] mx-auto text-center">
     <h2
-      class="text-5xl md:text-7xl font-bold uppercase tracking-widest text-gray-800 mb-12"
+      class="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold uppercase tracking-widest text-raisin-black mb-6 md:mb-12"
     >
       {{ page.activities.title }}
     </h2>
@@ -10,30 +12,34 @@
   <div class="relative w-full">
     <div class="overflow-hidden">
       <div
-        class="flex items-center -mx-4 transition-transform duration-500 ease-in-out"
+        class="flex items-start transition-transform duration-500 ease-in-out"
         id="slider"
       >
         {% for card in page.activities.cards %}
         <div
           class="flex-shrink-0 w-10/12 md:w-1/2 lg:w-5/12 px-4 transition-all duration-500 ease-in-out"
         >
-          <div class="flex flex-col">
-            <img
-              src="{{ card.image }}"
-              alt="{{ card.title }}"
-              class="w-full h-96 object-cover mb-6"
-            />
-            <h3
-              class="text-3xl md:text-5xl font-bold uppercase tracking-wider text-raisin-black mb-3"
-            >
-              {{ card.title }}
-            </h3>
-            <p class="text-raisin-black mb-6 h-32 text-lg">
-              {{ card.description }}
-            </p>
+          <div class="flex flex-col h-full justify-between">
+            <div>
+              <img
+                src="{{ card.image }}"
+                alt="{{ card.title }}"
+                class="w-full max-h-96 object-cover mb-6"
+              />
+              <h3
+                class="text-lg md:text-2xl lg:text-3xl font-semibold uppercase tracking-wider text-raisin-black"
+              >
+                {{ card.title }}
+              </h3>
+              <p
+                class="text-raisin-black text-base font-normal mt-4 md:mt-8 min-h-[5rem]"
+              >
+                {{ card.description }}
+              </p>
+            </div>
             <a
               href="{{ card.button_link }}"
-              class="inline-block bg-keppel text-white px-4 xs:px-6 py-2 xs:py-3 font-bold tracking-widest uppercase hover:bg-keppel-hover transition duration-300 ease-in-out mt-auto self-start text-sm xs:text-base md:text-lg"
+              class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
             >
               {{ card.button_text }}
             </a>
