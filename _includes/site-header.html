@@ -22,7 +22,7 @@
         <!-- Dropdown Menu -->
         <div class="relative group h-full flex items-center">
           <button
-            class="inline-flex items-center hover:text-baby-powder-hover focus:outline-none text-baby-powder uppercase font-bold text-xl tracking-widest"
+            class="inline-flex items-center hover:text-baby-powder-hover focus:outline-none text-baby-powder uppercase font-bold text-base tracking-widest"
           >
             {{ item.title }}
             <svg
@@ -40,13 +40,13 @@
             </svg>
           </button>
           <div
-            class="absolute left-0 top-full bg-custom-blue bg-opacity-80 border-none rounded-none shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 origin-top z-20 text-xl tracking-widest whitespace-nowrap"
-            style="margin-top: 8px"
+            class="absolute left-0 top-full py-2 bg-custom-blue bg-opacity-80 border-none rounded-none shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 origin-top z-20 text-base tracking-widest whitespace-nowrap"
+            style="margin-top: 52px"
           >
             {% for subitem in item.submenu %}
             <a
               href="{{ subitem.url | relative_url }}"
-              class="block px-4 py-2 text-baby-powder hover:bg-custom-blue-hover"
+              class="block px-6 py-2 text-baby-powder hover:bg-custom-blue-hover"
               >{{ subitem.title }}</a
             >
             {% endfor %}
@@ -56,14 +56,14 @@
         <!-- Book Now Button -->
         <a
           href="{{ item.url | relative_url }}"
-          class="ml-4 inline-block bg-keppel text-white px-[20px] py-[15px] hover:bg-keppel-hover transition duration-300 ease-in-out transform hover:scale-105 font-bold text-xl tracking-widest"
+          class="ml-4 inline-block bg-keppel text-white px-[20px] py-[15px] hover:bg-keppel-hover transition duration-300 ease-in-out transform hover:scale-105 font-bold text-base tracking-widest"
           >{{ item.title }}</a
         >
         {% else %}
         <!-- Single Link -->
         <a
           href="{{ item.url | relative_url }}"
-          class="text-baby-powder hover:text-baby-powder-hover px-3 py-2 text-xl tracking-widest"
+          class="text-baby-powder hover:text-baby-powder-hover px-3 py-2 text-base tracking-widest"
           >{{ item.title }}</a
         >
         {% endif %} {% endfor %}
@@ -74,21 +74,17 @@
         <button
           id="mobile-menu-button"
           aria-label="Toggle menu"
-          class="text-baby-powder focus:outline-none relative w-8 h-8"
+          class="text-baby-powder focus:outline-none relative w-8 h-8 flex flex-col justify-between py-1"
         >
           <span
-            class="absolute inset-0 flex flex-col justify-between h-6 w-8 transition-all duration-300 ease-in-out"
-          >
-            <span
-              class="bg-baby-powder h-1 w-full rounded transform transition-all duration-300 ease-in-out origin-center"
-            ></span>
-            <span
-              class="bg-baby-powder h-1 w-full rounded transform transition-all duration-300 ease-in-out origin-center"
-            ></span>
-            <span
-              class="bg-baby-powder h-1 w-full rounded transform transition-all duration-300 ease-in-out origin-center"
-            ></span>
-          </span>
+            class="hamburger-line top bg-baby-powder h-1 w-full rounded transition-transform duration-300 ease-in-out origin-center"
+          ></span>
+          <span
+            class="hamburger-line middle bg-baby-powder h-1 w-full rounded transition-opacity duration-300 ease-in-out"
+          ></span>
+          <span
+            class="hamburger-line bottom bg-baby-powder h-1 w-full rounded transition-transform duration-300 ease-in-out origin-center"
+          ></span>
         </button>
       </div>
     </div>
@@ -99,7 +95,7 @@
       class="fixed inset-0 bg-custom-blue z-40 flex flex-col p-6 xl:hidden transform translate-x-full transition-transform duration-500 ease-in-out overflow-y-auto"
     >
       <div
-        class="flex flex-col space-y-6 mt-20 uppercase font-bold text-baby-powder text-xl w-full max-w-xl mx-auto min-h-[calc(100vh-3rem)]"
+        class="flex flex-col space-y-6 mt-20 uppercase font-bold text-baby-powder text-base w-full max-w-xl mx-auto min-h-[calc(100vh-3rem)]"
       >
         <div class="flex-shrink-0">
           <a href="{{ '/' | relative_url }}">
@@ -114,7 +110,7 @@
         <!-- Dropdown Menu -->
         <details class="dropdown">
           <summary
-            class="cursor-pointer py-2 hover:text-baby-powder-hover flex items-center justify-between tracking-widest"
+            class="cursor-pointer py-2 hover:text-baby-powder-hover flex items-center justify-between tracking-widest appearance-none"
           >
             <span>{{ item.title }}</span>
             <svg

@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "h-4",
         "rounded-full",
         "border-2",
-        "border-raisin-black",
+        "border-kepel",
         "bg-bone",
         "transition-colors",
         "duration-300",
@@ -88,11 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const dots = Array.from(dotsContainer.children);
     dots.forEach((dot, index) => {
       if (index === currentIndex) {
-        dot.classList.remove("bg-transparent", "border-raisin-black");
+        dot.classList.remove("bg-transparent", "border-keppel");
         dot.classList.add("bg-keppel", "border-keppel");
       } else {
         dot.classList.remove("bg-keppel", "border-keppel");
-        dot.classList.add("bg-transparent", "border-raisin-black");
+        dot.classList.add("bg-transparent", "border-keppel");
       }
       console.log(`Dot ${index + 1} classes:`, dot.className); // Debug dot styling
     });

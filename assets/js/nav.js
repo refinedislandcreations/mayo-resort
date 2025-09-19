@@ -12,24 +12,30 @@ const initializeMobileMenu = () => {
 };
 
 const toggleMenu = (menu, button, isOpen) => {
-  const lines = button.querySelectorAll("span > span");
+  const topLine = button.querySelector(".top");
+  const middleLine = button.querySelector(".middle");
+  const bottomLine = button.querySelector(".bottom");
+
   if (isOpen) {
     menu.classList.remove("translate-x-full");
     menu.classList.add("translate-x-0");
-    lines.forEach((line, index) => {
-      if (index === 0) line.classList.add("rotate-45", "translate-y-2.5");
-      if (index === 1) line.classList.add("opacity-0");
-      if (index === 2) line.classList.add("-rotate-45", "-translate-y-2.5");
-    });
+
+    // Fade out middle line
+    middleLine.style.opacity = "0";
+
+    // Transform top and bottom lines to form an "X"
+    topLine.style.transform = "translateY(10px) rotate(45deg)";
+    bottomLine.style.transform = "translateY(-10px) rotate(-45deg)";
   } else {
     menu.classList.add("translate-x-full");
     menu.classList.remove("translate-x-0");
-    lines.forEach((line, index) => {
-      if (index === 0) line.classList.remove("rotate-45", "translate-y-2.5");
-      if (index === 1) line.classList.remove("opacity-0");
-      if (index === 2) line.classList.remove("-rotate-45", "-translate-y-2.5");
-    });
-    closeAllDropdowns();
+
+    // Restore middle line
+    middleLine.style.opacity = "1";
+
+    // Reset transformations
+    topLine.style.transform = "translateY(0) rotate(0deg)";
+    bottomLine.style.transform = "translateY(0) rotate(0deg)";
   }
 };
 
