@@ -1,13 +1,19 @@
+<!--
+  Your existing markup (keep mostly same),
+  just add an empty container for mobile arrows below testimonials
+-->
 <section
   class="max-w-full mx-auto py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-bone min-h-[350px] xs:min-h-[400px] sm:min-h-[480px] md:min-h-[560px]"
 >
   <div
     class="flex flex-col xs:flex-row items-center justify-between max-w-[96rem] mx-auto space-y-6 md:space-y-0"
+    id="testimonialWrapper"
   >
+    <!-- Prev Button (desktop) -->
     <button
       id="prevBtn"
       aria-label="Previous testimonial"
-      class="hidden md:flex text-2xl xs:text-3xl sm:text-4xl md:text-5xl select-none flex-shrink-0 px-3 py-2"
+      class="hidden md:flex flex-shrink-0"
     >
       <img
         src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
@@ -15,8 +21,10 @@
       />
     </button>
 
+    <!-- Testimonials container -->
     <div
       class="flex-1 w-full max-w-full xs:max-w-4xl text-center relative overflow-hidden min-h-[280px] xs:min-h-[320px] sm:min-h-[360px] md:min-h-[420px] flex items-center justify-center"
+      id="testimonialContainer"
     >
       {% for t in page.testimonials %}
       <article
@@ -55,14 +63,36 @@
       {% endfor %}
     </div>
 
+    <!-- Next Button (desktop) -->
     <button
       id="nextBtn"
       aria-label="Next testimonial"
-      class="hidden md:flex text-2xl xs:text-3xl sm:text-4xl md:text-5xl select-none flex-shrink-0 px-3 py-2 rotate-180"
+      class="hidden md:flex select-none flex-shrink-0 rotate-180"
     >
       <img
         src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
         alt="Right Arrow Icon"
+      />
+    </button>
+  </div>
+
+  <!-- Mobile arrows container (only show below 768px) -->
+  <div
+    id="mobileArrows"
+    class="flex md:hidden px-4 mt-6 justify-center space-x-6"
+  >
+    <button id="mobilePrevBtn" aria-label="Previous testimonial">
+      <img
+        src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
+        alt="Left Arrow Icon"
+        class="object-contain w-8 h-8"
+      />
+    </button>
+    <button id="mobileNextBtn" aria-label="Next testimonial">
+      <img
+        src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
+        alt="Right Arrow Icon"
+        class="object-contain rotate-180 w-8 h-8"
       />
     </button>
   </div>
