@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Create indicators (dots with border)
   for (let i = 0; i < totalCards; i++) {
     const dot = document.createElement("div");
-    dot.className = "w-3 h-3 rounded-full transition-all duration-300";
+    dot.className = "w-4 h-4 rounded-full transition-all duration-300";
     dot.style.border = `2px solid #5aaf9d`;
     dot.style.backgroundColor = i === currentIndex ? "#5aaf9d" : "transparent";
     indicator.appendChild(dot);
