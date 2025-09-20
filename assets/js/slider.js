@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("slider.js script running");
-
   const slider = document.getElementById("slider");
   const cards = slider.querySelectorAll(":scope > div");
   const prevBtn = document.getElementById("prevBtnSlider");
