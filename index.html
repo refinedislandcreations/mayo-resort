@@ -16,6 +16,35 @@ image_banner:
     Welcome to
     Mayo Resort
 
+popup:
+  - title: "Unlock Special Rates"
+    description: "Use our promo code ABCDEF and get up to 25% off breakfast.  Direct booking via website only!"
+    image: "/assets/images/dummy.png"
+    button:
+      text: "Book Now"
+      url: "https://bookingku.bookandlink.com/booking-page.php?id=mayo-resort"
+
+  - title: "Winter Wonderland Discount"
+    description: "Enjoy special discounts this winter season on all packages."
+    image: "/assets/images/dummy.png"
+    button:
+      text: "Reserve Today"
+      url: "https://bookingku.bookandlink.com/booking-page.php?id=mayo-resort"
+
+  - title: "Spring Break Offer"
+    description: "Make your spring break unforgettable with our exclusive deals!"
+    image: "/assets/images/dummy.png"
+    button:
+      text: "Book Now"
+      url: "https://bookingku.bookandlink.com/booking-page.php?id=mayo-resort"
+
+  - title: "Autumn Special Promo"
+    description: "Fall into savings this autumn with discounts on select stays."
+    image: "/assets/images/dummy.png"
+    button:
+      text: "Grab the Deal"
+      url: "https://bookingku.bookandlink.com/booking-page.php?id=mayo-resort"
+
 mayo_about:
   title: "A Peaceful Escape by the Sea"
   description: "Located at the tip of a scenic headland, Mayo Resort provides a serene retreat, surrounded by the Bali Sea on three sides. With panoramic ocean views, a calm microclimate, and unforgettable sunsets, it's the perfect place to unwind and enjoy a peaceful escape, away from the hustle and bustle."
@@ -175,9 +204,10 @@ cta_mayo:
   image: "/assets/images/dummy.png"
 ---
 
-{% include image-banner.html %} {% include content-with-images.html %} {%
-include rooms-content.html %} {% include testimonial.html %} {% include
-content-with-image-on-the-left.html section=page.offer %} {% include
-image-gallery-text-section.html %} {% include content-image-right.html %} {%
-include images-gallery-content.html %} {% include section-slider.html %} {%
-include content-with-image-on-the-left.html section=page.cta_mayo %}
+{% include image-banner.html %} {% include popup-modal.html %} {% include
+content-with-images.html %} {% include rooms-content.html %} {% include
+testimonial.html %} {% include content-with-image-on-the-left.html
+section=page.offer %} {% include image-gallery-text-section.html %} {% include
+content-image-right.html %} {% include images-gallery-content.html %} {% include
+section-slider.html %} {% include content-with-image-on-the-left.html
+section=page.cta_mayo %}
