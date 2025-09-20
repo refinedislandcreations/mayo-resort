@@ -28,50 +28,90 @@
       </a>
     </div>
 
-    <!-- Grid Bento for Desktop -->
+    <!-- LightGallery Container for Desktop -->
     {% if dining_section.images.size >= 6 %}
-    <div class="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img
-        src="{{ dining_section.images[0] }}"
-        alt="Image 1"
-        loading="lazy"
-        class="col-span-2 md:col-span-1 md:col-start-1 md:row-start-1 object-cover w-full h-full rounded {{ dining_section.image_height }}"
-      />
+    <div
+      id="lightgallery-desktop"
+      class="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-4 cursor-pointer"
+    >
+      {% assign imgs = dining_section.images %}
+      <a
+        href="{{ imgs[0] }}"
+        data-lg-size="1600-1067"
+        class="col-span-2 md:col-span-1 md:col-start-1 md:row-start-1 block overflow-hidden"
+      >
+        <img
+          src="{{ imgs[0] }}"
+          alt="Image 1"
+          loading="lazy"
+          class="object-cover w-full h-full {{ dining_section.image_height }}"
+        />
+      </a>
 
-      <img
-        src="{{ dining_section.images[1] }}"
-        alt="Image 2"
-        loading="lazy"
-        class="col-span-1 md:col-span-2 md:col-start-2 md:row-start-1 object-cover w-full h-full rounded {{ dining_section.image_height }}"
-      />
+      <a
+        href="{{ imgs[1] }}"
+        data-lg-size="1600-1067"
+        class="col-span-1 md:col-span-2 md:col-start-2 md:row-start-1 block overflow-hidden"
+      >
+        <img
+          src="{{ imgs[1] }}"
+          alt="Image 2"
+          loading="lazy"
+          class="object-cover w-full h-full {{ dining_section.image_height }}"
+        />
+      </a>
 
-      <img
-        src="{{ dining_section.images[2] }}"
-        alt="Image 3"
-        loading="lazy"
-        class="col-span-1 md:block md:col-span-1 md:col-start-4 md:row-start-1 object-cover w-full h-full rounded {{ dining_section.image_height }}"
-      />
+      <a
+        href="{{ imgs[2] }}"
+        data-lg-size="1600-1067"
+        class="col-span-1 md:block md:col-span-1 md:col-start-4 md:row-start-1 block overflow-hidden"
+      >
+        <img
+          src="{{ imgs[2] }}"
+          alt="Image 3"
+          loading="lazy"
+          class="object-cover w-full h-full {{ dining_section.image_height }}"
+        />
+      </a>
 
-      <img
-        src="{{ dining_section.images[3] }}"
-        alt="Image 4"
-        loading="lazy"
-        class="col-span-1 md:col-span-1 md:col-start-1 md:row-start-2 object-cover w-full h-full rounded {{ dining_section.image_height }}"
-      />
+      <a
+        href="{{ imgs[3] }}"
+        data-lg-size="1600-1067"
+        class="col-span-1 md:col-span-1 md:col-start-1 md:row-start-2 block overflow-hidden"
+      >
+        <img
+          src="{{ imgs[3] }}"
+          alt="Image 4"
+          loading="lazy"
+          class="object-cover w-full h-full {{ dining_section.image_height }}"
+        />
+      </a>
 
-      <img
-        src="{{ dining_section.images[4] }}"
-        alt="Image 5"
-        loading="lazy"
-        class="col-span-1 md:col-span-1 md:col-start-2 md:row-start-2 object-cover w-full h-full rounded {{ dining_section.image_height }}"
-      />
+      <a
+        href="{{ imgs[4] }}"
+        data-lg-size="1600-1067"
+        class="col-span-1 md:col-span-1 md:col-start-2 md:row-start-2 block overflow-hidden"
+      >
+        <img
+          src="{{ imgs[4] }}"
+          alt="Image 5"
+          loading="lazy"
+          class="object-cover w-full h-full {{ dining_section.image_height }}"
+        />
+      </a>
 
-      <img
-        src="{{ dining_section.images[5] }}"
-        alt="Image 6"
-        loading="lazy"
-        class="col-span-2 md:col-span-2 md:col-start-3 md:row-start-2 object-cover w-full h-full rounded {{ dining_section.image_height }}"
-      />
+      <a
+        href="{{ imgs[5] }}"
+        data-lg-size="1600-1067"
+        class="col-span-2 md:col-span-2 md:col-start-3 md:row-start-2 block overflow-hidden"
+      >
+        <img
+          src="{{ imgs[5] }}"
+          alt="Image 6"
+          loading="lazy"
+          class="object-cover w-full h-full {{ dining_section.image_height }}"
+        />
+      </a>
     </div>
     {% else %}
     <p class="text-red-500 text-center">
@@ -79,15 +119,24 @@
     </p>
     {% endif %}
 
-    <!-- Images for Mobile -->
-    <div class="sm:hidden flex flex-col space-y-4">
+    <!-- LightGallery Container for Mobile -->
+    <div
+      id="lightgallery-mobile"
+      class="sm:hidden flex flex-col space-y-4 cursor-pointer"
+    >
       {% for image in dining_section.images limit:3 %}
-      <img
-        src="{{ image }}"
-        alt="Dining Image"
-        loading="lazy"
-        class="w-full h-auto object-cover {{ dining_section.image_height }}"
-      />
+      <a
+        href="{{ image }}"
+        data-lg-size="1600-1067"
+        class="block overflow-hidden"
+      >
+        <img
+          src="{{ image }}"
+          alt="Dining Image"
+          loading="lazy"
+          class="w-full h-auto object-cover {{ dining_section.image_height }}"
+        />
+      </a>
       {% endfor %}
     </div>
   </div>
