@@ -1,133 +1,94 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("slider.js script running");
+
   const slider = document.getElementById("slider");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
-  const dotsContainer = document.getElementById("dots");
+  const cards = slider.querySelectorAll(":scope > div");
+  const prevBtn = document.getElementById("prevBtnSlider");
+  const nextBtn = document.getElementById("nextBtnSlider");
+  const indicator = document.getElementById("indicator");
 
-  // Debug: Log if elements are found
-  console.log("Slider:", slider);
-  console.log("Prev Button:", prevBtn);
-  console.log("Next Button:", nextBtn);
-  console.log("Dots Container:", dotsContainer);
-
-  // Exit if essential elements aren't found
-  if (!slider || !prevBtn || !nextBtn || !dotsContainer) {
-    console.error("Slider elements not found. Please check your HTML IDs.");
+  if (!slider || cards.length === 0 || !prevBtn || !nextBtn) {
+    console.warn("Missing essential elements, cannot initialize slider");
     return;
   }
 
-  const slides = Array.from(slider.children);
-  const totalSlides = slides.length;
+  let currentIndex = 1; // Start from second card (index 1)
+  const totalCards = cards.length;
 
-  // Debug: Log number of slides
-  console.log("Total Slides:", totalSlides);
+  // Clear previous indicators if any (safe re-initialize)
+  indicator.innerHTML = "";
 
-  // Exit if there are no slides to display
-  if (totalSlides === 0) {
-    console.error("No slides found in the slider.");
-    return;
+  // Create indicators (dots with border)
+  for (let i = 0; i < totalCards; i++) {
+    const dot = document.createElement("div");
+    dot.className = "w-3 h-3 rounded-full transition-all duration-300";
+    dot.style.border = `2px solid #5aaf9d`;
+    dot.style.backgroundColor = i === currentIndex ? "#5aaf9d" : "transparent";
+    indicator.appendChild(dot);
   }
 
-  // --- State ---
-  let currentIndex = 1; // Start with the second slide
-
-  // --- Create Dots ---
-  function setupDots() {
-    dotsContainer.innerHTML = ""; // Clear existing dots
-    slides.forEach((_, index) => {
-      const dot = document.createElement("button");
-      dot.classList.add(
-        "w-4",
-        "h-4",
-        "rounded-full",
-        "border-2",
-        "border-kepel",
-        "bg-bone",
-        "transition-colors",
-        "duration-300",
-        "cursor-pointer"
-      );
-      dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
-      dot.addEventListener("click", () => {
-        console.log(`Dot ${index + 1} clicked`);
-        currentIndex = index;
-        updateSlider();
-      });
-      dotsContainer.appendChild(dot);
-      console.log(`Created dot ${index + 1} with classes:`, dot.className); // Debug dot creation
+  function updateIndicators() {
+    Array.from(indicator.children).forEach((dot, i) => {
+      if (i === currentIndex) {
+        dot.style.backgroundColor = "#5aaf9d";
+        dot.style.borderColor = "#5aaf9d";
+        dot.style.opacity = "1";
+      } else {
+        dot.style.backgroundColor = "transparent";
+        dot.style.borderColor = "#5aaf9d";
+        dot.style.opacity = "0.6";
+      }
     });
   }
 
-  // --- Main Update Function ---
   function updateSlider() {
-    const sliderContainer = slider.parentElement;
-    const containerWidth = sliderContainer.offsetWidth || window.innerWidth;
-    const activeSlide = slides[currentIndex];
-    const slideWidth = activeSlide.offsetWidth || 0;
-    const slideOffsetLeft = activeSlide.offsetLeft || 0;
+    const card = cards[0];
+    const cardStyle = getComputedStyle(card);
+    const cardMarginRight = parseFloat(cardStyle.marginRight) || 0;
+    const cardMarginLeft = parseFloat(cardStyle.marginLeft) || 0;
+    const totalCardWidth = card.offsetWidth + cardMarginLeft + cardMarginRight;
 
-    console.log("Container Width:", containerWidth);
-    console.log("Slide Width:", slideWidth);
-    console.log("Slide Offset Left:", slideOffsetLeft);
-    console.log("Current Index:", currentIndex);
+    const containerWidth = slider.parentElement.offsetWidth;
 
-    const targetPosition =
-      containerWidth / 2 - (slideOffsetLeft + slideWidth / 2);
-    slider.style.transform = `translateX(${targetPosition}px)`;
+    // Calculate offset so current card is centered:
+    // Move slider so that current card's left edge aligns at (containerWidth/2 - cardWidth/2)
+    let offset =
+      totalCardWidth * currentIndex - (containerWidth / 2 - totalCardWidth / 2);
 
-    slides.forEach((slide, index) => {
-      if (index === currentIndex) {
-        slide.classList.remove("opacity-100", "scale-90");
-        slide.classList.add("opacity-100", "scale-100");
+    const maxOffset = totalCardWidth * (totalCards - 1);
+    if (offset < 0) offset = 0;
+    if (offset > maxOffset) offset = maxOffset;
+
+    gsap.to(slider, {
+      x: -offset,
+      duration: 0.6,
+      ease: "power3.out",
+    });
+
+    cards.forEach((card, i) => {
+      if (i === currentIndex) {
+        gsap.to(card, { scale: 1, opacity: 1, zIndex: 10, duration: 0.6 });
+      } else if (i === currentIndex - 1 || i === currentIndex + 1) {
+        gsap.to(card, { scale: 1, opacity: 0.6, zIndex: 5, duration: 0.6 });
       } else {
-        slide.classList.remove("opacity-100", "scale-100");
-        slide.classList.add("opacity-100", "scale-90");
+        gsap.to(card, { scale: 1, opacity: 0.3, zIndex: 1, duration: 0.6 });
       }
     });
 
-    const dots = Array.from(dotsContainer.children);
-    dots.forEach((dot, index) => {
-      if (index === currentIndex) {
-        dot.classList.remove("bg-transparent", "border-keppel");
-        dot.classList.add("bg-keppel", "border-keppel");
-      } else {
-        dot.classList.remove("bg-keppel", "border-keppel");
-        dot.classList.add("bg-transparent", "border-keppel");
-      }
-      console.log(`Dot ${index + 1} classes:`, dot.className); // Debug dot styling
-    });
+    updateIndicators();
   }
 
-  // --- Event Listeners ---
-  [prevBtn, nextBtn].forEach((btn) => {
-    btn.disabled = false;
-    btn.style.pointerEvents = "auto";
-    btn.style.position = "relative"; // Ensure no overlap
-    btn.style.zIndex = "10"; // Ensure buttons are on top
-  });
-
-  prevBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log("Previous button clicked, currentIndex before:", currentIndex);
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    console.log("Current Index after:", currentIndex);
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
     updateSlider();
   });
 
-  nextBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log("Next button clicked, currentIndex before:", currentIndex);
-    currentIndex = (currentIndex + 1) % totalSlides;
-    console.log("Current Index after:", currentIndex);
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % totalCards;
     updateSlider();
   });
 
-  window.addEventListener("resize", () => {
-    console.log("Window resized, updating slider");
-    updateSlider();
-  });
+  window.addEventListener("resize", updateSlider);
 
-  // --- Initial Setup ---
-  setupDots();
-  setTimeout(updateSlider, 50);
+  updateSlider();
 });
