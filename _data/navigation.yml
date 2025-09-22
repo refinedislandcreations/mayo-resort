@@ -30,7 +30,7 @@ main_nav:
       - title: Getting Here
         url: "/getting-here"
   - title: Book Now
-    url: "/booking"
+    url: "https://bookingku.bookandlink.com/booking-page.php?id=mayo-resort"
     is_button: true
 
 social_links:
