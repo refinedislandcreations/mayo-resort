@@ -18,6 +18,7 @@
       <img
         src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
         alt="Left Arrow Icon"
+        loading="lazy"
       />
     </button>
 
@@ -26,7 +27,7 @@
       class="flex-1 w-full max-w-full xs:max-w-4xl text-center relative overflow-hidden min-h-[280px] xs:min-h-[320px] sm:min-h-[360px] md:min-h-[420px] flex items-center justify-center"
       id="testimonialContainer"
     >
-      {% for t in page.testimonials %}
+      {% for t in page.guest_testimonials %}
       <article
         class="testimonial-item w-full max-w-full transition-opacity duration-500 ease-in-out {% unless forloop.first %}hidden{% endunless %}"
         data-index="{{ forloop.index0 }}"
@@ -56,6 +57,7 @@
         <button
           class="text-base font-bold underline text-raisin-black hover:text-raisin-black-hover focus:outline-none"
           type="button"
+          aria-label="View all reviews"
         >
           <a href="">View all reviews</a>
         </button>
@@ -72,6 +74,7 @@
       <img
         src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
         alt="Right Arrow Icon"
+        loading="lazy"
       />
     </button>
   </div>
@@ -85,6 +88,8 @@
       <img
         src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
         alt="Left Arrow Icon"
+        loading="lazy"
+        aria-label="Previous testimonial"
         class="object-contain w-8 h-8"
       />
     </button>
@@ -92,6 +97,8 @@
       <img
         src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
         alt="Right Arrow Icon"
+        loading="lazy"
+        aria-label="Next testimonial"
         class="object-contain rotate-180 w-8 h-8"
       />
     </button>

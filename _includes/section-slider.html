@@ -21,8 +21,9 @@
           <div class="flex flex-col h-full justify-between">
             <div>
               <img
-                src="{{ card.image }}"
-                alt="{{ card.title }}"
+                src="{{ card.image.src }}"
+                alt="{{ card.image.alt }}"
+                loading="lazy"
                 class="w-full h-64 md:h-72 lg:h-96 object-cover mb-6 rounded"
               />
               <h3
@@ -38,6 +39,7 @@
             </div>
             <a
               href="{{ card.button_link }}"
+              aria-label="{{ card.button_aria_label }}"
               class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-4 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
             >
               {{ card.button_text }}
@@ -58,6 +60,7 @@
       <img
         src="/assets/images/icons/arrow.png"
         alt="Previous"
+        loading="lazy"
         class="pointer-events-none w-4"
       />
     </button>
@@ -70,6 +73,7 @@
       <img
         src="/assets/images/icons/arrow.png"
         alt="Next"
+        loading="lazy"
         class="pointer-events-none w-4"
       />
     </button>

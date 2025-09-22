@@ -1,6 +1,6 @@
 <section
-  class="relative w-full h-screen bg-cover bg-center"
-  style="background-image: url('{{ page.image_banner.image_banner | relative_url }}');"
+  class="relative w-full h-screen bg-cover bg-center lazy-bg"
+  data-bg="{{ page.image_banner.image_banner | relative_url }}"
   aria-label="{{ page.image_banner.banner_label }}"
 >
   <!-- Overlay -->
@@ -9,10 +9,10 @@
   <!-- Content wrapper with max width -->
   <div class="relative z-10 flex justify-center h-full">
     <div
-      class="flex flex-col items-start justify-end h-full text-white text-left px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 pb-12 max-w-[96rem] w-full"
+      class="flex flex-col items-start justify-end h-full text-left px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 pb-12 max-w-[96rem] w-full"
     >
       <h1
-        class="font-extrabold text-raisin-black uppercase tracking-widest text-2xl xs:text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl 3xl:text-[7rem] 4xl:text-[8rem] 5xl:text-[9rem]"
+        class="font-extrabold text-baby-powder uppercase tracking-widest text-2xl xs:text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl 3xl:text-[7rem] 4xl:text-[8rem] 5xl:text-[9rem]"
       >
         {{ page.image_banner.title | newline_to_br }}
       </h1>
