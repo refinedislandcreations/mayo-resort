@@ -1085,6 +1085,9 @@ video {
 .leading-tight {
   line-height: .85;
 }
+.leading-loose {
+  line-height: 2;
+}
 .tracking-wide {
   letter-spacing: 0.025em;
 }
