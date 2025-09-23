@@ -596,6 +596,9 @@ video {
 .inline-flex {
   display: inline-flex;
 }
+.table {
+  display: table;
+}
 .grid {
   display: grid;
 }
@@ -755,6 +758,9 @@ video {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+.list-disc {
+  list-style-type: disc;
 }
 .appearance-none {
   -webkit-appearance: none;
@@ -1039,6 +1045,12 @@ video {
 .pt-8 {
   padding-top: 2rem;
 }
+.pl-5 {
+  padding-left: 1.25rem;
+}
+.pr-5 {
+  padding-right: 1.25rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1212,6 +1224,14 @@ body {
     font-size: 3rem;
     line-height: 1;
   }
+}
+
+.marker\:text-keppel *::marker {
+  color: rgb(90 175 157 );
+}
+
+.marker\:text-keppel::marker {
+  color: rgb(90 175 157 );
 }
 
 .after\:absolute::after {

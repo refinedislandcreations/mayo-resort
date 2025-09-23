@@ -1,41 +1,41 @@
-{% assign dining_section = page.dining_options[0] %}
+{% assign section = include.section %}
 
 <section
-  class="py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 max-w-full mx-auto bg-alabaster"
+  class="py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 max-w-full mx-auto {{ section.bg_color }}"
 >
   <div class="max-w-[96rem] mx-auto">
     <!-- Judul -->
     <h2
       class="uppercase text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-raisin-black text-center"
     >
-      {{ dining_section.title }}
+      {{ section.title }}
     </h2>
 
     <!-- Deskripsi -->
     <p
       class="max-w-3xl text-base font-normal mt-6 md:mt-12 text-raisin-black text-center mx-auto"
     >
-      {{ dining_section.description }}
+      {{ section.description | raw }}
     </p>
 
     <!-- Tombol -->
     <div class="text-center mb-12">
       <a
-        href="{{ dining_section.button_link }}"
-        aria-label="{{ dining_section.button_aria_label }}"
+        href="{{ section.button_link }}"
+        aria-label="{{ section.button_aria_label }}"
         class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
       >
-        {{ dining_section.button_text }}
+        {{ section.button_text }}
       </a>
     </div>
 
     <!-- LightGallery Container for Desktop -->
-    {% if dining_section.images.size >= 6 %}
+    {% if section.images.size >= 6 %}
     <div
       id="lightgallery-desktop"
       class="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-4 cursor-pointer"
     >
-      {% assign imgs = dining_section.images %}
+      {% assign imgs = section.images %}
       <a
         href="{{ imgs[0].src }}"
         data-lg-size="1600-1067"
@@ -45,7 +45,7 @@
           src="{{ imgs[0].src }}"
           alt="{{ imgs[0].alt }}"
           loading="lazy"
-          class="object-cover w-full h-full {{ dining_section.image_height }}"
+          class="object-cover w-full h-full {{ section.image_height }}"
         />
       </a>
 
@@ -58,7 +58,7 @@
           src="{{ imgs[1].src }}"
           alt="{{ imgs[1].alt }}"
           loading="lazy"
-          class="object-cover w-full h-full {{ dining_section.image_height }}"
+          class="object-cover w-full h-full {{ section.image_height }}"
         />
       </a>
 
@@ -71,7 +71,7 @@
           src="{{ imgs[2].src }}"
           alt="{{ imgs[2].alt }}"
           loading="lazy"
-          class="object-cover w-full h-full {{ dining_section.image_height }}"
+          class="object-cover w-full h-full {{ section.image_height }}"
         />
       </a>
 
@@ -84,7 +84,7 @@
           src="{{ imgs[3].src }}"
           alt="{{ imgs[3].alt }}"
           loading="lazy"
-          class="object-cover w-full h-full {{ dining_section.image_height }}"
+          class="object-cover w-full h-full {{ section.image_height }}"
         />
       </a>
 
@@ -97,7 +97,7 @@
           src="{{ imgs[4].src }}"
           alt="{{ imgs[4].alt }}"
           loading="lazy"
-          class="object-cover w-full h-full {{ dining_section.image_height }}"
+          class="object-cover w-full h-full {{ section.image_height }}"
         />
       </a>
 
@@ -110,7 +110,7 @@
           src="{{ imgs[5].src }}"
           alt="{{ imgs[5].alt }}"
           loading="lazy"
-          class="object-cover w-full h-full {{ dining_section.image_height }}"
+          class="object-cover w-full h-full {{ section.image_height }}"
         />
       </a>
     </div>
@@ -125,7 +125,7 @@
       id="lightgallery-mobile"
       class="sm:hidden flex flex-col space-y-4 cursor-pointer"
     >
-      {% for image in dining_section.images limit:3 %}
+      {% for image in section.images limit:3 %}
       <a
         href="{{ image.src }}"
         data-lg-size="1600-1067"
@@ -135,7 +135,7 @@
           src="{{ image.src }}"
           alt="{{ image.alt }}"
           loading="lazy"
-          class="w-full h-auto object-cover {{ dining_section.image_height }}"
+          class="w-full h-auto object-cover {{ section.image_height }}"
         />
       </a>
       {% endfor %}

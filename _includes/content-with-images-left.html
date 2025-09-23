@@ -1,0 +1,63 @@
+<section
+  class="flex flex-col md:flex-row items-center justify-between bg-baby-powder py-12 md:py-24 lg:py-48 pr-4 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20"
+>
+  <div
+    class="w-full max-w-[96rem] mx-auto flex flex-col md:flex-row items-center justify-between"
+  >
+    <!-- Gambar di kiri -->
+    <div
+      class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-start pl-4 md:pl-0 h-full w-full"
+    >
+      <img
+        src="{{ include.section.image1.src }}"
+        alt="{{ include.section.image1.alt }}"
+        loading="lazy"
+        class="w-full h-auto object-cover shadow {{ include.section.image_size }}"
+      />
+      <img
+        src="{{ include.section.image2.src }}"
+        alt="{{ include.section.image2.alt }}"
+        loading="lazy"
+        class="w-full h-auto object-cover shadow {{ include.section.image_size }}"
+      />
+    </div>
+
+    <!-- Konten teks di kanan -->
+    <div class="md:w-1/2 flex flex-col justify-center pl-4 md:px-12 pb-6">
+      <!-- Title -->
+      <h2
+        class="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold mb-4 uppercase text-raisin-black tracking-wider"
+      >
+        {{ include.section.title }}
+      </h2>
+
+      {% if include.section.description %} {% if include.section.description[0]
+      %}
+      <!-- Description as List -->
+      <ul
+        class="list-disc marker:text-keppel text-base text-raisin-black space-y-3 md:mt-8 pl-5"
+      >
+        {% for item in include.section.description %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <!-- Description as Single Paragraph -->
+      <p
+        class="text-base font-normal mb-6 text-raisin-black tracking-wide md:mt-4"
+      >
+        {{ include.section.description }}
+      </p>
+      {% endif %} {% endif %} {% if include.section.button_text %}
+      <!-- Button -->
+      <a
+        href="{{ include.section.button_link }}"
+        aria-label="{{ include.section.button_aria_label }}"
+        class="inline-block bg-keppel text-baby-powder px-5 py-3 md:mt-4 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
+      >
+        {{ include.section.button_text }}
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
