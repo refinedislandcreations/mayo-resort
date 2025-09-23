@@ -11,9 +11,7 @@
       >
         {{ page.about_resort.title }}
       </h2>
-      <p
-        class="text-base font-normal mb-6 text-raisin-black tracking-wide mt-6 md:mt-12"
-      >
+      <p class="text-base font-normal text-raisin-black tracking-wide md:mt-8">
         {{ page.about_resort.description }}
       </p>
       <a
@@ -27,19 +25,19 @@
 
     <!-- Gambar di kanan -->
     <div
-      class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-end pr-4 md:pr-0"
+      class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-end pr-4 md:pr-0 h-full w-full"
     >
       <img
         src="{{ page.about_resort.image1.src }}"
         alt="{{ page.about_resort.image1.alt }}"
         loading="lazy"
-        class="w-full object-cover shadow {{ page.about_resort.image_size }}"
+        class="w-full h-auto object-cover shadow {{ page.about_resort.image_size }}"
       />
       <img
         src="{{ page.about_resort.image2.src }}"
         alt="{{ page.about_resort.image2.alt }}"
         loading="lazy"
-        class="w-full object-cover shadow {{ page.about_resort.image_size }}"
+        class="w-full h-auto object-cover shadow {{ page.about_resort.image_size }}"
       />
     </div>
   </div>
