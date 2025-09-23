@@ -1,4 +1,4 @@
-{% assign dining_section = page.dining[0] %}
+{% assign dining_section = page.dining_options[0] %}
 
 <section
   class="py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 max-w-full mx-auto bg-alabaster"
@@ -22,6 +22,7 @@
     <div class="text-center mb-12">
       <a
         href="{{ dining_section.button_link }}"
+        aria-label="{{ dining_section.button_aria_label }}"
         class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
       >
         {{ dining_section.button_text }}
@@ -36,78 +37,78 @@
     >
       {% assign imgs = dining_section.images %}
       <a
-        href="{{ imgs[0] }}"
+        href="{{ imgs[0].src }}"
         data-lg-size="1600-1067"
         class="col-span-2 md:col-span-1 md:col-start-1 md:row-start-1 block overflow-hidden"
       >
         <img
-          src="{{ imgs[0] }}"
-          alt="Image 1"
+          src="{{ imgs[0].src }}"
+          alt="{{ imgs[0].alt }}"
           loading="lazy"
           class="object-cover w-full h-full {{ dining_section.image_height }}"
         />
       </a>
 
       <a
-        href="{{ imgs[1] }}"
+        href="{{ imgs[1].src }}"
         data-lg-size="1600-1067"
         class="col-span-1 md:col-span-2 md:col-start-2 md:row-start-1 block overflow-hidden"
       >
         <img
-          src="{{ imgs[1] }}"
-          alt="Image 2"
+          src="{{ imgs[1].src }}"
+          alt="{{ imgs[1].alt }}"
           loading="lazy"
           class="object-cover w-full h-full {{ dining_section.image_height }}"
         />
       </a>
 
       <a
-        href="{{ imgs[2] }}"
+        href="{{ imgs[2].src }}"
         data-lg-size="1600-1067"
         class="col-span-1 md:block md:col-span-1 md:col-start-4 md:row-start-1 block overflow-hidden"
       >
         <img
-          src="{{ imgs[2] }}"
-          alt="Image 3"
+          src="{{ imgs[2].src }}"
+          alt="{{ imgs[2].alt }}"
           loading="lazy"
           class="object-cover w-full h-full {{ dining_section.image_height }}"
         />
       </a>
 
       <a
-        href="{{ imgs[3] }}"
+        href="{{ imgs[3].src }}"
         data-lg-size="1600-1067"
         class="col-span-1 md:col-span-1 md:col-start-1 md:row-start-2 block overflow-hidden"
       >
         <img
-          src="{{ imgs[3] }}"
-          alt="Image 4"
+          src="{{ imgs[3].src }}"
+          alt="{{ imgs[3].alt }}"
           loading="lazy"
           class="object-cover w-full h-full {{ dining_section.image_height }}"
         />
       </a>
 
       <a
-        href="{{ imgs[4] }}"
+        href="{{ imgs[4].src }}"
         data-lg-size="1600-1067"
         class="col-span-1 md:col-span-1 md:col-start-2 md:row-start-2 block overflow-hidden"
       >
         <img
-          src="{{ imgs[4] }}"
-          alt="Image 5"
+          src="{{ imgs[4].src }}"
+          alt="{{ imgs[4].alt }}"
           loading="lazy"
           class="object-cover w-full h-full {{ dining_section.image_height }}"
         />
       </a>
 
       <a
-        href="{{ imgs[5] }}"
+        href="{{ imgs[5].src }}"
         data-lg-size="1600-1067"
         class="col-span-2 md:col-span-2 md:col-start-3 md:row-start-2 block overflow-hidden"
       >
         <img
-          src="{{ imgs[5] }}"
-          alt="Image 6"
+          src="{{ imgs[5].src }}"
+          alt="{{ imgs[5].alt }}"
           loading="lazy"
           class="object-cover w-full h-full {{ dining_section.image_height }}"
         />
@@ -126,13 +127,13 @@
     >
       {% for image in dining_section.images limit:3 %}
       <a
-        href="{{ image }}"
+        href="{{ image.src }}"
         data-lg-size="1600-1067"
         class="block overflow-hidden"
       >
         <img
-          src="{{ image }}"
-          alt="Dining Image"
+          src="{{ image.src }}"
+          alt="{{ image.alt }}"
           loading="lazy"
           class="w-full h-auto object-cover {{ dining_section.image_height }}"
         />

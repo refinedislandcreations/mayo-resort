@@ -16,7 +16,8 @@
         >
           <img
             src="{{ room.image }}"
-            alt="{{ room.title }}"
+            alt="{{ room.image_alt }}"
+            loading="lazy"
             class="w-full h-auto object-cover shadow {{ room.image_size }}"
           />
           <div class="py-6 flex flex-col flex-grow">
@@ -36,6 +37,7 @@
                 <img
                   src="/assets/images/icons/bed.png"
                   alt="Bed icon"
+                  loading="lazy"
                   class="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6"
                 />
                 <span class="text-sm xs:text-base font-medium"
@@ -46,6 +48,7 @@
                 <img
                   src="/assets/images/icons/capacity.png"
                   alt="Capacity icon"
+                  loading="lazy"
                   class="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6"
                 />
                 <span class="text-sm xs:text-base font-medium"
@@ -56,6 +59,7 @@
 
             <a
               href="{{ room.button_url }}"
+              aria-label="{{ room.button_aria_label }}"
               class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
             >
               {{ room.button_text }}

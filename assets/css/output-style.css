@@ -1073,6 +1073,9 @@ video {
 .font-semibold {
   font-weight: 600;
 }
+.font-black {
+  font-weight: 900;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -1081,6 +1084,9 @@ video {
 }
 .leading-tight {
   line-height: .85;
+}
+.leading-loose {
+  line-height: 2;
 }
 .tracking-wide {
   letter-spacing: 0.025em;

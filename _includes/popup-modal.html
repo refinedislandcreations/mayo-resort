@@ -23,8 +23,9 @@
     <!-- Gambar (kiri di md ke atas) -->
     <div class="md:w-1/2 w-full h-48 md:h-auto overflow-hidden">
       <img
-        src="{{ popup.image }}"
-        alt="{{ popup.title }}"
+        src="{{ popup.image.src }}"
+        alt="{{ popup.image.alt }}"
+        loading="lazy"
         class="w-full h-full object-cover"
       />
     </div>
@@ -40,6 +41,7 @@
       <div class="mt-4">
         <a
           href="{{ popup.button.url }}"
+          aria-label="{{ popup.button.aria_label }}"
           class="inline-block bg-keppel text-baby-powder px-4 py-2 text-sm hover:bg-keppel-hover transition"
         >
           {{ popup.button.text }}
@@ -59,7 +61,11 @@
       aria-label="Previous"
       class="w-4 h-4 justify-center items-center flex"
     >
-      <img src="{{ '/assets/images/icons/arrow.png' }}" alt="Previous Button" />
+      <img
+        src="{{ '/assets/images/icons/arrow.png' }}"
+        alt="Previous Button"
+        loading="lazy"
+      />
     </button>
     <div class="flex space-x-1" id="popupIndicators">
       {% for popup in popups %}
@@ -73,7 +79,11 @@
       aria-label="Next"
       class="rotate-180 w-4 h-4 flex justify-center items-center"
     >
-      <img src="{{ '/assets/images/icons/arrow.png' }}" alt="Next Button" />
+      <img
+        src="{{ '/assets/images/icons/arrow.png' }}"
+        alt="Next Button"
+        loading="lazy"
+      />
     </button>
   </div>
   {% endif %}

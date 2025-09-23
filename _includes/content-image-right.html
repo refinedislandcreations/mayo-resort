@@ -18,6 +18,7 @@
       </p>
       <a
         href="{{ page.celebrate_section.button_link }}"
+        aria-label="{{ page.celebrate_section.button_aria_label }}"
         class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase text-center break-words max-w-xs w-full text-sm sm:text-base md:text-lg"
       >
         {{ page.celebrate_section.button_text }}
@@ -30,7 +31,8 @@
     >
       <img
         src="{{ page.celebrate_section.image }}"
-        alt="Image"
+        alt="{{ page.celebrate_section.image_alt }}"
+        loading="lazy"
         class="w-full object-cover shadow {{ page.celebrate_section.image_size }}"
       />
     </div>

@@ -9,18 +9,19 @@
       <h2
         class="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold mb-4 uppercase text-raisin-black tracking-wider"
       >
-        {{ page.mayo_about.title }}
+        {{ page.about_resort.title }}
       </h2>
       <p
         class="text-base font-normal mb-6 text-raisin-black tracking-wide mt-6 md:mt-12"
       >
-        {{ page.mayo_about.description }}
+        {{ page.about_resort.description }}
       </p>
       <a
-        href="{{ page.mayo_about.button_link }}"
+        href="{{ page.about_resort.button_link }}"
+        aria-label="{{ page.about_resort.button_aria_label }}"
         class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
       >
-        {{ page.mayo_about.button_text }}
+        {{ page.about_resort.button_text }}
       </a>
     </div>
 
@@ -29,14 +30,16 @@
       class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-end pr-4 md:pr-0"
     >
       <img
-        src="{{ page.mayo_about.image1 }}"
-        alt="Image"
-        class="w-full object-cover shadow {{ page.mayo_about.image_size }}"
+        src="{{ page.about_resort.image1.src }}"
+        alt="{{ page.about_resort.image1.alt }}"
+        loading="lazy"
+        class="w-full object-cover shadow {{ page.about_resort.image_size }}"
       />
       <img
-        src="{{ page.mayo_about.image2 }}"
-        alt="Image"
-        class="w-full object-cover shadow {{ page.mayo_about.image_size }}"
+        src="{{ page.about_resort.image2.src }}"
+        alt="{{ page.about_resort.image2.alt }}"
+        loading="lazy"
+        class="w-full object-cover shadow {{ page.about_resort.image_size }}"
       />
     </div>
   </div>
