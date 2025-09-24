@@ -74,6 +74,7 @@ popup:
 
 about_resort:
   title: "A Peaceful Escape by the Sea"
+  bg_color: "bg-baby-powder"
   description: "Located at the tip of a scenic headland, Mayo Resort provides a serene retreat, surrounded by the Bali Sea on three sides. With panoramic ocean views, a calm microclimate, and unforgettable sunsets, it's the perfect place to unwind and enjoy a peaceful escape, away from the hustle and bustle."
   button_text: "Find Out More"
   button_link: "/contact"
@@ -136,40 +137,42 @@ rooms:
       button_aria_label: "Find out more about Villa Putih at Mayo Resort Bali"
 
 guest_testimonials:
-  - main_quote: "A Truly Unforgettable Stay!"
-    rating: 5
-    description: >
-      Our time at Mayo Resort was nothing short of spectacular. From the moment we arrived, we were captivated by the stunning ocean views and the peaceful ambiance that surrounded us. The staff went above and beyond to ensure our stay was comfortable and memorable. We enjoyed relaxing by the pool, exploring the lush gardens, and witnessing breathtaking sunsets every evening. It truly was the perfect getaway, and we’re already planning our next visit.
-    name: "John Doe"
-    date: "March 2024"
+  bg_color: "bg-bone"
+  testimonials:
+    - main_quote: "A Truly Unforgettable Stay!"
+      rating: 5
+      description: >
+        Our time at Mayo Resort was nothing short of spectacular. From the moment we arrived, we were captivated by the stunning ocean views and the peaceful ambiance that surrounded us. The staff went above and beyond to ensure our stay was comfortable and memorable. We enjoyed relaxing by the pool, exploring the lush gardens, and witnessing breathtaking sunsets every evening. It truly was the perfect getaway, and we’re already planning our next visit.
+      name: "John Doe"
+      date: "March 2024"
 
-  - main_quote: "Exceptional Service and Hospitality"
-    rating: 5
-    description: >
-      The warmth and professionalism of the Mayo Resort team made our stay unforgettable. Every request was met with a smile, and they took great care of every detail, from personalized recommendations to seamless check-in and check-out. The rooms were impeccably clean and beautifully designed to maximize comfort and the ocean views. This level of hospitality made us feel truly valued as guests. Highly recommended for anyone seeking a stress-free and welcoming retreat.
-    name: "Jane Smith"
-    date: "April 2024"
+    - main_quote: "Exceptional Service and Hospitality"
+      rating: 5
+      description: >
+        The warmth and professionalism of the Mayo Resort team made our stay unforgettable. Every request was met with a smile, and they took great care of every detail, from personalized recommendations to seamless check-in and check-out. The rooms were impeccably clean and beautifully designed to maximize comfort and the ocean views. This level of hospitality made us feel truly valued as guests. Highly recommended for anyone seeking a stress-free and welcoming retreat.
+      name: "Jane Smith"
+      date: "April 2024"
 
-  - main_quote: "Great Value for a Relaxing Vacation"
-    rating: 4
-    description: >
-      Mayo Resort offers exceptional value, combining beautiful surroundings with excellent amenities. The tranquility of the location, paired with attentive service and comfortable accommodations, made for a rejuvenating experience. Whether lounging by the pool, enjoying the local cuisine, or simply soaking in the natural beauty, we felt completely refreshed by the end of our stay. A wonderful choice for travelers looking to unwind without breaking the bank.
-    name: "Emily Johnson"
-    date: "May 2024"
+    - main_quote: "Great Value for a Relaxing Vacation"
+      rating: 4
+      description: >
+        Mayo Resort offers exceptional value, combining beautiful surroundings with excellent amenities. The tranquility of the location, paired with attentive service and comfortable accommodations, made for a rejuvenating experience. Whether lounging by the pool, enjoying the local cuisine, or simply soaking in the natural beauty, we felt completely refreshed by the end of our stay. A wonderful choice for travelers looking to unwind without breaking the bank.
+      name: "Emily Johnson"
+      date: "May 2024"
 
-  - main_quote: "Comfortable and Peaceful"
-    rating: 4
-    description: >
-      The spacious rooms with panoramic ocean views were a highlight of our stay at Mayo Resort. Waking up to the gentle sound of waves and enjoying coffee on the balcony was a daily pleasure. The peaceful atmosphere throughout the resort helped us disconnect from the everyday hustle and truly relax. The facilities were well-maintained, and the friendly staff added a personal touch that made us feel at home. Definitely a place we would recommend and return to.
-    name: "Michael Brown"
-    date: "June 2024"
+    - main_quote: "Comfortable and Peaceful"
+      rating: 4
+      description: >
+        The spacious rooms with panoramic ocean views were a highlight of our stay at Mayo Resort. Waking up to the gentle sound of waves and enjoying coffee on the balcony was a daily pleasure. The peaceful atmosphere throughout the resort helped us disconnect from the everyday hustle and truly relax. The facilities were well-maintained, and the friendly staff added a personal touch that made us feel at home. Definitely a place we would recommend and return to.
+      name: "Michael Brown"
+      date: "June 2024"
 
-  - main_quote: "Perfect for Family and Professionals"
-    rating: 5
-    description: >
-      Mayo Resort strikes the perfect balance between relaxation and functionality. As a professional who needed to mix work with leisure, I found the environment ideal for both. The reliable Wi-Fi and quiet spaces allowed me to stay productive, while my family enjoyed the spacious suites, pool, and natural beauty of the surroundings. The attentive staff made sure everyone’s needs were met, making it a seamless experience for both work and play. Highly recommended for families and business travelers alike.
-    name: "Sarah Davis"
-    date: "July 2024"
+    - main_quote: "Perfect for Family and Professionals"
+      rating: 5
+      description: >
+        Mayo Resort strikes the perfect balance between relaxation and functionality. As a professional who needed to mix work with leisure, I found the environment ideal for both. The reliable Wi-Fi and quiet spaces allowed me to stay productive, while my family enjoyed the spacious suites, pool, and natural beauty of the surroundings. The attentive staff made sure everyone’s needs were met, making it a seamless experience for both work and play. Highly recommended for families and business travelers alike.
+      name: "Sarah Davis"
+      date: "July 2024"
 
 special_offers:
   title: "Special Offers"
@@ -280,10 +283,11 @@ cta_mayo:
 ---
 
 {% include image-banner.html %} {% include popup-modal.html %} {% include
-content-with-images.html %} {% include rooms-content.html %} {% include
-testimonial.html %} {% include content-with-image-on-the-left.html
-section=page.special_offers %} {% assign dining_section = page.dining_options[0]
-%} {% include image-gallery-text-section.html section=dining_section %} {%
-include content-image-right.html %} {% include images-gallery-content.html %} {%
-include section-slider.html %} {% include content-with-image-on-the-left.html
+content-with-images.html section=page.about_resort %} {% include
+rooms-content.html %} {% include testimonial.html %} {% include
+content-with-image-on-the-left.html section=page.special_offers %} {% assign
+dining_section = page.dining_options[0] %} {% include
+image-gallery-text-section.html section=dining_section %} {% include
+content-image-right.html %} {% include images-gallery-content.html %} {% include
+section-slider.html %} {% include content-with-image-on-the-left.html
 section=page.cta_mayo %}

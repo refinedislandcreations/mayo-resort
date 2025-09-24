@@ -1,5 +1,5 @@
 <section
-  class="flex flex-col md:flex-row items-center justify-between bg-baby-powder py-12 md:py-24 lg:py-48 pl-4 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20"
+  class="flex flex-col md:flex-row items-center justify-between {{ include.section.bg_color }} py-12 md:py-24 lg:py-48 pl-4 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20"
 >
   <div
     class="w-full max-w-[96rem] mx-auto flex flex-col md:flex-row items-center justify-between"
@@ -9,20 +9,33 @@
       <h2
         class="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold mb-4 uppercase text-raisin-black tracking-wider cantarell-bold"
       >
-        {{ page.about_resort.title }}
+        {{ include.section.title }}
       </h2>
+      {% if include.section.description %} {% if include.section.description[0]
+      %}
+      <ul
+        class="list-disc marker:text-keppel text-base text-raisin-black space-y-3 md:mt-8 pl-5"
+      >
+        {% for item in include.section.description %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% else %}
       <p
         class="text-base font-normal text-raisin-black tracking-wide md:mt-8 fjalla-one-regular"
       >
-        {{ page.about_resort.description }}
+        {{ include.section.description }}
       </p>
+      {% endif %} {% endif %} {% if include.section.button_text %}
+
       <a
-        href="{{ page.about_resort.button_link }}"
-        aria-label="{{ page.about_resort.button_aria_label }}"
+        href="{{ include.section.button_link }}"
+        aria-label="{{ include.section.button_aria_label }}"
         class="fjalla-one-regular inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
       >
-        {{ page.about_resort.button_text }}
+        {{ include.section.button_text }}
       </a>
+      {% endif %}
     </div>
 
     <!-- Gambar di kanan -->
@@ -30,16 +43,16 @@
       class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-end pr-4 md:pr-0 h-full w-full"
     >
       <img
-        src="{{ page.about_resort.image1.src }}"
-        alt="{{ page.about_resort.image1.alt }}"
+        src="{{ include.section.image1.src }}"
+        alt="{{ include.section.image1.alt }}"
         loading="lazy"
-        class="w-full h-auto object-cover shadow {{ page.about_resort.image_size }}"
+        class="w-full h-auto object-cover shadow {{ include.section.image_size }}"
       />
       <img
-        src="{{ page.about_resort.image2.src }}"
-        alt="{{ page.about_resort.image2.alt }}"
+        src="{{ include.section.image2.src }}"
+        alt="{{ include.section.image2.alt }}"
         loading="lazy"
-        class="w-full h-auto object-cover shadow {{ page.about_resort.image_size }}"
+        class="w-full h-auto object-cover shadow {{ include.section.image_size }}"
       />
     </div>
   </div>

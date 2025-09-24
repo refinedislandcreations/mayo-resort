@@ -7,7 +7,7 @@ main_nav:
       - title: Special Offer
         url: "/rooms.html#special-offer"
       - title: Group Stays
-        url: "/rooms.html#group-stays"
+        url: "/special-offers.html#group-stays"
   - title: Restaurant
     url: "#"
     submenu:

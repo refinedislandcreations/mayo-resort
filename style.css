@@ -102,7 +102,7 @@ body {
   text-align: center;
   font-size: 30px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+  z-index: 10;
   cursor: pointer; /* Pointer on hover */
   transition: background-color 0.3s ease, transform 0.3s ease;
   display: flex;
