@@ -38,3 +38,53 @@ body {
     line-height: 1;
   }
 }
+
+.navbar-font {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 500; /* medium weight for good readability */
+  font-style: normal;
+  font-optical-sizing: auto;
+  letter-spacing: 0.05em; /* optional, for better spacing */
+}
+
+.fjalla-one-regular {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cantarell-regular {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cantarell-bold {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cantarell-regular-italic {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cantarell-bold-italic {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
