@@ -18,6 +18,15 @@
 
     <!-- Tombol -->
     <div class="text-center mb-12">
+      {% if section.buttons %} {% for button in section.buttons %}
+      <a
+        href="{{ button.button_link }}"
+        aria-label="{{ button.button_aria_label }}"
+        class="inline-block bg-keppel text-white md:mt-4 hover:bg-keppel-hover max-w-max button-font mx-2"
+      >
+        {{ button.button_text }}
+      </a>
+      {% endfor %} {% else %}
       <a
         href="{{ section.button_link }}"
         aria-label="{{ section.button_aria_label }}"
@@ -25,6 +34,7 @@
       >
         {{ section.button_text }}
       </a>
+      {% endif %}
     </div>
 
     <!-- LightGallery Container for Desktop -->

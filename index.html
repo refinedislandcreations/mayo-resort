@@ -209,17 +209,18 @@ dining_options:
         alt: "Pizza and wine served at Bora Bora restaurant"
 
 celebrate_section:
+  bg_color: "bg-bone"
   title: "Celebrate in Style"
   description: "From milestone birthdays to intimate gatherings, Mayo Resort offers the perfect backdrop for your special moments. Surrounded by serene waters and stunning scenery, every celebration here becomes truly memorable."
   button_link: "/more-info"
   button_text: "Start Planning With Us"
   button_aria_label: "Start planning your special celebration at Mayo Resort"
-  image_height: "max-h-64 md:max-h-96"
   image: "/assets/images/homepage/couple-dancing-at-sunset.webp"
   image_alt: "Couple dancing at sunset with ocean view at Mayo Resort"
   image_size: "max-w-auto max-h-[400px] md:max-w-[800px] md:max-h-[600px]"
 
 weddings:
+  bg_color: "bg-baby-powder"
   images:
     - src: "/assets/images/homepage/oceanfront-wedding-venue.webp"
       alt: "Oceanfront wedding venue at Mayo Resort with decorated seating and floral arrangements"
@@ -232,7 +233,7 @@ weddings:
   image_size: "max-w-auto max-h-[650px]"
   title: "Weddings by the Sea"
   description: >
-    Exchange your vows surrounded by the Bali Sea, with unobstructed ocean views and breathtaking sunsets.
+    Exchange your vows surrounded by the Bali Sea, with unobstructed ocean views and breathtaking sunsets. <br>
 
     Mayo Resort provides an elegant, serene setting for an unforgettable wedding day that you and your guests will cherish forever.
   button_text: "Celebrations by the Sea"
@@ -288,6 +289,7 @@ rooms-content.html %} {% include testimonial.html %} {% include
 content-with-image-on-the-left.html section=page.special_offers %} {% assign
 dining_section = page.dining_options[0] %} {% include
 image-gallery-text-section.html section=dining_section %} {% include
-content-image-right.html %} {% include images-gallery-content.html %} {% include
+content-image-right.html section=page.celebrate_section %} {% include
+images-gallery-content.html section=page.weddings %} {% include
 section-slider.html %} {% include content-with-image-on-the-left.html
 section=page.cta_mayo %}

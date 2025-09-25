@@ -1,23 +1,23 @@
 <section
-  class="bg-baby-powder max-w-full py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
+  class="{{ include.section.bg_color }} max-w-full py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
 >
-  <div class="mx-auto max-w-[96rem] bg-baby-powder">
+  <div class="mx-auto max-w-[96rem] {{ include.section.bg_color }}">
     <div class="md:hidden mb-6 text-center">
       <h2 class="text-raisin-black section-title-font">
-        {{ page.weddings.title }}
+        {{ include.section.title }}
       </h2>
     </div>
     <!-- Grid Container -->
     <div
-      class="grid grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 {{ page.weddings.image_size }}"
+      class="grid grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 {{ include.section.image_size }}"
     >
       <!-- Gambar 1 -->
       <div
         class="col-span-2 row-span-1 md:col-span-1 md:row-span-2 md:row-start-1 md:col-start-1"
       >
         <img
-          src="{{ page.weddings.images[0].src }}"
-          alt="{{ page.weddings.images[0].alt }}"
+          src="{{ include.section.images[0].src }}"
+          alt="{{ include.section.images[0].alt }}"
           loading="lazy"
           class="w-full h-full object-cover"
         />
@@ -28,8 +28,8 @@
         class="col-span-1 row-span-1 md:col-span-1 md:row-span-1 md:row-start-1 md:col-start-2"
       >
         <img
-          src="{{ page.weddings.images[1].src }}"
-          alt="{{ page.weddings.images[1].alt }}"
+          src="{{ include.section.images[1].src }}"
+          alt="{{ include.section.images[1].alt }}"
           loading="lazy"
           class="w-full h-full object-cover"
         />
@@ -40,8 +40,8 @@
         class="col-span-1 row-span-1 md:col-span-1 md:row-span-1 md:row-start-2 md:col-start-2"
       >
         <img
-          src="{{ page.weddings.images[2].src }}"
-          alt="{{ page.weddings.images[2].alt }}"
+          src="{{ include.section.images[2].src }}"
+          alt="{{ include.section.images[2].alt }}"
           loading="lazy"
           class="w-full h-full object-cover"
         />
@@ -52,8 +52,8 @@
         class="col-span-2 row-span-1 md:col-span-1 md:row-span-2 md:row-start-1 md:col-start-3"
       >
         <img
-          src="{{ page.weddings.images[3].src }}"
-          alt="{{ page.weddings.images[3].alt }}"
+          src="{{ include.section.images[3].src }}"
+          alt="{{ include.section.images[3].alt }}"
           loading="lazy"
           class="w-full h-full object-cover"
         />
@@ -63,21 +63,21 @@
     <!-- Text Content Below Grid -->
     <div class="mt-6 md:mt-20 max-w-4xl mx-auto text-center">
       <h2 class="hidden md:block text-raisin-black section-title-font">
-        {{ page.weddings.title }}
+        {{ include.section.title }}
       </h2>
 
       <p
         class="description-font text-raisin-black max-w-3xl mx-auto mt-6 whitespace-pre-line"
       >
-        {{ page.weddings.description }}
+        {{ include.section.description }}
       </p>
 
       <a
-        href="{{ page.weddings.button_link }}"
-        aria-label="{{ page.weddings.button_aria_label }}"
+        href="{{ include.section.button_link }}"
+        aria-label="{{ include.section.button_aria_label }}"
         class="inline-block bg-keppel text-white md:mt-4 hover:bg-keppel-hover max-w-max button-font"
       >
-        {{ page.weddings.button_text }}
+        {{ include.section.button_text }}
       </a>
     </div>
   </div>

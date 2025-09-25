@@ -1,5 +1,5 @@
 <section
-  class="flex flex-col md:flex-row items-center justify-between bg-bone py-12 md:py-24 lg:py-48 pl-4 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20"
+  class="flex flex-col md:flex-row items-center justify-between {{ include.section.bg_color }} py-12 md:py-24 lg:py-48 pl-4 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20"
 >
   <div
     class="w-full max-w-[96rem] mx-auto flex flex-col md:flex-row items-center justify-between"
@@ -7,18 +7,42 @@
     <!-- Konten teks di kiri -->
     <div class="md:w-1/2 flex flex-col justify-center pr-4 md:px-12 pb-6">
       <h2 class="section-title-font mb-4 text-raisin-black">
-        {{ page.celebrate_section.title }}
+        {{ include.section.title }}
       </h2>
-      <p class="description-font mb-4 text-raisin-black md:mt-8">
-        {{ page.celebrate_section.description }}
+
+      {% if include.section.description_paragraphs or
+      include.section.description_paragraph or include.section.description_list
+      %}
+      <div class="description-font mb-6 text-raisin-black md:mt-4">
+        {% if include.section.description_paragraphs %} {% for paragraph in
+        include.section.description_paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %} {% endif %} {% if include.section.description_paragraph %}
+        <p>{{ include.section.description_paragraph }}</p>
+        {% endif %} {% if include.section.description_list %}
+        <ul
+          class="list-disc marker:text-keppel text-raisin-black space-y-3 md:mt-8 pl-5 description-font"
+        >
+          {% for item in include.section.description_list %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% elsif include.section.description %}
+      <p class="description-font mb-6 text-raisin-black md:mt-4">
+        {{ include.section.description }}
       </p>
+      {% endif %} {% if include.section.button_link and
+      include.section.button_text %}
       <a
-        href="{{ page.celebrate_section.button_link }}"
-        aria-label="{{ page.celebrate_section.button_aria_label }}"
+        href="{{ include.section.button_link }}"
+        aria-label="{{ include.section.button_aria_label | default: include.section.button_text }}"
         class="inline-block bg-keppel text-white md:mt-4 hover:bg-keppel-hover max-w-max button-font"
       >
-        {{ page.celebrate_section.button_text }}
+        {{ include.section.button_text }}
       </a>
+      {% endif %}
     </div>
 
     <!-- Gambar di kanan -->
@@ -26,10 +50,10 @@
       class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-end pr-4 md:pr-0 h-full w-full"
     >
       <img
-        src="{{ page.celebrate_section.image }}"
-        alt="{{ page.celebrate_section.image_alt }}"
+        src="{{ include.section.image }}"
+        alt="{{ include.section.image_alt }}"
         loading="lazy"
-        class="w-full object-cover shadow {{ page.celebrate_section.image_size }}"
+        class="w-full object-cover shadow {{ include.section.image_size }}"
       />
     </div>
   </div>
