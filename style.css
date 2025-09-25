@@ -41,10 +41,18 @@ body {
 
 .navbar-font {
   font-family: "Fjalla One", sans-serif;
-  font-weight: 500; /* medium weight for good readability */
+  font-weight: 300;
   font-style: normal;
   font-optical-sizing: auto;
-  letter-spacing: 0.05em; /* optional, for better spacing */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 16px; /* default di bawah 768px */
+}
+
+@media (min-width: 768px) {
+  .navbar-font {
+    font-size: 18px;
+  }
 }
 
 .fjalla-one-regular {

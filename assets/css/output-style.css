@@ -759,9 +759,6 @@ video {
      -moz-user-select: none;
           user-select: none;
 }
-.list-inside {
-  list-style-position: inside;
-}
 .list-disc {
   list-style-type: disc;
 }
@@ -1051,9 +1048,6 @@ video {
 .pt-8 {
   padding-top: 2rem;
 }
-.pr-5 {
-  padding-right: 1.25rem;
-}
 .text-left {
   text-align: left;
 }
@@ -1228,10 +1222,18 @@ body {
 
 .navbar-font {
   font-family: "Fjalla One", sans-serif;
-  font-weight: 500; /* medium weight for good readability */
+  font-weight: 300;
   font-style: normal;
   font-optical-sizing: auto;
-  letter-spacing: 0.05em; /* optional, for better spacing */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 16px; /* default di bawah 768px */
+}
+
+@media (min-width: 768px) {
+  .navbar-font {
+    font-size: 18px;
+  }
 }
 
 .fjalla-one-regular {
@@ -1350,11 +1352,6 @@ body {
 .after\:duration-300::after {
   content: var(--tw-content);
   transition-duration: 300ms;
-}
-.hover\:scale-105:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .hover\:bg-custom-blue-hover:hover {
   --tw-bg-opacity: 1;
@@ -1564,14 +1561,11 @@ body {
   .md\:hidden {
     display: none;
   }
-  .md\:h-10 {
-    height: 2.5rem;
-  }
   .md\:h-72 {
     height: 18rem;
   }
-  .md\:h-\[123px\] {
-    height: 123px;
+  .md\:h-\[82px\] {
+    height: 82px;
   }
   .md\:h-auto {
     height: auto;

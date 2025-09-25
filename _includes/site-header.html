@@ -1,5 +1,5 @@
 <header
-  class="bg-custom-blue bg-opacity-80 shadow-md w-full fixed top-0 z-50 h-[70px] md:h-[123px] flex items-center"
+  class="bg-custom-blue bg-opacity-80 shadow-md w-full fixed top-0 z-50 h-[70px] md:h-[82px] flex items-center"
 >
   <div
     class="max-w-[96rem] mx-auto w-full px-4 sm:px-6 lg:px-8 flex items-center h-full"
@@ -11,20 +11,20 @@
           <img
             src="{{ '/assets/images/logo.png' | relative_url }}"
             alt="Mayo Resort Logo"
-            class="h-[2.1rem] md:h-10 w-auto"
+            class="h-[2.1rem] w-auto"
           />
         </a>
       </div>
 
       <!-- Desktop Menu -->
       <nav
-        class="hidden xl:flex space-x-8 items-center uppercase font-bold h-full navbar-font"
+        class="hidden xl:flex space-x-8 items-center uppercase h-full navbar-font text-lg"
       >
         {% for item in site.data.navigation.main_nav %} {% if item.submenu %}
         <!-- Dropdown Menu -->
         <div class="relative group h-full flex items-center">
           <button
-            class="inline-flex items-center hover:text-baby-powder-hover focus:outline-none text-baby-powder uppercase font-bold text-base tracking-widest"
+            class="inline-flex items-center hover:text-baby-powder-hover focus:outline-none navbar-font"
           >
             {{ item.title }}
             <svg
@@ -43,12 +43,12 @@
           </button>
           <div
             class="absolute left-0 top-full py-2 bg-custom-blue bg-opacity-80 border-none rounded-none shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 origin-top z-20 text-base tracking-widest whitespace-nowrap"
-            style="margin-top: 52px"
+            style="margin-top: 30px"
           >
             {% for subitem in item.submenu %}
             <a
               href="{{ subitem.url | relative_url }}"
-              class="block px-6 py-2 text-baby-powder hover:bg-custom-blue-hover"
+              class="block px-6 py-2 text-baby-powder hover:bg-custom-blue-hover navbar-font"
               >{{ subitem.title }}</a
             >
             {% endfor %}
@@ -58,14 +58,14 @@
         <!-- Book Now Button -->
         <a
           href="{{ item.url | relative_url }}"
-          class="ml-4 inline-block bg-keppel text-white px-[20px] py-[15px] hover:bg-keppel-hover transition duration-300 ease-in-out transform hover:scale-105 font-bold text-base tracking-widest"
+          class="ml-4 inline-block bg-keppel text-white px-[20px] py-[15px] hover:bg-keppel-hover transition duration-300 ease-in-out navbar-font"
           >{{ item.title }}</a
         >
         {% else %}
         <!-- Single Link -->
         <a
           href="{{ item.url | relative_url }}"
-          class="text-baby-powder hover:text-baby-powder-hover px-3 py-2 text-base tracking-widest"
+          class="text-baby-powder hover:text-baby-powder-hover px-3 py-2 navbar-font"
           >{{ item.title }}</a
         >
         {% endif %} {% endfor %}
@@ -114,7 +114,7 @@
           <summary
             class="cursor-pointer py-2 hover:text-baby-powder-hover flex items-center justify-between tracking-widest appearance-none"
           >
-            <span>{{ item.title }}</span>
+            <span class="navbar-font">{{ item.title }}</span>
             <svg
               class="w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out"
               viewBox="0 0 24 24"
@@ -137,7 +137,7 @@
               <li>
                 <a
                   href="{{ subitem.url | relative_url }}"
-                  class="block hover:text-baby-powder-hover pb-2 tracking-widest"
+                  class="block hover:text-baby-powder-hover pb-2 navbar-font"
                   >{{ subitem.title }}</a
                 >
               </li>
@@ -149,14 +149,14 @@
         <div class="text-left">
           <a
             href="{{ item.url | relative_url }}"
-            class="inline-block bg-keppel px-[20px] py-[15px] hover:bg-keppel-hover transition duration-300 ease-in-out transform hover:scale-105 font-bold"
+            class="inline-block bg-keppel px-[20px] py-[15px] hover:bg-keppel-hover transition duration-300 ease-in-out navbar-font"
             >{{ item.title }}</a
           >
         </div>
         {% else %}
         <a
           href="{{ item.url | relative_url }}"
-          class="block py-2 hover:text-baby-powder-hover tracking-widest"
+          class="block py-2 hover:text-baby-powder-hover navbar-font"
           >{{ item.title }}</a
         >
         {% endif %} {% endfor %}
