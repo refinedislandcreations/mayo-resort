@@ -17,9 +17,7 @@
       </div>
 
       <!-- Desktop Menu -->
-      <nav
-        class="hidden xl:flex space-x-8 items-center uppercase h-full navbar-font text-lg"
-      >
+      <nav class="hidden xl:flex space-x-8 items-center h-full navbar-font">
         {% for item in site.data.navigation.main_nav %} {% if item.submenu %}
         <!-- Dropdown Menu -->
         <div class="relative group h-full flex items-center">
@@ -43,7 +41,7 @@
           </button>
           <div
             class="absolute left-0 top-full py-2 bg-custom-blue bg-opacity-80 border-none rounded-none shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 origin-top z-20 text-base tracking-widest whitespace-nowrap"
-            style="margin-top: 30px"
+            style="margin-top: 27px"
           >
             {% for subitem in item.submenu %}
             <a
@@ -58,7 +56,7 @@
         <!-- Book Now Button -->
         <a
           href="{{ item.url | relative_url }}"
-          class="ml-4 inline-block bg-keppel text-white px-[20px] py-[15px] hover:bg-keppel-hover transition duration-300 ease-in-out button-font"
+          class="ml-4 inline-block bg-keppel text-white hover:bg-keppel-hover button-font"
           >{{ item.title }}</a
         >
         {% else %}
@@ -112,7 +110,7 @@
         <!-- Dropdown Menu -->
         <details class="dropdown">
           <summary
-            class="cursor-pointer py-2 hover:text-baby-powder-hover flex items-center justify-between tracking-widest appearance-none"
+            class="cursor-pointer py-2 hover:text-baby-powder-hover flex items-center justify-between appearance-none"
           >
             <span class="navbar-font">{{ item.title }}</span>
             <svg
@@ -149,7 +147,7 @@
         <div class="text-left">
           <a
             href="{{ item.url | relative_url }}"
-            class="inline-block bg-keppel px-[20px] py-[15px] hover:bg-keppel-hover transition duration-300 ease-in-out button-font"
+            class="inline-block bg-keppel hover:bg-keppel-hover button-font"
             >{{ item.title }}</a
           >
         </div>

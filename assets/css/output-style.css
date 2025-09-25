@@ -1238,6 +1238,7 @@ body {
   letter-spacing: 0.15em;
   line-height: 1;
   font-size: 2.5rem;
+  text-transform: uppercase;
 }
 
 .section-title-font {
@@ -1245,6 +1246,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.05em;
   font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
 .description-font {
