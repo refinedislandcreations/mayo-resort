@@ -73,6 +73,7 @@ module.exports = {
       screens: {
         "xs": "300px", // Smallest phones
         "sm": "480px", // Small phones
+        "custom-sm": "640px", // Custom small breakpoint
         "md": "768px", // Tablets (portrait)
         "lg": "1024px", // Tablets (landscape) and small desktops
         "xl": "1280px", // Desktops

@@ -1,13 +1,13 @@
 main_nav:
   - title: Rooms
-    url: "#"
+    url: "/rooms"
     submenu:
       - title: Room Types
-        url: "/room-types"
+        url: "/rooms.html#room-types"
       - title: Special Offer
-        url: "/special-offer"
+        url: "/rooms.html#special-offer"
       - title: Group Stays
-        url: "/group-stays"
+        url: "/special-offers.html#group-stays"
   - title: Restaurant
     url: "#"
     submenu:

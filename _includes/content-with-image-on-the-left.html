@@ -1,18 +1,18 @@
 <section
-  class="flex flex-col md:flex-row items-center justify-between bg-baby-powder py-12 md:py-24 lg:py-48 pr-4 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20"
+  class="flex flex-col md:flex-row items-center justify-between {{ include.section.bg_color }} py-12 md:py-24 lg:py-48 pr-4 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20"
 >
   <div
     class="w-full max-w-[96rem] mx-auto flex flex-col md:flex-row items-center justify-between"
   >
     <!-- Gambar di kiri -->
     <div
-      class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-start pl-4 md:pl-0"
+      class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-start pl-4 md:pl-0 h-full w-full"
     >
       <img
         src="{{ include.section.image.src }}"
         alt="{{ include.section.image_alt }}"
         loading="lazy"
-        class="w-full object-cover shadow {{ include.section.image_size }}"
+        class="w-full h-full object-cover shadow {{ include.section.image_size }}"
       />
     </div>
 
@@ -24,17 +24,19 @@
         {{ include.section.title }}
       </h2>
       <p
-        class="text-base font-normal mb-6 text-raisin-black tracking-wide mt-6 md:mt-12"
+        class="text-base font-normal mb-6 text-raisin-black tracking-wide md:mt-4"
       >
         {{ include.section.description }}
       </p>
+      {% if include.section.button_text %}
       <a
         href="{{ include.section.button_link }}"
         aria-label="{{ include.section.button_aria_label }}"
-        class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
+        class="inline-block bg-keppel text-baby-powder px-5 py-3 md:mt-4 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
       >
         {{ include.section.button_text }}
       </a>
+      {% endif %}
     </div>
   </div>
 </section>
