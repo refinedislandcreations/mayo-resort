@@ -2,9 +2,7 @@
   class="py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-alabaster"
 >
   {% if page.rooms.main_title %}
-  <h2
-    class="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-center mb-12 tracking-widest text-raisin-black uppercase"
-  >
+  <h2 class="text-center mb-12 text-raisin-black section-title-font">
     {{ page.rooms.main_title }}
   </h2>
   {% endif %}
@@ -20,13 +18,9 @@
           class="w-full h-auto object-cover shadow {{ room.image_size }}"
         />
         <div class="py-6 flex flex-col flex-grow">
-          <h3
-            class="text-lg md:text-2xl lg:text-3xl font-semibold mb-3 text-raisin-black uppercase tracking-wide"
-          >
-            {{ room.title }}
-          </h3>
+          <h3 class="mb-3 text-raisin-black subtitle-font">{{ room.title }}</h3>
           <p
-            class="text-raisin-black mb-4 text-base font-normal md:mt-4 max-w-[90%]"
+            class="text-raisin-black mb-4 md:mt-4 max-w-[90%] description-font"
           >
             {{ room.description }}
           </p>
@@ -39,9 +33,7 @@
                 loading="lazy"
                 class="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6"
               />
-              <span class="text-sm xs:text-base font-medium"
-                >{{ room.bed }}</span
-              >
+              <span class="description-font">{{ room.bed }}</span>
             </div>
             <div class="flex items-center space-x-2">
               <img
@@ -50,16 +42,14 @@
                 loading="lazy"
                 class="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6"
               />
-              <span class="text-sm xs:text-base font-medium"
-                >{{ room.capacity }}</span
-              >
+              <span class="description-font">{{ room.capacity }}</span>
             </div>
           </div>
 
           <a
             href="{{ room.button_url }}"
             aria-label="{{ room.button_aria_label }}"
-            class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-auto hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
+            class="inline-block bg-keppel text-baby-powder mt-auto hover:bg-keppel-hover max-w-max button-font"
           >
             {{ room.button_text }}
           </a>

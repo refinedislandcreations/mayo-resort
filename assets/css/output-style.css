@@ -983,10 +983,6 @@ video {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.px-\[20px\] {
-  padding-left: 20px;
-  padding-right: 20px;
-}
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1010,10 +1006,6 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-.py-\[15px\] {
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 .pb-12 {
   padding-bottom: 3rem;
@@ -1249,6 +1241,15 @@ body {
   text-transform: uppercase;
 }
 
+.subtitle-font {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
 .description-font {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -1287,6 +1288,10 @@ body {
     font-size: 2.1rem;
   }
 
+  .subtitle-font {
+    font-size: 1.3rem;
+  }
+
   .description-font {
     font-size: 1rem;
   }
@@ -1311,6 +1316,10 @@ body {
     font-size: 2.4rem;
   }
 
+  .subtitle-font {
+    font-size: 1.4rem;
+  }
+
   .description-font {
     font-size: 1.1rem;
   }
@@ -1333,6 +1342,10 @@ body {
 
   .section-title-font {
     font-size: 2.55rem;
+  }
+
+  .subtitle-font {
+    font-size: 1.5rem;
   }
 
   .description-font {
@@ -1534,10 +1547,6 @@ body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  .xs\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 1;
-  }
   .xs\:text-base {
     font-size: 1rem;
     line-height: 1.2;
@@ -1584,10 +1593,6 @@ body {
     font-size: 1.5rem;
     line-height: 1.2;
   }
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 1;
-  }
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.2;
@@ -1598,11 +1603,6 @@ body {
   }
   .sm\:leading-relaxed {
     line-height: 1.625;
-  }
-}
-@media (min-width: 640px) {
-  .custom-sm\:text-\[3\.65rem\] {
-    font-size: 3.65rem;
   }
 }
 @media (min-width: 768px) {
