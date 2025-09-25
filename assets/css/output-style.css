@@ -1069,9 +1069,6 @@ video {
 .font-bold {
   font-weight: 700;
 }
-.font-medium {
-  font-weight: 500;
-}
 .font-normal {
   font-weight: 400;
 }
@@ -1255,6 +1252,14 @@ body {
   font-weight: 400;
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.description-bold {
+  font-weight: 700 !important;
+}
+
+.descriptioin-semibold {
+  font-weight: 500 !important;
 }
 
 .button-font {
@@ -1600,9 +1605,6 @@ body {
   .sm\:text-lg {
     font-size: 1.125rem;;
     line-height: 1.2;
-  }
-  .sm\:leading-relaxed {
-    line-height: 1.625;
   }
 }
 @media (min-width: 768px) {

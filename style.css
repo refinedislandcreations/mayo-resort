@@ -84,6 +84,14 @@ body {
   line-height: 1.5;
 }
 
+.description-bold {
+  font-weight: 700 !important;
+}
+
+.descriptioin-semibold {
+  font-weight: 500 !important;
+}
+
 .button-font {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
