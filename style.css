@@ -70,7 +70,7 @@ body {
 
 .subtitle-font {
   font-family: "Cantarell", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.2rem;
   letter-spacing: 0.03em;
   line-height: 1.3;
@@ -88,7 +88,7 @@ body {
   font-weight: 700 !important;
 }
 
-.descriptioin-semibold {
+.description-semibold {
   font-weight: 500 !important;
 }
 
@@ -231,25 +231,37 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 /* Whatsapp floating button */
 .float {
   position: fixed;
   width: 50px;
   height: 50px;
   bottom: 40px;
-  right: 20px; /* Simplified for consistency on all screen sizes */
-  background-color: #25d366;
+  right: 20px;
+  background-color: #21b164;
   color: #fff;
   border-radius: 50%;
   text-align: center;
   font-size: 30px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
   z-index: 10;
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  -webkit-transition: background-color 0.3s ease, transform 0.3s ease;
+  -moz-transition: background-color 0.3s ease, transform 0.3s ease;
+  -ms-transition: background-color 0.3s ease, transform 0.3s ease;
+  -o-transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .my-float {
@@ -259,6 +271,5 @@ body {
 
 /* Hover effect */
 .float:hover {
-  background-color: #128c4a;
-  transform: scale(1.1);
+  background-color: #119742;
 }

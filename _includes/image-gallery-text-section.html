@@ -5,15 +5,13 @@
 >
   <div class="max-w-[96rem] mx-auto">
     <!-- Judul -->
-    <h2
-      class="uppercase text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-raisin-black text-center"
-    >
+    <h2 class="section-title-font text-raisin-black text-center">
       {{ section.title }}
     </h2>
 
     <!-- Deskripsi -->
     <p
-      class="max-w-3xl text-base font-normal mt-6 md:mt-12 text-raisin-black text-center mx-auto"
+      class="max-w-3xl mt-6 md:mt-12 text-raisin-black text-center mx-auto description-font"
     >
       {{ section.description | raw }}
     </p>
@@ -23,7 +21,7 @@
       <a
         href="{{ section.button_link }}"
         aria-label="{{ section.button_aria_label }}"
-        class="inline-block bg-keppel text-baby-powder px-5 py-3 mt-8 md:mt-12 hover:bg-keppel-hover transition duration-300 ease-in-out font-semibold tracking-widest uppercase max-w-max text-sm sm:text-base md:text-lg"
+        class="inline-block bg-keppel text-white md:mt-4 hover:bg-keppel-hover max-w-max button-font"
       >
         {{ section.button_text }}
       </a>

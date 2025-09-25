@@ -1,7 +1,7 @@
 {% assign popups = page.popup %} {% if popups %}
 <div
   id="popupModal"
-  class="fixed bottom-4 right-4 z-50 hidden w-[70vw] max-w-xs md:max-w-md bg-custom-blue rounded shadow-lg overflow-hidden"
+  class="fixed bottom-4 right-4 z-50 hidden w-[70vw] max-w-xs md:max-w-md bg-custom-blue rounded shadow-lg overflow-hidden ring-1 ring-keppel"
   aria-modal="true"
   role="dialog"
 >
@@ -35,14 +35,14 @@
       class="pt-4 md:p-4 text-baby-powder flex flex-col justify-between md:w-1/2"
     >
       <div>
-        <h2 class="text-lg font-bold uppercase mb-2">{{ popup.title }}</h2>
-        <p class="text-sm">{{ popup.description }}</p>
+        <h2 class="text-lg uppercase mb-2 cantarell-bold">{{ popup.title }}</h2>
+        <p class="text-sm roboto-regular">{{ popup.description }}</p>
       </div>
       <div class="mt-4">
         <a
           href="{{ popup.button.url }}"
           aria-label="{{ popup.button.aria_label }}"
-          class="inline-block bg-keppel text-baby-powder px-4 py-2 text-sm hover:bg-keppel-hover transition"
+          class="inline-block bg-keppel text-white px-4 py-2 text-sm hover:bg-keppel-hover transition uppercase"
         >
           {{ popup.button.text }}
         </a>
