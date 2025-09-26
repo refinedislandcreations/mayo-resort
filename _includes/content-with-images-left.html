@@ -29,8 +29,20 @@
         {{ include.section.title }}
       </h2>
 
-      {% if include.section.description %} {% if include.section.description[0]
-      %}
+      {% if include.section.description_intro %}
+      <p class="description-font mb-3 text-raisin-black md:mt-4">
+        {{ include.section.description_intro | raw }}
+      </p>
+      {% endif %} {% if include.section.description_list %}
+      <ul
+        class="list-disc marker:text-keppel text-raisin-black space-y-3 md:mt-8 pl-5 description-font"
+      >
+        {% for item in include.section.description_list %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% if include.section.description %} {% if
+      include.section.description[0] %}
       <!-- Description as List -->
       <ul
         class="list-disc marker:text-keppel text-raisin-black space-y-3 md:mt-8 pl-5 description-font"

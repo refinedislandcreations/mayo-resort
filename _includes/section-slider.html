@@ -1,10 +1,20 @@
 <div
-  class="w-full bg-bone overflow-x-hidden py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
+  class="w-full {{ include.section.bg_color }} overflow-x-hidden py-12 md:py-24 lg:py-48 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
 >
   <div class="max-w-[96rem] mx-auto text-center">
+    <!-- Title -->
     <h2 class="section-title-font text-raisin-black mb-6 md:mb-12">
-      {{ page.activities.title }}
+      {{ include.section.title }}
     </h2>
+
+    {% if include.section.description %}
+    <!-- Description -->
+    <p
+      class="max-w-3xl my-6 md:mb-12 md:mt-12 text-raisin-black text-center mx-auto description-font"
+    >
+      {{ include.section.description | raw }}
+    </p>
+    {% endif %}
   </div>
 
   <div class="relative max-w-[96rem] mx-auto">
@@ -14,7 +24,7 @@
         id="slider"
         style="will-change: transform"
       >
-        {% for card in page.activities.cards %}
+        {% for card in include.section.cards %}
         <div class="flex-shrink-0 w-10/12 md:w-1/2 lg:w-5/12 px-4">
           <div class="flex flex-col h-full justify-between">
             <div>
