@@ -12,7 +12,7 @@ main_nav:
     url: "/restaurant.html"
     submenu:
       - title: Special Events
-        url: "/special-events"
+        url: "/restaurant.html"
   - title: Weddings
     url: "/weddings"
   - title: Activities
