@@ -521,6 +521,10 @@ video {
 .row-span-1 {
   grid-row: span 1 / span 1;
 }
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -532,10 +536,6 @@ video {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -766,9 +766,6 @@ video {
      -moz-user-select: none;
           user-select: none;
 }
-.list-inside {
-  list-style-position: inside;
-}
 .list-disc {
   list-style-type: disc;
 }
@@ -982,10 +979,6 @@ video {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1005,10 +998,6 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 .py-6 {
   padding-top: 1.5rem;
@@ -1069,27 +1058,11 @@ video {
   font-size: 0.875rem;;
   line-height: 1.2;
 }
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.2;
-}
 .font-bold {
   font-weight: 700;
 }
-.font-normal {
-  font-weight: 400;
-}
-.font-semibold {
-  font-weight: 600;
-}
 .uppercase {
   text-transform: uppercase;
-}
-.tracking-wide {
-  letter-spacing: 0.025em;
-}
-.tracking-wider {
-  letter-spacing: 0.05em;
 }
 .tracking-widest {
   letter-spacing: 0.1em;
@@ -1618,14 +1591,6 @@ body {
   .sm\:pr-8 {
     padding-right: 2rem;
   }
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 1.2;
-  }
-  .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.2;
-  }
   .sm\:text-lg {
     font-size: 1.125rem;;
     line-height: 1.2;
@@ -1786,14 +1751,6 @@ body {
   .md\:text-left {
     text-align: left;
   }
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 1;
-  }
-  .md\:text-lg {
-    font-size: 1.125rem;;
-    line-height: 1.2;
-  }
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.2;
@@ -1839,10 +1796,6 @@ body {
   }
   .lg\:pr-16 {
     padding-right: 4rem;
-  }
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
   }
 }
 @media (min-width: 1280px) {

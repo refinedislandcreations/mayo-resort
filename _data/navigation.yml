@@ -1,6 +1,6 @@
 main_nav:
   - title: Rooms
-    url: "/rooms"
+    url: "/rooms.html"
     submenu:
       - title: Room Types
         url: "/rooms.html#room-types"
@@ -9,7 +9,7 @@ main_nav:
       - title: Group Stays
         url: "/special-offers.html#group-stays"
   - title: Restaurant
-    url: "#"
+    url: "/restaurant.html"
     submenu:
       - title: Special Events
         url: "/special-events"
