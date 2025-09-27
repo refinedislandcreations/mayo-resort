@@ -52,6 +52,18 @@
       >
         {{ include.section.button_text }}
       </a>
+      {% endif %} {% if include.section.buttons %}
+      <div class="flex flex-wrap gap-4">
+        {% for button in include.section.buttons %}
+        <a
+          href="{{ button.link }}"
+          aria-label="{{ button.aria_label }}"
+          class="inline-block bg-keppel text-white md:mt-4 hover:bg-keppel-hover max-w-max button-font"
+        >
+          {{ button.text }}
+        </a>
+        {% endfor %}
+      </div>
       {% endif %}
     </div>
   </div>

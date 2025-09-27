@@ -1,0 +1,67 @@
+<section
+  class="flex flex-col md:flex-row items-center justify-between {{ include.section.bg_color }} py-12 md:py-24 lg:py-48 pl-4 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20"
+>
+  <div
+    class="w-full max-w-[96rem] mx-auto flex flex-col md:flex-row items-center justify-between"
+  >
+    <!-- Konten teks di kiri -->
+    <div class="md:w-1/2 flex flex-col justify-center pr-4 md:px-12 pb-6">
+      <h2 class="section-title-font mb-4 text-raisin-black">
+        {{ include.section.title }}
+      </h2>
+
+      <div class="description-font mb-6 text-raisin-black md:mt-4 space-y-4">
+        <!-- Address -->
+        <address class="not-italic">
+          <h3 class="font-semibold mb-2">Address</h3>
+          <div class="pl-4">
+            <p>{{ include.section.address.line1 }}</p>
+            <p>{{ include.section.address.line2 }}</p>
+            <p>{{ include.section.address.line3 }}</p>
+            <p>
+              {{ include.section.address.city }}, {{
+              include.section.address.postal_code }}
+            </p>
+            <p>{{ include.section.address.region }}</p>
+            <p>{{ include.section.address.country }}</p>
+          </div>
+        </address>
+
+        <!-- Phone numbers -->
+        <div>
+          <h3 class="font-semibold mb-2">Phone Number</h3>
+          <ul class="list-disc list-inside pl-4">
+            {% for phone in include.section.phone_numbers %}
+            <li>
+              {{ phone.number }} <span class="italic">({{ phone.label }})</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <h3 class="font-semibold mb-2">E-Mail</h3>
+          <a
+            href="mailto:{{ include.section.email }}"
+            class="text-keppel hover:underline ml-4"
+          >
+            {{ include.section.email }}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gambar di kanan -->
+    <div
+      class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-end pr-4 md:pr-0 h-full w-full"
+    >
+      <img
+        src="{{ include.section.image }}"
+        alt="{{ include.section.image_alt }}"
+        loading="lazy"
+        class="w-full object-cover shadow {{ include.section.image_size }}"
+      />
+    </div>
+  </div>
+</section>

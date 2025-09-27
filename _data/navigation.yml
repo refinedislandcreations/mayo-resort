@@ -26,7 +26,7 @@ main_nav:
     url: "#"
     submenu:
       - title: Contact Form
-        url: "/contact-form"
+        url: "/contact-form.html"
       - title: Getting Here
         url: "/getting-here.html"
   - title: Book Now

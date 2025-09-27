@@ -1,0 +1,72 @@
+<section
+  class="flex flex-col md:flex-row items-center justify-between {{ include.section.bg_color }} py-12 md:py-24 lg:py-48 pl-4 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20"
+>
+  <div
+    class="w-full max-w-[96rem] mx-auto flex flex-col md:flex-row items-center justify-between"
+  >
+    <!-- Form kontak di kiri -->
+    <div class="md:w-1/2 flex flex-col justify-center pr-4 md:px-12 pb-6">
+      <h2 class="section-title-font mb-4 text-raisin-black">
+        {{ include.section.title }}
+      </h2>
+
+      <form
+        action="/submit-contact"
+        method="POST"
+        class="flex flex-col space-y-4"
+      >
+        <label for="name" class="text-raisin-black description-font"
+          >Name</label
+        >
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-keppel description-font text-raisin-black"
+        />
+
+        <label for="email" class="text-raisin-black description-font"
+          >Email</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="border border-gray-300 px-3 py-1 focus:outline-none focus:ring-1 focus:ring-keppel description-font text-raisin-black"
+        />
+
+        <label for="message" class="text-raisin-black description-font"
+          >Message</label
+        >
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          required
+          class="border border-gray-300 px-3 py-2 resize-none focus:outline-none focus:ring-1 focus:ring-keppel description-font text-raisin-black"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="inline-block bg-keppel text-white md:mt-4 hover:bg-keppel-hover max-w-max button-font"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Gambar di kanan -->
+    <div
+      class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-end pr-4 md:pr-0 h-full w-full"
+    >
+      <img
+        src="{{ include.section.image }}"
+        alt="{{ include.section.image_alt }}"
+        loading="lazy"
+        class="w-full object-cover shadow {{ include.section.image_size }}"
+      />
+    </div>
+  </div>
+</section>
