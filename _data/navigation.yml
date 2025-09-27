@@ -21,7 +21,7 @@ main_nav:
       - title: Near Mayo
         url: "/activities.html"
       - title: North Bali
-        url: "/north-bali"
+        url: "/north-bali.html"
   - title: Contact
     url: "#"
     submenu:
