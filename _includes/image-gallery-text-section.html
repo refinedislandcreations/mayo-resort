@@ -18,7 +18,8 @@
 
     <!-- Tombol -->
     <div class="text-center mb-12">
-      {% if section.buttons %} {% for button in section.buttons %}
+      {% if section.button_link %} {% if section.buttons %} {% for button in
+      section.buttons %}
       <a
         href="{{ button.button_link }}"
         aria-label="{{ button.button_aria_label }}"
@@ -34,7 +35,7 @@
       >
         {{ section.button_text }}
       </a>
-      {% endif %}
+      {% endif %} {% endif %}
     </div>
 
     <!-- LightGallery Container for Desktop -->
