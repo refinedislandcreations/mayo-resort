@@ -239,8 +239,13 @@ company_functions:
 section=page.stunning_seaside %} {% include content-with-image-on-the-left.html
 section=page.open_all_day %} {% include content-image-right.html
 section=page.supporting_local %} {% include images-gallery-content.html
-section=page.sunset_evening_delights %} {% include testimonial.html %} {%
-include content-with-images.html section=page.host_toast %} {% include
+section=page.sunset_evening_delights %} {% include testimonial.html %} 
+<div id="host-toast-section"">
+  {% include content-with-images.html section=page.host_toast %}
+</div>
+
+
+{% include
 content-with-image-on-the-left.html section=page.birthday_party %} {% include
 content-with-images.html section=page.wine_food %} {% include
 content-with-image-on-the-left.html section=page.fashion_culture %} {% include

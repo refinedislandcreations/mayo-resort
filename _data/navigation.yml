@@ -3,11 +3,11 @@ main_nav:
     url: "/rooms.html"
     submenu:
       - title: Room Types
-        url: "/rooms.html#room-types"
+        url: "/rooms.html"
       - title: Special Offer
-        url: "/rooms.html#special-offer"
+        url: "/special-offers.html"
       - title: Group Stays
-        url: "/special-offers.html#group-stays"
+        url: "/special-offers.html#group-stays-section"
   - title: Restaurant
     url: "/restaurant.html"
     submenu:

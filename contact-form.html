@@ -34,7 +34,7 @@ cta_contact:
   description: "Whether you’re marking a special moment or simply looking to unwind, our packages are thoughtfully crafted to offer the perfect experience."
   buttons:
     - text: "Book Now"
-      link: "#booking-form"
+      link: "https://bookingku.bookandlink.com/booking-page.php?id=mayo-resort"
       aria_label: "Book Your Stay at Mayo Resort Bali Now"
     - text: "Contact Us"
       link: "#contact-form"
@@ -74,6 +74,8 @@ contact_info:
 ---
 
 {% include image-banner.html %} {% include content-with-image-on-the-left.html
-section=page.cta_contact %} {% include contact-form.html
-section=page.contact_form %} {% include contact-info.html
-section=page.contact_info %}
+section=page.cta_contact %}
+<div id="contact-form">
+  {% include contact-form.html section=page.contact_form %}
+</div>
+{% include contact-info.htmlsection=page.contact_info %}

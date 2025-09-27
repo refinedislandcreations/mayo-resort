@@ -18,25 +18,25 @@
 
     <!-- Tombol -->
     <div class="text-center mb-12">
-      {% if section.button_link %} {% if section.buttons %} {% for button in
-      section.buttons %}
+      {% if section.buttons %} {% for button in section.buttons %}
       <a
         href="{{ button.button_link }}"
         aria-label="{{ button.button_aria_label }}"
-        class="inline-block bg-keppel text-white md:mt-4 hover:bg-keppel-hover max-w-max button-font mx-2"
+        class="inline-block bg-keppel text-white mt-6 hover:bg-keppel-hover max-w-max button-font mx-2 px-6 py-3 transition duration-300"
       >
         {{ button.button_text }}
       </a>
-      {% endfor %} {% else %}
+      {% endfor %} {% elsif section.button_link %}
       <a
         href="{{ section.button_link }}"
         aria-label="{{ section.button_aria_label }}"
-        class="inline-block bg-keppel text-white md:mt-4 hover:bg-keppel-hover max-w-max button-font"
+        class="inline-block bg-keppel text-white mt-6 hover:bg-keppel-hover max-w-max button-font px-6 py-3 transition duration-300"
       >
         {{ section.button_text }}
       </a>
-      {% endif %} {% endif %}
+      {% endif %}
     </div>
+
     <!-- LightGallery Container for Desktop -->
     {% assign imgs = section.images %} {% if imgs and imgs.size >= 6 %}
     <div
