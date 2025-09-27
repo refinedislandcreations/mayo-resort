@@ -37,14 +37,12 @@
       </a>
       {% endif %} {% endif %}
     </div>
-
     <!-- LightGallery Container for Desktop -->
-    {% if section.images.size >= 6 %}
+    {% assign imgs = section.images %} {% if imgs and imgs.size >= 6 %}
     <div
       id="lightgallery-desktop"
       class="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-4 cursor-pointer"
     >
-      {% assign imgs = section.images %}
       <a
         href="{{ imgs[0].src }}"
         data-lg-size="1600-1067"
@@ -123,10 +121,6 @@
         />
       </a>
     </div>
-    {% else %}
-    <p class="text-red-500 text-center">
-      Image data incomplete. Please provide 6 images for this layout.
-    </p>
     {% endif %}
 
     <!-- LightGallery Container for Mobile -->
