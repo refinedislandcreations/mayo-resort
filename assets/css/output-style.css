@@ -595,6 +595,12 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.ml-6 {
+  margin-left: 1.5rem;
+}
+.ml-20 {
+  margin-left: 5rem;
+}
 .block {
   display: block;
 }
@@ -908,6 +914,9 @@ video {
 }
 .rounded-none {
   border-radius: 0px;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 .border {
   border-width: 1px;

@@ -61,17 +61,19 @@
     </div>
 
     <!-- Text Content Below Grid -->
-    <div class="mt-6 md:mt-20 max-w-4xl mx-auto text-center">
+    <div class="mt-6 md:mt-20 mx-auto text-center">
       <h2 class="hidden md:block text-raisin-black section-title-font">
         {{ include.section.title }}
       </h2>
 
+      {% if include.section.description %}
       <p
         class="description-font text-raisin-black max-w-3xl mx-auto mt-6 whitespace-pre-line"
       >
         {{ include.section.description }}
       </p>
-
+      {% endif %} {% if include.section.button_text and
+      include.section.button_link %}
       <a
         href="{{ include.section.button_link }}"
         aria-label="{{ include.section.button_aria_label }}"
@@ -79,6 +81,24 @@
       >
         {{ include.section.button_text }}
       </a>
+      {% endif %} {% if include.section.description_intro or
+      include.section.description_list %}
+      <div class="mt-6 text-center">
+        <div class="max-w-3xl mx-auto inline-block text-left">
+          {% if include.section.description_intro %}
+          <p class="description-font text-raisin-black whitespace-pre-line">
+            {{ include.section.description_intro }}
+          </p>
+          {% endif %} {% if include.section.description_list %}
+          <ul class="mt-6 space-y-2 list-disc marker:text-keppel px-6">
+            {% for item in include.section.description_list %}
+            <li class="description-font text-raisin-black">{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>

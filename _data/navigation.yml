@@ -28,7 +28,7 @@ main_nav:
       - title: Contact Form
         url: "/contact-form"
       - title: Getting Here
-        url: "/getting-here"
+        url: "/getting-here.html"
   - title: Book Now
     url: "https://bookingku.bookandlink.com/booking-page.php?id=mayo-resort"
     is_button: true
