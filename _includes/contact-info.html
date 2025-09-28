@@ -1,11 +1,23 @@
 <section
-  class="flex flex-col md:flex-row items-center justify-between {{ include.section.bg_color }} py-12 md:py-24 lg:py-48 pl-4 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20"
+  class="flex flex-col md:flex-row items-center justify-between {{ include.section.bg_color }} py-12 md:py-24 lg:py-48 pr-4 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20"
 >
   <div
     class="w-full max-w-[96rem] mx-auto flex flex-col md:flex-row items-center justify-between"
   >
-    <!-- Konten teks di kiri -->
-    <div class="md:w-1/2 flex flex-col justify-center pr-4 md:px-12 pb-6">
+    <!-- Gambar di kiri -->
+    <div
+      class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-start pl-4 md:pl-0 h-full w-full"
+    >
+      <img
+        src="{{ include.section.image }}"
+        alt="{{ include.section.image_alt }}"
+        loading="lazy"
+        class="w-full object-cover shadow {{ include.section.image_size }}"
+      />
+    </div>
+
+    <!-- Konten teks di kanan -->
+    <div class="md:w-1/2 flex flex-col justify-center pl-4 md:px-12 pb-6">
       <h2 class="section-title-font mb-4 text-raisin-black">
         {{ include.section.title }}
       </h2>
@@ -14,7 +26,7 @@
         <!-- Address -->
         <address class="not-italic">
           <h3 class="font-semibold mb-2">Address</h3>
-          <div class="pl-4">
+          <div class="ml-4">
             <p>{{ include.section.address.line1 }}</p>
             <p>{{ include.section.address.line2 }}</p>
             <p>{{ include.section.address.line3 }}</p>
@@ -30,7 +42,7 @@
         <!-- Phone numbers -->
         <div>
           <h3 class="font-semibold mb-2">Phone Number</h3>
-          <ul class="list-none pl-4">
+          <ul class="list-none ml-4">
             {% for phone in include.section.phone_numbers %}
             <li>
               {{ phone.number }} <span class="italic">({{ phone.label }})</span>
@@ -45,23 +57,10 @@
           <a
             href="mailto:{{ include.section.email }}"
             class="hover:underline ml-4"
-          >
-            {{ include.section.email }}
+            >{{ include.section.email }}
           </a>
         </div>
       </div>
-    </div>
-
-    <!-- Gambar di kanan -->
-    <div
-      class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-end pr-4 md:pr-0 h-full w-full"
-    >
-      <img
-        src="{{ include.section.image }}"
-        alt="{{ include.section.image_alt }}"
-        loading="lazy"
-        class="w-full object-cover shadow {{ include.section.image_size }}"
-      />
     </div>
   </div>
 </section>
