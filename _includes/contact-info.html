@@ -30,7 +30,7 @@
         <!-- Phone numbers -->
         <div>
           <h3 class="font-semibold mb-2">Phone Number</h3>
-          <ul class="list-disc list-inside pl-4">
+          <ul class="list-none pl-4">
             {% for phone in include.section.phone_numbers %}
             <li>
               {{ phone.number }} <span class="italic">({{ phone.label }})</span>
@@ -44,7 +44,7 @@
           <h3 class="font-semibold mb-2">E-Mail</h3>
           <a
             href="mailto:{{ include.section.email }}"
-            class="text-keppel hover:underline ml-4"
+            class="hover:underline ml-4"
           >
             {{ include.section.email }}
           </a>
