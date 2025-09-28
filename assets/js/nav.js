@@ -99,28 +99,55 @@ const initializeMobileDropdowns = () => {
 
       const isOpen = el.open;
 
-      // Close all first
-      document.querySelectorAll("details.dropdown").forEach((otherEl) => {
-        const otherContent = otherEl.querySelector(".dropdown-content");
-        const otherIcon = otherEl.querySelector("svg");
-        otherEl.open = false;
-        otherContent.style.maxHeight = "0px";
-        otherContent.style.opacity = "0";
-        otherIcon.classList.remove("rotate-180");
-      });
-
       if (!isOpen) {
-        // Open only the clicked one
+        // Close all other dropdowns smoothly first
+        document.querySelectorAll("details.dropdown").forEach((otherEl) => {
+          if (otherEl === el) return; // skip the one we want to open
+
+          const otherContent = otherEl.querySelector(".dropdown-content");
+          const otherIcon = otherEl.querySelector("svg");
+
+          if (otherEl.open) {
+            otherContent.style.maxHeight = otherContent.scrollHeight + "px"; // reset to full height before collapsing
+            otherContent.offsetHeight; // force reflow
+
+            otherContent.style.maxHeight = "0px";
+            otherContent.style.opacity = "0";
+
+            const closeHandler = () => {
+              otherEl.open = false;
+              otherIcon.classList.remove("rotate-180");
+              otherContent.removeEventListener("transitionend", closeHandler);
+            };
+            otherContent.addEventListener("transitionend", closeHandler);
+          }
+        });
+
+        // Open clicked dropdown
         el.open = true;
         content.style.maxHeight = content.scrollHeight + "px";
         content.style.opacity = "1";
         icon.classList.add("rotate-180");
+      } else {
+        // Close clicked dropdown smoothly
+        content.style.maxHeight = content.scrollHeight + "px"; // reset to full height before collapsing
+        content.offsetHeight; // force reflow
+
+        content.style.maxHeight = "0px";
+        content.style.opacity = "0";
+
+        const closeHandler = () => {
+          el.open = false;
+          icon.classList.remove("rotate-180");
+          content.removeEventListener("transitionend", closeHandler);
+        };
+        content.addEventListener("transitionend", closeHandler);
       }
     });
 
     content.addEventListener("transitionend", () => {
       if (el.open) {
-        content.style.maxHeight = "none";
+        content.style.maxHeight = "none"; // remove max-height limit after transition
       }
     });
 

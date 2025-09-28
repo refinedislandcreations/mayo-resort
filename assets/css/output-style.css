@@ -1455,112 +1455,147 @@ body {
 .float:hover {
   background-color: #119742;
 }
+
+.dropdown-content {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
 .marker\:text-keppel *::marker {
   color: rgb(90 175 157 );
 }
+
 .marker\:text-keppel::marker {
   color: rgb(90 175 157 );
 }
+
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
 }
+
 .after\:bottom-0::after {
   content: var(--tw-content);
   bottom: 0px;
 }
+
 .after\:left-0::after {
   content: var(--tw-content);
   left: 0px;
 }
+
 .after\:block::after {
   content: var(--tw-content);
   display: block;
 }
+
 .after\:h-\[1px\]::after {
   content: var(--tw-content);
   height: 1px;
 }
+
 .after\:w-0::after {
   content: var(--tw-content);
   width: 0px;
 }
+
 .after\:bg-current::after {
   content: var(--tw-content);
   background-color: currentColor;
 }
+
 .after\:transition-\[width\]::after {
   content: var(--tw-content);
   transition-property: width;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
 .after\:duration-300::after {
   content: var(--tw-content);
   transition-duration: 300ms;
 }
+
 .hover\:bg-custom-blue-hover:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(32 91 138 / var(--tw-bg-opacity));
 }
+
 .hover\:bg-keppel-hover:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(74 138 131 / var(--tw-bg-opacity));
 }
+
 .hover\:text-baby-powder-hover:hover {
   --tw-text-opacity: 1;
   color: rgb(168 218 220 / var(--tw-text-opacity));
 }
+
 .hover\:text-keppel:hover {
   --tw-text-opacity: 1;
   color: rgb(90 175 157 / var(--tw-text-opacity));
 }
+
 .hover\:text-keppel-hover:hover {
   --tw-text-opacity: 1;
   color: rgb(74 138 131 / var(--tw-text-opacity));
 }
+
 .hover\:text-raisin-black-hover:hover {
   --tw-text-opacity: 1;
   color: rgb(56 57 64 / var(--tw-text-opacity));
 }
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
+
 .hover\:opacity-80:hover {
   opacity: 0.8;
 }
+
 .hover\:after\:w-full:hover::after {
   content: var(--tw-content);
   width: 100%;
 }
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
 .focus\:ring-1:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+
 .focus\:ring-keppel:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(90 175 157 / var(--tw-ring-opacity));
 }
+
 .group:hover .group-hover\:visible {
   visibility: visible;
 }
+
 .group:hover .group-hover\:rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .group:hover .group-hover\:scale-100 {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
+
 @media (min-width: 300px) {
   .xs\:h-5 {
     height: 1.25rem;
@@ -1592,6 +1627,7 @@ body {
     line-height: 1.2;
   }
 }
+
 @media (min-width: 480px) {
   .sm\:grid {
     display: grid;
@@ -1637,6 +1673,7 @@ body {
     line-height: 1.2;
   }
 }
+
 @media (min-width: 768px) {
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
@@ -1807,6 +1844,7 @@ body {
     line-height: 1.2;
   }
 }
+
 @media (min-width: 1024px) {
   .lg\:h-96 {
     height: 24rem;
@@ -1849,6 +1887,7 @@ body {
     padding-right: 4rem;
   }
 }
+
 @media (min-width: 1280px) {
   .xl\:flex {
     display: flex;
