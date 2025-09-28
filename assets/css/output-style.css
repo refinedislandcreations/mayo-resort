@@ -667,6 +667,9 @@ video {
 .max-h-\[650px\] {
   max-height: 650px;
 }
+.max-h-full {
+  max-height: 100%;
+}
 .min-h-\[280px\] {
   min-height: 280px;
 }
@@ -832,6 +835,9 @@ video {
 .gap-8 {
   gap: 2rem;
 }
+.gap-2 {
+  gap: 0.5rem;
+}
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -914,6 +920,9 @@ video {
 }
 .break-words {
   overflow-wrap: break-word;
+}
+.break-all {
+  word-break: break-all;
 }
 .rounded {
   border-radius: 0.25rem;
@@ -1079,6 +1088,15 @@ video {
 }
 .pt-8 {
   padding-top: 2rem;
+}
+.pl-2 {
+  padding-left: 0.5rem;
+}
+.pl-8 {
+  padding-left: 2rem;
+}
+.pl-12 {
+  padding-left: 3rem;
 }
 .text-left {
   text-align: left;
@@ -1672,6 +1690,9 @@ body {
   .xs\:flex-row {
     flex-direction: row;
   }
+  .xs\:break-words {
+    overflow-wrap: break-word;
+  }
   .xs\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1716,6 +1737,13 @@ body {
   .sm\:w-6 {
     width: 1.5rem;
   }
+  .sm\:break-normal {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .sm\:break-words {
+    overflow-wrap: break-word;
+  }
   .sm\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1736,11 +1764,21 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .sm\:pl-8 {
     padding-left: 2rem;
   }
   .sm\:pr-8 {
     padding-right: 2rem;
+  }
+  .sm\:pl-4 {
+    padding-left: 1rem;
+  }
+  .sm\:pr-4 {
+    padding-right: 1rem;
   }
   .sm\:text-left {
     text-align: left;
@@ -1919,6 +1957,9 @@ body {
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
+  .md\:break-all {
+    word-break: break-all;
+  }
   .md\:p-4 {
     padding: 1rem;
   }
@@ -1945,6 +1986,9 @@ body {
   }
   .md\:pr-12 {
     padding-right: 3rem;
+  }
+  .md\:pe-12 {
+    padding-inline-end: 3rem;
   }
   .md\:text-left {
     text-align: left;
@@ -1989,6 +2033,9 @@ body {
   .lg\:gap-x-8 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
+  }
+  .lg\:break-words {
+    overflow-wrap: break-word;
   }
   .lg\:px-16 {
     padding-left: 4rem;

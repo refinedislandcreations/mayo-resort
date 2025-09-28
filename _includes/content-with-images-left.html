@@ -1,5 +1,5 @@
 <section
-  class="flex flex-col md:flex-row items-center justify-between {{ include.section.bg_color }} py-12 md:py-24 lg:py-48 pr-4 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20"
+  class="flex flex-col md:flex-row items-center justify-between {{ include.section.bg_color }} py-12 md:py-24 lg:py-48 pr-4 sm:pr-4 md:pr-12 lg:pr-16 xl:pr-20"
 >
   <div
     class="w-full max-w-[96rem] mx-auto flex flex-col md:flex-row items-center justify-between"
@@ -23,9 +23,9 @@
     </div>
 
     <!-- Konten teks di kanan -->
-    <div class="md:w-1/2 flex flex-col justify-center pl-4 md:px-12 pb-6">
+    <div class="md:w-1/2 flex flex-col justify-center pl-4 md:pl-12 pb-6">
       <!-- Title -->
-      <h2 class="section-title-font text-raisin-black">
+      <h2 class="section-title-font text-raisin-black break-all">
         {{ include.section.title }}
       </h2>
 
@@ -45,7 +45,7 @@
       include.section.description[0] %}
       <!-- Description as List -->
       <ul
-        class="list-disc marker:text-keppel text-raisin-black space-y-3 md:mt-8 pl-5 description-font"
+        class="list-disc marker:text-keppel text-raisin-black space-y-3 mt-4 md:mt-8 pl-5 description-font"
       >
         {% for item in include.section.description %}
         <li>{{ item }}</li>

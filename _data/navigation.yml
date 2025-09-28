@@ -16,14 +16,14 @@ main_nav:
   - title: Weddings
     url: "/weddings"
   - title: Activities
-    url: "#"
+    url: "/activities.html"
     submenu:
       - title: Near Mayo
         url: "/activities.html"
       - title: North Bali
         url: "/north-bali.html"
   - title: Contact
-    url: "#"
+    url: "/contact-form.html"
     submenu:
       - title: Contact Form
         url: "/contact-form.html"
@@ -35,8 +35,8 @@ main_nav:
 
 social_links:
   - title: Instagram
-    url: "https://instagram.com/yourprofile"
+    url: "https://www.instagram.com/mayoresort/"
     icon: "/assets/images/icons/instagram-icon.png"
   - title: Facebook
-    url: "https://facebook.com/yourprofile"
+    url: "https://web.facebook.com/p/Mayo-Resort-North-Bali-100063748800498/"
     icon: "/assets/images/icons/facebook-icon.png"
