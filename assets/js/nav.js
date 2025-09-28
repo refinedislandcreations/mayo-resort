@@ -123,6 +123,10 @@ const initializeMobileDropdowns = () => {
           }
         });
 
+        // **Add this line before opening your clicked dropdown**
+        content.style.maxHeight = "0px";
+        content.offsetHeight; // force reflow
+
         // Open clicked dropdown
         el.open = true;
         content.style.maxHeight = content.scrollHeight + "px";
