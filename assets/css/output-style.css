@@ -549,6 +549,10 @@ video {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -713,6 +717,12 @@ video {
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.min-h-\[4rem\] {
+  min-height: 4rem;
+}
+.min-h-\[6rem\] {
+  min-height: 6rem;
 }
 .w-1\/2 {
   width: 50%;
@@ -1835,6 +1845,10 @@ body {
   }
   .md\:row-start-2 {
     grid-row-start: 2;
+  }
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .md\:mb-0 {
     margin-bottom: 0px;
