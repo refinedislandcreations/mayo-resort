@@ -11,8 +11,10 @@ main_nav:
   - title: Restaurant
     url: "/restaurant.html"
     submenu:
-      - title: Special Events
+      - title: Bora Bora
         url: "/restaurant.html"
+      - title: Special Events
+        url: "/restaurant.html#host-toast-section"
   - title: Weddings
     url: "/weddings"
   - title: Activities
