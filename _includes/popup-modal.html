@@ -1,14 +1,14 @@
 {% assign popups = page.popup %} {% if popups %}
 <div
   id="popupModal"
-  class="fixed bottom-4 right-4 z-50 hidden w-[70vw] max-w-xs md:max-w-md bg-custom-blue rounded shadow-lg overflow-hidden ring-1 ring-keppel"
+  class="fixed bottom-2 right-2 z-50 hidden w-[70vw] max-w-xs md:max-w-md bg-custom-blue rounded shadow-lg overflow-hidden ring-1 ring-keppel"
   aria-modal="true"
   role="dialog"
 >
   <!-- Tombol Close -->
   <button
     id="closePopupBtn"
-    class="absolute top-2 right-2 text-baby-powder hover:text-keppel transition"
+    class="absolute top-2 right-2 text-baby-powder hover:text-keppel transition text-sm"
     aria-label="Close"
   >
     Close ✕
@@ -21,28 +21,28 @@
     data-popup-index="{{ forloop.index0 }}"
   >
     <!-- Gambar (kiri di md ke atas) -->
-    <div class="md:w-1/2 w-full h-48 md:h-auto overflow-hidden">
+    <div class="md:w-1/2 flex justify-center items-center overflow-hidden">
       <img
         src="{{ popup.image.src }}"
         alt="{{ popup.image.alt }}"
         loading="lazy"
-        class="w-full h-full object-cover"
+        class="w-full h-28 md:h-full object-cover"
       />
     </div>
 
     <!-- Konten (kanan di md ke atas) -->
     <div
-      class="pt-4 md:p-4 text-baby-powder flex flex-col justify-between md:w-1/2"
+      class="mt-4 md:mt-0 md:p-2 text-baby-powder flex flex-col justify-between md:w-1/2"
     >
       <div>
-        <h2 class="text-lg uppercase mb-2 cantarell-bold">{{ popup.title }}</h2>
-        <p class="text-sm roboto-regular">{{ popup.description }}</p>
+        <h2 class="text-sm uppercase mb-2 cantarell-bold">{{ popup.title }}</h2>
+        <p class="text-[12px] roboto-regular">{{ popup.description }}</p>
       </div>
       <div class="mt-4">
         <a
           href="{{ popup.button.url }}"
           aria-label="{{ popup.button.aria_label }}"
-          class="inline-block bg-keppel text-baby-powder px-4 py-2 text-sm hover:bg-keppel-hover transition uppercase"
+          class="inline-block bg-keppel text-baby-powder px-4 py-2 text-[12px] hover:bg-keppel-hover transition uppercase"
         >
           {{ popup.button.text }}
         </a>
@@ -59,7 +59,7 @@
     <button
       id="prevBtnPopup"
       aria-label="Previous"
-      class="w-4 h-4 justify-center items-center flex"
+      class="w-3 h-3 justify-center items-center flex"
     >
       <img
         src="{{ '/assets/images/icons/arrow.png' }}"
@@ -70,14 +70,14 @@
     <div class="flex space-x-1" id="popupIndicators">
       {% for popup in popups %}
       <div
-        class="w-4 h-4 rounded-full border border-[#5aaf9d] {% if forloop.first %}bg-[#5aaf9d]{% else %}bg-transparent{% endif %}"
+        class="w-2 h-2 rounded-full border border-[#5aaf9d] {% if forloop.first %}bg-[#5aaf9d]{% else %}bg-transparent{% endif %}"
       ></div>
       {% endfor %}
     </div>
     <button
       id="nextBtnPopup"
       aria-label="Next"
-      class="rotate-180 w-4 h-4 flex justify-center items-center"
+      class="rotate-180 w-3 h-3 flex justify-center items-center"
     >
       <img
         src="{{ '/assets/images/icons/arrow.png' }}"
