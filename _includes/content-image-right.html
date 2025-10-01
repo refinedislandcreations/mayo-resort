@@ -13,7 +13,7 @@
       {% if include.section.description_paragraphs or
       include.section.description_paragraph or include.section.description_list
       %}
-      <div class="description-font mb-6 text-raisin-black md:mt-4">
+      <div class="description-font mb-0 text-raisin-black md:mt-4">
         {% if include.section.description_paragraphs %} {% for paragraph in
         include.section.description_paragraphs %}
         <p>{{ paragraph }}</p>
@@ -21,7 +21,7 @@
         <p>{{ include.section.description_paragraph }}</p>
         {% endif %} {% if include.section.description_list %}
         <ul
-          class="list-disc marker:text-keppel text-raisin-black space-y-3 md:mt-8 pl-5 description-font"
+          class="list-disc marker:text-keppel text-raisin-black space-y-3 mt-4 md:mt-8 pl-5 description-font"
         >
           {% for item in include.section.description_list %}
           <li>{{ item }}</li>
@@ -38,7 +38,7 @@
       <a
         href="{{ include.section.button_link }}"
         aria-label="{{ include.section.button_aria_label | default: include.section.button_text }}"
-        class="inline-block bg-keppel text-baby-powder md:mt-4 text-center hover:bg-keppel-hover max-w-max button-font"
+        class="inline-block bg-keppel text-baby-powder md:mt-0 text-center hover:bg-keppel-hover max-w-max button-font"
       >
         {{ include.section.button_text }}
       </a>
@@ -47,7 +47,7 @@
 
     <!-- Gambar di kanan -->
     <div
-      class="md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 items-end pr-4 md:pr-0 h-full w-full"
+      class="md:w-1/2 mb-0 flex flex-col space-y-4 items-end pr-4 md:pr-0 h-full w-full"
     >
       <img
         src="{{ include.section.image }}"

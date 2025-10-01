@@ -597,6 +597,9 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.mt-0 {
+  margin-top: 0px;
+}
 .block {
   display: block;
 }
@@ -1814,6 +1817,9 @@ body {
   }
   .md\:mt-8 {
     margin-top: 2rem;
+  }
+  .md\:mt-6 {
+    margin-top: 1.5rem;
   }
   .md\:block {
     display: block;
