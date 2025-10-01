@@ -22,7 +22,7 @@
         <!-- Dropdown Menu -->
         <div class="relative group h-full flex items-center">
           <button
-            class="inline-flex items-center hover:text-baby-powder-hover focus:outline-none navbar-font"
+            class="inline-flex items-center hover:text-baby-powder-hover focus:outline-none navbar-font text-baby-powder"
           >
             {{ item.title }}
             <svg
@@ -56,7 +56,7 @@
         <!-- Book Now Button -->
         <a
           href="{{ item.url | relative_url }}"
-          class="ml-4 inline-block bg-keppel text-white hover:bg-keppel-hover button-font"
+          class="ml-4 inline-block bg-keppel text-baby-powder hover:bg-keppel-hover button-font"
           >{{ item.title }}</a
         >
         {% else %}
