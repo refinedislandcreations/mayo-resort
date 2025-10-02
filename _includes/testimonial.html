@@ -9,7 +9,7 @@
     <button
       id="prevBtn"
       aria-label="Previous testimonial"
-      class="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2"
+      class="hidden lg:flex absolute left-0 top-1/2 transform -translate-y-1/2"
       type="button"
     >
       <img
@@ -20,59 +20,60 @@
       />
     </button>
 
-    <!-- Testimonials container -->
-    <div
-      id="testimonialContainer"
-      class="relative flex-1 w-full max-w-full xs:max-w-4xl text-center"
-      style="min-height: 400px"
-    >
-      {% for t in page.guest_testimonials.testimonials %}
-      <article
-        class="testimonial-item absolute inset-0 w-full max-w-full transition-opacity duration-500 ease-in-out"
-        style="{% unless forloop.first %}opacity: 0; pointer-events: none; display: none;{% else %}opacity: 1; pointer-events: auto; position: relative; display: block;{% endunless %}"
-        data-index="{{ forloop.index0 }}"
+    <!-- Testimonials container wrapper -->
+    <div>
+      <!-- Testimonials container -->
+      <div
+        id="testimonialContainer"
+        class="relative flex-1 w-full max-w-full xs:max-w-4xl text-center"
       >
-        <p
-          class="section-title-font mb-6 md:mb-12 text-raisin-black max-w-full break-words"
+        {% for t in page.guest_testimonials.testimonials %}
+        <article
+          class="testimonial-item absolute inset-0 w-full max-w-full transition-opacity duration-500 ease-in-out"
+          style="{% unless forloop.first %}opacity: 0; pointer-events: none; display: none;{% else %}opacity: 1; pointer-events: auto; position: relative; display: block;{% endunless %}"
+          data-index="{{ forloop.index0 }}"
         >
-          "{{ t.main_quote }}"
-        </p>
+          <p
+            class="section-title-font mb-6 md:mb-12 text-raisin-black max-w-full break-words"
+          >
+            "{{ t.main_quote }}"
+          </p>
 
-        <div
-          class="flex justify-center mb-4 space-x-1 text-keppel text-sm xs:text-base sm:text-lg md:text-xl"
-          aria-label="Rating: {{ t.rating }} stars"
-        >
-          {% for i in (1..5) %} {% if i <= t.rating %}
-          <span>★</span>
-          {% else %}
-          <span>☆</span>
-          {% endif %} {% endfor %}
-        </div>
-        <p
-          class="description-font mb-6 max-w-full xs:max-w-3xl mx-auto text-raisin-black"
-        >
-          {{ t.description }}
-        </p>
-        <p class="description-bold description-font mb-1 text-raisin-black">
-          {{ t.name }}
-        </p>
-        <p class="description-font text-raisin-black mb-6">{{ t.date }}</p>
-        <button
-          class="description-font description-semibold underline text-raisin-black hover:text-raisin-black-hover focus:outline-none"
-          type="button"
-          aria-label="View all reviews"
-        >
-          <a href="">View all reviews</a>
-        </button>
-      </article>
-      {% endfor %}
+          <div
+            class="flex justify-center mb-4 space-x-1 text-keppel text-sm xs:text-base sm:text-lg md:text-xl"
+            aria-label="Rating: {{ t.rating }} stars"
+          >
+            {% for i in (1..5) %} {% if i <= t.rating %}
+            <span>★</span>
+            {% else %}
+            <span>☆</span>
+            {% endif %} {% endfor %}
+          </div>
+          <p
+            class="description-font mb-6 max-w-full xs:max-w-3xl mx-auto text-raisin-black"
+          >
+            {{ t.description }}
+          </p>
+          <p class="description-bold description-font mb-1 text-raisin-black">
+            {{ t.name }}
+          </p>
+          <p class="description-font text-raisin-black mb-6">{{ t.date }}</p>
+        </article>
+        {% endfor %}
+      </div>
+
+      <!-- Testimonial indicator dots (desktop) -->
+      <div
+        id="testimonialIndicatorDesktop"
+        class="hidden lg:flex justify-center items-center space-x-2 md:space-x-6 select-none mt-8"
+      ></div>
     </div>
 
     <!-- Next Button (desktop) -->
     <button
       id="nextBtn"
       aria-label="Next testimonial"
-      class="hidden md:flex absolute right-0 top-1/2 transform -translate-y-1/2 rotate-180"
+      class="hidden lg:flex absolute right-0 top-1/2 transform -translate-y-1/2 rotate-180"
       type="button"
     >
       <img
@@ -84,62 +85,33 @@
     </button>
   </div>
 
-  <!-- Mobile arrows container (only show below 768px) -->
+  <!-- Mobile arrows container (only show below 1024px) -->
   <div
     id="mobileArrows"
-    class="flex md:hidden px-4 mt-6 justify-center space-x-6"
+    class="flex lg:hidden px-4 mt-6 justify-center space-x-6"
   >
     <button id="mobilePrevBtn" aria-label="Previous testimonial" type="button">
       <img
         src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
         alt="Left Arrow Icon"
         loading="lazy"
-        class="object-contain w-6 h-6"
+        class="object-contain w-8 h-8"
       />
     </button>
+
+    <!-- Testimonial indicator dots (mobile) -->
+    <div
+      id="testimonialIndicatorMobile"
+      class="flex justify-center items-center space-x-2 select-none"
+    ></div>
+
     <button id="mobileNextBtn" aria-label="Next testimonial" type="button">
       <img
         src="{{ '/assets/images/icons/arrow.png' | relative_url }}"
         alt="Right Arrow Icon"
         loading="lazy"
-        class="object-contain rotate-180 w-6 h-6"
+        class="object-contain rotate-180 w-8 h-8"
       />
     </button>
   </div>
-
-  <script>
-    window.addEventListener("load", () => {
-      const container = document.getElementById("testimonialContainer");
-      const items = container.querySelectorAll(".testimonial-item");
-      let maxHeight = 0;
-
-      items.forEach((item) => {
-        // Simpan style asli agar nanti dikembalikan
-        const originalStyles = {
-          opacity: item.style.opacity,
-          pointerEvents: item.style.pointerEvents,
-          position: item.style.position,
-          display: item.style.display,
-        };
-
-        // Tampilkan dulu untuk ukur tinggi
-        item.style.opacity = "1";
-        item.style.pointerEvents = "auto";
-        item.style.position = "relative";
-        item.style.display = "block";
-
-        const height = item.offsetHeight;
-        if (height > maxHeight) maxHeight = height;
-
-        // Kembalikan style asli
-        item.style.opacity = originalStyles.opacity;
-        item.style.pointerEvents = originalStyles.pointerEvents;
-        item.style.position = originalStyles.position;
-        item.style.display = originalStyles.display;
-      });
-
-      // Set minHeight container supaya tetap
-      container.style.minHeight = maxHeight + "px";
-    });
-  </script>
 </section>

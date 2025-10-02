@@ -276,6 +276,13 @@ body {
   background-color: #119742;
 }
 
+@media (min-width: 96rem) {
+  .float {
+    right: calc((100vw - 96rem) / 2 + 20px);
+  }
+}
+
+/* Dropdown menu styles - Navbar*/
 .dropdown-content {
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   overflow: hidden;

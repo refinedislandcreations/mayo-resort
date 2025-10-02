@@ -8,7 +8,9 @@
       class="md:hidden md:w-1/2 flex flex-col justify-center pl-4 md:pl-12 pb-6"
     >
       <!-- Title -->
-      <h2 class="section-title-font text-raisin-black break-words text-center">
+      <h2
+        class="section-title-font text-raisin-black break-words text-left mb-4 md:mb-0"
+      >
         {{ include.section.title }}
       </h2>
 
@@ -18,7 +20,7 @@
       </p>
       {% endif %} {% if include.section.description_list %}
       <ul
-        class="list-disc marker:text-keppel text-raisin-black space-y-3 md:mt-8 pl-5 description-font"
+        class="list-disc marker:text-keppel text-raisin-black space-y-3 mb-4 md:mt-8 pl-5 description-font"
       >
         {% for item in include.section.description_list %}
         <li>{{ item }}</li>
@@ -44,7 +46,7 @@
       <a
         href="{{ include.section.button_link }}"
         aria-label="{{ include.section.button_aria_label }}"
-        class="button-font inline-block bg-keppel text-baby-powder mt-8 md:mt-12 hover:bg-keppel-hover max-w-max"
+        class="button-font inline-block bg-keppel text-baby-powder mt-0 md:mt-12 hover:bg-keppel-hover max-w-max"
       >
         {{ include.section.button_text }}
       </a>
@@ -110,7 +112,7 @@
       <a
         href="{{ include.section.button_link }}"
         aria-label="{{ include.section.button_aria_label }}"
-        class="button-font inline-block bg-keppel text-baby-powder mt-8 md:mt-12 hover:bg-keppel-hover max-w-max"
+        class="button-font inline-block bg-keppel text-baby-powder mt-6 md:mt-8 hover:bg-keppel-hover max-w-max"
       >
         {{ include.section.button_text }}
       </a>
